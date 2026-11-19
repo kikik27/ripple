@@ -34,3 +34,6 @@ Quest turn-in through dialogue delegates to the same village reducer used by the
 
 ## Village atlas, walk cycles and foley
 The Grove journal draws terrain and landmark frames from the loaded scene and previews routes from the same walkability data used by the player. Following the route issues normal steps. Side walk strips preserve frame bounds and foot anchors of the supplied character art. Trade, journal and cloth sounds are short local CC0 recordings from Kenney's RPG pack and use the SFX channel.
+
+## Complete Grove animal locomotion cycles
+Added 4-frame lateral walk strips for all five remaining Grove domestic animals: Miso (cat), Mochi (goat), Cloud (sheep), Sunny (chicken), and Puddle (duck). All strips match the 192×48 layout (48×48 cells), stable foot baseline Y=46, and pass tools/validate-living.py. GroveScene loads and animates them during both horizontal and vertical locomotion, restoring idle textures on step completion.

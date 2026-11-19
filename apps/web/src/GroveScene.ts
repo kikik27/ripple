@@ -4,7 +4,10 @@ import Phaser from "phaser";
 import { grove, livingConfig, pathToApproach, isWalkable, type LivingObject, type LivingStateV1, type Tile } from "./living";
 
 type Asset = { atlas: { key: string; frame: string }; origin: [number, number] };
-const walkSheets:Record<string,string>={npc_elder:"elder",npc_child:"child",npc_engineer:"engineer",npc_recycler:"recycler",npc_farmer:"ari",npc_fisher:"fisher",npc_merchant:"merchant",animal_dog:"biscuit"};
+const walkSheets:Record<string,string>={
+  npc_elder:"elder",npc_child:"child",npc_engineer:"engineer",npc_recycler:"recycler",npc_farmer:"ari",npc_fisher:"fisher",npc_merchant:"merchant",
+  animal_dog:"biscuit",animal_cat:"cat",animal_goat:"goat",animal_sheep:"sheep",animal_chicken:"chicken",animal_duck:"duck"
+};
 export class GroveScene extends Phaser.Scene {
   private player?: Phaser.GameObjects.Sprite;
   private placed = new Map<string, Phaser.GameObjects.Sprite>();
@@ -105,9 +108,10 @@ export class GroveScene extends Phaser.Scene {
       const dx=step[0]-route.tile[0],dy=step[1]-route.tile[1];
       this.face(id,dx,dy);
       const animal=id.startsWith("animal_"), flutter=id.endsWith("butterfly") || id.endsWith("bird");
-      const stride=dx && walkSheets[id] && walkSheets[id]+"-walk";
+      const stride=(dx || (animal && dy)) && walkSheets[id] && walkSheets[id]+"-walk";
       if(stride){
-        sprite.play(stride).setFlipX(dx<0);
+        if(dx) sprite.setFlipX(dx<0);
+        sprite.play(stride);
       }else if (flutter && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
         this.tweens.add({targets:sprite,angle:5,duration:140,yoyo:true,repeat:1,onComplete:()=>sprite.setAngle(0)});
       }
@@ -121,7 +125,8 @@ export class GroveScene extends Phaser.Scene {
     if (!sprite) return;
     sprite.anims.stop();
     if (id.startsWith("animal_")) {
-      if(id==="animal_dog")sprite.setTexture("living","lw_animal_dog");
+      const living="lw_"+id;
+      if(this.textures.get("living").has(living)) sprite.setTexture("living",living);
       if(dx)sprite.setFlipX(dx<0);return;
     }
     const side=Math.abs(dx)>Math.abs(dy);

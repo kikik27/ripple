@@ -33,7 +33,7 @@
   "missing": [
     "Lofi gather, craft, water and interact sequences",
     "NPC north/south stride cycles and work cycles",
-    "Animal eating and play cycles, vertical dog gait, other animal gait cycles"
+    "Vertical animal gait, ambient bird/chick/duckling gait cycles"
   ],
   "groveSideWalk": {
     "actors": [
@@ -44,7 +44,12 @@
       "ari",
       "fisher",
       "merchant",
-      "biscuit"
+      "biscuit",
+      "cat",
+      "goat",
+      "sheep",
+      "chicken",
+      "duck"
     ],
     "cell": [
       48,

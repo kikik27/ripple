@@ -111,3 +111,10 @@ The backpack map renders canonical terrain, landmark footprints and an actual wa
 Seven villagers and Biscuit have new four-frame lateral strides. Stable foot anchors, unique frames and sheet dimensions pass tools/validate-living.py. The downloaded book, cloth and coin sounds all have valid Ogg durations. Audio quality on physical speakers has not been evaluated. North/south stride art and species-specific care cycles remain outstanding.
 
 Production build, core replay tests, content/asset validators, living state and opening image comparison passed. Chromium walkthrough of the map and market approach passed at 1280×720, 1920×1080, 390×844 and 844×390.
+
+## Grove animal walk cycles increment
+
+- Added 4-frame lateral walk strips for all five remaining Grove domestic animals: Miso (`cat-walk.png`), Mochi (`goat-walk.png`), Cloud (`sheep-walk.png`), Sunny (`chicken-walk.png`), and Puddle (`duck-walk.png`). All 13 walk sheets (7 villagers + 6 animals) use 48×48 px frame cells with unified foot anchors passing `tools/validate-living.py`.
+- Updated `GroveScene.ts` to preload, generate animations, and animate animal movement across cardinal directions, returning cleanly to idle poses.
+- `pnpm test`, `python tools/validate-living.py`, and `pnpm build` passed without warnings or errors.
+- Production Chromium QA walkthrough (`node tools/qa-rpg.mjs atlas`) verified route pathing, animal locomotion, and destination interactions across 1280×720, 1920×1080, 390×844, and 844×390 viewports.
