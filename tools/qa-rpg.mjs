@@ -25,7 +25,7 @@ function call(method,params={},sessionId=session){
 }
 const delay=ms=>new Promise(ok=>setTimeout(ok,ms));
 const evaluate=async expression=>(await call("Runtime.evaluate",{expression,returnByValue:true})).result.value;
-async function until(expr){for(let n=0;n<100;n++){if(await evaluate("Boolean("+expr+")"))return;await delay(100)}throw Error(expr)}
+async function until(expr,attempts=120){for(let n=0;n<attempts;n++){if(await evaluate("Boolean("+expr+")"))return;await delay(100)}throw Error(expr+" | "+await evaluate("document.body.innerText.slice(0,500)")+" | "+exceptions.join(", "))}
 const evidence="docs/qa/rpg/current";mkdirSync(evidence,{recursive:true});
 async function shot(name){const {data}=await call("Page.captureScreenshot");writeFileSync(evidence+"/"+label+"-"+name+".png",Buffer.from(data,"base64"))}
 try{
@@ -36,7 +36,9 @@ try{
  await call("Emulation.setDeviceMetricsOverride",{width,height,mobile:width<900,deviceScaleFactor:1});
  await call("Emulation.setTouchEmulationEnabled",{enabled:width<900});
  await call("Page.navigate",{url:process.env.RIPPLE_URL||"http://127.0.0.1:4186"});
- await until("document.querySelector('.hero .primary') && document.querySelector('canvas')");
+ await until("document.querySelector('.hero .primary') && document.querySelector('canvas')",900);
+ const cacheCount=(await call("Runtime.evaluate",{expression:"(async()=>{const names=await caches.keys();const art=names.find(n=>n.startsWith('ripple-art-'));return art?(await (await caches.open(art)).keys()).length:0})()",awaitPromise:true,returnByValue:true})).result.value;
+ assert(cacheCount>400,"Expected local game art pack");
  await evaluate("localStorage.clear(); document.querySelector('main').requestFullscreen=()=>Promise.reject()");
  await until("!document.querySelector('.haven-loading')"); await delay(200);await shot(width+"-title");
  if(label==="highlands"){
@@ -116,10 +118,17 @@ try{
  }
  for(const key of (touch?["e"]:["d","d","e"])){await call("Input.dispatchKeyEvent",{type:"keyDown",key});await call("Input.dispatchKeyEvent",{type:"keyUp",key});await delay(165)}
  await until("document.querySelector('.haven-board')");
+ const enterWaygate=async()=>{
+   await until("document.querySelector('.camp-objective')?.textContent.includes('East waygate')");
+   for(const key of ["s","d","d","e"]){
+     await call("Input.dispatchKeyEvent",{type:"keyDown",key});
+     await call("Input.dispatchKeyEvent",{type:"keyUp",key});await delay(170);
+   }
+ };
  if(label==="mission"){
    const bridge=width===1280 || width===390;
    const route=JSON.parse(readFileSync("fixtures/"+(bridge?"replay-example":"replay-detour")+".json","utf8")).actions;
-   await evaluate("document.querySelector('.haven-board .primary').click()");
+   await evaluate("document.querySelector('.haven-board .primary').click()");await enterWaygate();
    await until("document.querySelector('.campaign-card .primary')");
    await until("document.querySelector('#game-canvas canvas')");
    await delay(650);await shot(width+"-briefing");
@@ -172,17 +181,28 @@ try{
  const issuer=width<900?"farmer":"elder";
  const socialKey="social.komodoGrove.v1:guest";
  if(label==="quest"){
-   const save={version:1,position:issuer==="elder"?[17,15]:[32,16],talked:[issuer,"engineer","child"],harvestCount:1,quests:{[issuer==="elder"?"greet_three":"first_harvest"]:"active"}};
+   const save={version:1,position:issuer==="elder"?[17,15]:[32,16],talked:[issuer,"engineer","child"],harvestCount:1,quests:{}};
    await evaluate("localStorage.setItem("+JSON.stringify(socialKey)+","+JSON.stringify(JSON.stringify(save))+")");
  }
- await evaluate("document.querySelector('.haven-board .primary:nth-of-type(2)').click()");
+ await evaluate("document.querySelector('.haven-board .primary:nth-of-type(2)').click()");await enterWaygate();
  await until("document.querySelector('#grove-canvas canvas') && !document.querySelector('.grove-loading')");
  if(label==="quest"){
-   await call("Input.dispatchKeyEvent",{type:"keyDown",key:"e"});await call("Input.dispatchKeyEvent",{type:"keyUp",key:"e"});
-   await delay(100);
-   await evaluate("Array.from(document.querySelectorAll('[aria-label=Nearby] button')).find(b=>b.textContent==="+JSON.stringify(issuer==="elder"?"Elder Toma":"Ari")+")?.click()");
-   await until("document.querySelector('.story-box')");
+   const talk=async()=>{
+     await evaluate("document.querySelector('.grove-bag').click()");
+     await evaluate("Array.from(document.querySelectorAll('.book-tabs button')).find(b=>b.textContent==='Map').click()");
+     await evaluate("(()=>{const s=document.querySelector('.village-atlas select');s.value="+JSON.stringify("npc_"+issuer)+";s.dispatchEvent(new Event('change',{bubbles:true}))})()");
+     await evaluate("document.querySelector('.village-atlas button').click()");
+     await until("document.querySelector('.grove-actions button')");
+     await evaluate("Array.from(document.querySelectorAll('.grove-actions button')).find(b=>b.textContent==='talk').click()");
    await until("document.querySelector('.quest-slip button')");
+   };
+   const choice=async text=>evaluate("Array.from(document.querySelectorAll('.quest-slip button')).find(b=>b.textContent==="+JSON.stringify(text)+").click()");
+   await talk();await choice("Decline");await until("!document.querySelector('.story-box')");
+   assert.equal(Object.keys(JSON.parse(await evaluate("localStorage.getItem("+JSON.stringify(socialKey)+")")).quests).length,0);
+   await talk();await choice("Accept quest");await until("document.querySelector('.grove-quest-hud small')");
+   await shot(width+"-tracked");
+   await talk();await choice("Later");await until("!document.querySelector('.story-box')");
+   await talk();
    await shot(width+"-reward");
    await evaluate("document.querySelector('.quest-slip button').click()");
    const saved=JSON.parse(await evaluate("localStorage.getItem("+JSON.stringify(socialKey)+")"));
@@ -201,13 +221,20 @@ try{
    assert(await evaluate("!!document.querySelector('.grove-actions button')"));
    const stops=width===1280?["fishing_dock","plot_0_0","pump","camp","world_board","water_lab","nursery_gate"]:["water_lab","nursery_gate"];
      for(const destination of stops){
-       await evaluate("document.querySelector('.journal>button').click()");
+       await evaluate("document.querySelector('.journal>button')?.click()");
        await evaluate("document.querySelector('.grove-bag').click()");
        await until("document.querySelector('.village-atlas select')");
        await evaluate("(()=>{const select=document.querySelector('.village-atlas select');select.value="+JSON.stringify(destination)+";select.dispatchEvent(new Event('change',{bubbles:true}))})()");
        const destinationName=await evaluate("document.querySelector('.village-atlas select').selectedOptions[0].textContent");
        await evaluate("document.querySelector('.village-atlas button').click()");
        await until("document.querySelector('.grove-target h2')?.textContent==="+JSON.stringify(destinationName));
+       if(destination==="fishing_dock"){
+         const reel=()=>evaluate("document.querySelector('.fishing-pool button').click()");
+         await reel();await reel();await until("document.querySelector('.fishing-pool[data-phase=miss]')");
+         await reel();await until("document.querySelector('.fishing-pool[data-phase=bite]')");await reel();
+         const caught=JSON.parse(await evaluate("localStorage.getItem("+JSON.stringify(socialKey)+")"));
+         assert.equal(caught.fishDay,caught.day);
+       }
        if(destination==="water_lab")await evaluate("document.querySelector('.grove-actions button').click()");
      }
    await until("document.querySelector('.nursery-gate')");
@@ -220,7 +247,7 @@ try{
    await until("document.querySelector('.grove-target')?.textContent.includes('All three beds have water')");
    assert.equal(JSON.parse(await evaluate("localStorage.getItem("+JSON.stringify(socialKey)+")")).nursery,"flowing");
    assert(await evaluate("document.querySelector('.mission-ribbon')?.textContent.includes('Water for Eastbank')"));
-   await evaluate("document.querySelector('.journal>button').click()");
+   await evaluate("document.querySelector('.journal>button')?.click()");
    await shot(width+"-eastbank");
    await evaluate("document.querySelector('.grove-title button').click()");
    await evaluate("Array.from(document.querySelectorAll('.journal button')).find(b=>b.textContent==='Return to Haven').click()");

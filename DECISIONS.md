@@ -46,3 +46,41 @@ The social map extends eastward from Market Lane with an orchard, a stream, two 
 Successful expedition extraction returns Lofi to the World Board approach and shows a dismissible badge for 6.5 seconds. Store the accepted actions from the last successful Operation Komodo run locally and validate them through the reducer when restoring its board checkmark. This marker is local gameplay history. Social checkmarks read the Grove save and the highland journal. Optional village activities keep the player at their current location.
 
 The broken and repaired bridge props span the river above its water layer. Draw the riverbank edges narrowly enough that the walkable approach tiles have dry ground. Use the deck as the visual anchor. The cinematic fixture still controls the opening frame. After handoff the east road uses two adjacent walkable rows with its props moved to the shoulders.
+
+## 2026-11-19 — RPG Interactive Systems, Asset Preload Cache, Living World FX, and Hover Indicators
+
+1. **Asset Preload and Unified Loading Transitions**:
+   - `AssetBoot.tsx` indexes and downloads all pack assets to CacheStorage via ServiceWorker (`ripple-art-<packHash>`) on startup, preventing missing textures during gameplay.
+   - Dedicated `LoadScreen` overlay displays destination title, emblem, and animated spinner on all map/scene handoffs (Himalayan Haven, Komodo Grove, Operation Komodo), ensuring maps are never displayed until fully preloaded and postrendered.
+
+2. **Interactive Building Hover Indicators (`BuildingPill`)**:
+   - Implemented a unified floating badge component (`BuildingPill.tsx`) calculating screen coordinates from active Phaser cameras.
+   - Triggers when Lofi approaches interactable buildings, structures, NPCs, crops, or resource nodes across Komodo Grove, Himalayan Haven, and Operation Komodo. Shows key prompt `[E]`, entity title, and primary function.
+
+3. **RPG Quest Tracker and Dialogue Accept/Decline**:
+   - Replaced hidden inventory quest navigation with an on-screen RPG Quest HUD tracker displaying active quests, objectives, progress, and ready-to-claim highlights.
+   - NPC quest encounters (Elder Toma, Ari) require explicit player decision to `Accept Quest` or `Decline`.
+   - Accepting a quest triggers a parabolic multi-star sparkle trail (`questSpark.ts`) from the NPC/source to the on-screen Quest HUD, pulsing upon arrival.
+
+4. **Living World Ambient FX**:
+   - Expanded river life in Komodo Grove and Operation Komodo with leaping fish, emergence and splashdown particle animations (`fx_water_splash`), and ambient current ripples.
+   - Enhanced campfires in Haven and Grove with animated flame scale/alpha tweens, rising smoke puffs (`fx_smoke`), and floating ember sparks (`fx_sparkle`).
+   - Integrated hammer strike dust and restoration aura FX on building, repairing, and water connectivity.
+
+5. **Waygate / Portal Fast Travel**:
+   - Connected Himalayan Haven East Waygate and Komodo Grove Wayfarer Waygate with glowing portal rings (`fx_interaction_ring`) and journey charting, avoiding immediate unexplained teleportation.
+
+6. **Campfire Particle Color Tuning**:
+   - Diagnosed greenish/cyan particles in campfire animations to un-tinted `fx_sparkle_01` (which defaults to a blue-slate `rgb(41, 56, 97)`) and ground `aurora_pulse_01` particles in `HavenScene`.
+   - Tuned `worldEffects.ts` campfire embers to a warm fire palette (`0xff4400`, `0xff7700`, `0xffaa11`, `0xffcc33`), fire-tinted flame base (`0xffd788`), and soft neutral ash smoke (`0xd0c4b0`).
+
+7. **RPG UI Theme Alignment & Loading Screen Overhaul**:
+   - Replaced generic web progress elements with an authentic pixel-art RPG gauge utilizing `bar_track_empty.png` and `bar_fill_energy.png`.
+   - Upgraded loading presentation with the master panoramic landscape `campaign_komodo_1280x720.png` radial vignette and `ripple_logo_768.png` lockup.
+   - Redesigned `BuildingPill.tsx` into a cozy RPG wooden/parchment signpost badge (`#fbf1dd` parchment, `#57432e` dark timber, `#203651` ink, and `#41655b` teal) with a carved `[E]` button and pointing arrow.
+   - Styled `QuestHUD.tsx` with `/assets/props/notice_board.png`, `COMMUNITY LOG` badge, `TaskTitle` checkmarks, and pulsing ready-to-turn-in gold highlights.
+
+8. **RPG Achievements / Feats System**:
+   - Implemented an offline-first 8-feat progression registry (`achievements.ts`) spanning Haven exploration, Grove community life, and Operation Komodo expeditions.
+   - Created `AchievementsList.tsx` rendered under a new "Feats" tab in the bag journal.
+   - Connected unlock triggers across `HavenView.tsx`, `GroveView.tsx`, and `main.tsx` with instant global `ripple:achievement` event dispatch that displays the RPG mission-ribbon toast banner.

@@ -1,3 +1,4 @@
+import {loadWaterEffects,riverLife,flame} from "./worldEffects";
 import {bindMix,volume} from "./Mixer";
 import { placeLofi } from "./placeLofi";
 import Phaser from "phaser";
@@ -19,7 +20,11 @@ export class GroveScene extends Phaser.Scene {
   constructor(state: LivingStateV1, ready: () => void, select: (objectId: string | null, tile: Tile) => void) {
     super("KomodoGrove"); this.state = state; this.ready = ready; this.select = select;
   }
+  fail=()=>{};
   preload() {
+    this.load.once("loaderror",()=>this.fail());
+    loadWaterEffects(this);
+    this.load.image("waygate","/assets/fx/fx_interaction_ring.png");
     const root = "/assets/living/";
     for(const actor of Object.values(walkSheets))this.load.spritesheet(actor+"-walk",root+"sprites/"+actor+"-walk.png",{frameWidth:48,frameHeight:48});
     this.load.atlas("living", root + "atlases/living.png", root + "atlases/living.json");
@@ -59,8 +64,19 @@ export class GroveScene extends Phaser.Scene {
       const sprite = this.add.sprite(o.tile[0] * 32 + 16, footY, asset.atlas.key, asset.atlas.frame)
         .setOrigin(asset.origin[0], asset.origin[1]).setScale(o.scale * (animalScale[o.animalId ?? ""] ?? propScale[o.asset] ?? 1)).setDepth(footY);
       this.placed.set(o.id, sprite);
+      if(o.asset==="campfire")flame(this,sprite);
       if (o.actions.length) sprite.setInteractive().setData("livingId", o.id);
     }
+    const waygate = this.add.image(19 * 32 + 16, 13 * 32 + 20, "waygate").setDisplaySize(46, 22).setDepth(13 * 32);
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      this.tweens.add({ targets: waygate, alpha: 0.45, duration: 950, yoyo: true, repeat: -1 });
+    }
+    riverLife(this,20*32+8,7*32,()=>!this.locked);
+    riverLife(this,20*32+8,14*32,()=>!this.locked);
+    riverLife(this,20*32+8,19*32,()=>!this.locked);
+    riverLife(this,35*32+16,22*32,()=>!this.locked);
+    riverLife(this,49*32+12,11*32,()=>!this.locked);
+    riverLife(this,52*32+16,19*32,()=>!this.locked);
     const fish=this.placed.get("animal_fish");
     if(fish && !matchMedia("(prefers-reduced-motion: reduce)").matches){
       this.tweens.add({targets:fish,x:fish.x+9,y:fish.y-3,duration:1600,yoyo:true,repeat:-1,ease:"Sine.inOut",onYoyo:()=>fish.setFlipX(true),onRepeat:()=>fish.setFlipX(false)});
@@ -87,6 +103,23 @@ export class GroveScene extends Phaser.Scene {
       this.select(object?.getData("livingId") ?? null, tile);
     });
     this.game.events.once("postrender", this.ready);
+  }
+  private prompt?:Phaser.GameObjects.Text;
+  showBuildingHint(o:LivingObject|undefined,name:string,verb:string){
+    if(!this.player)return;
+    if(!this.prompt)this.prompt=this.add.text(0,0,"",{fontFamily:"Georgia",fontSize:"10px",color:"#fff1d8",backgroundColor:"#294453",padding:{x:4,y:3}}).setOrigin(.5,1).setDepth(3000);
+    const sprite=o && this.placed.get(o.id);
+    this.prompt.setVisible(!!sprite);
+    if(sprite)this.prompt.setText(name+" · "+verb).setPosition(sprite.x,sprite.y-sprite.displayHeight*.84);
+  }
+  screenPointOf(objectId: string): { x: number; y: number } | null {
+    const sprite = this.placed.get(objectId);
+    if (!sprite || !this.game?.canvas) return null;
+    const canvas = this.game.canvas.getBoundingClientRect();
+    const cam = this.cameras.main;
+    const sx = canvas.left + (sprite.x - cam.worldView.x) * canvas.width / cam.worldView.width;
+    const sy = canvas.top + (sprite.y - sprite.displayHeight * 0.85 - cam.worldView.y) * canvas.height / cam.worldView.height;
+    return { x: sx, y: sy };
   }
   private routes = new Map<string,{tile:Tile; goal:Tile; returning:boolean; next:number}>();
   private drawEastbank(){

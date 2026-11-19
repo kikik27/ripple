@@ -107,7 +107,7 @@ export function applyLiving(state: LivingStateV1, id: string, action: LivingActi
     const id = o.npcId!;
     const npc = npcs[id];
     if (!s.talked.includes(id)) s.talked.push(id);
-    if (npc.quest && !s.quests[npc.quest]) s.quests[npc.quest] = "active";
+    if (arg==="accept" && npc.quest && !s.quests[npc.quest]) s.quests[npc.quest] = "active";
     return yes(s, npc.dialogue.join(" "));
   }
   if (action === "trade") {

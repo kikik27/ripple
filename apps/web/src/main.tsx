@@ -1,3 +1,5 @@
+import {AssetBoot,LoadScreen} from "./AssetBoot";
+import {BuildingPill,type BuildingInfo} from "./BuildingPill";
 import {PlayerHUD,BagGrid} from "./GameUI";
 import {Mixer} from "./Mixer";
 import React, { useEffect, useRef, useState } from "react";
@@ -20,6 +22,7 @@ import { HavenView, type HavenHandle } from "./HavenView";
 import { GroveView } from "./GroveView";
 import { hasSeenIntro } from "./haven";
 import { TouchJoystick } from "./TouchJoystick";
+import { unlockAchievement } from "./achievements";
 import operation from "../../../fixtures/operation-komodo.json";
 import "./style.css";
 import "./shell.css";
@@ -29,6 +32,7 @@ const A = "/assets/";
 const campaign = {title:operation.title,notice:operation.fiction_notice,target:operation.target_rp,credit:operation.sponsor_policy.amount};
 function App() {
   const [menu,setMenu] = useState<"bag"|"pause"|null>(null);
+  const [havenReady,setHavenReady]=useState(false),[expReady,setExpReady]=useState(false),[loadError,setLoadError]=useState(false);
   const shellRef = useRef<HTMLElement>(null);
   const newGameDialog = useRef<HTMLDialogElement>(null);
   const requestGameFullscreen = () => {
@@ -57,6 +61,14 @@ function App() {
     const timer=window.setTimeout(()=>setBadge(null),6500);
     return ()=>window.clearTimeout(timer);
   },[badge]);
+  useEffect(() => {
+    const onAch = (e: Event) => {
+      const ach = (e as CustomEvent).detail;
+      if (ach?.title) setBadge({ title: `Feat: ${ach.title}`, detail: ach.desc });
+    };
+    window.addEventListener("ripple:achievement", onAch);
+    return () => window.removeEventListener("ripple:achievement", onAch);
+  }, []);
   const sceneRef = useRef<ExpeditionScene | null>(null),
     havenRef = useRef<HavenHandle | null>(null),
     stateRef = useRef(state),
@@ -107,6 +119,7 @@ function App() {
       if (action.type === "FINISH") {
         try {localStorage.setItem("ripple.komodo.completedReplay.v1",JSON.stringify(actions))}catch{ /* Keep completion for the session. */ }
         stopMoving();setPuzzle(false);setMenu(null);setMissionDone(true);setBadge({title:"Water reaches both homes",detail:`Operation Komodo · ${next.xp} XP · ${next.rp} virtual RP`});
+        unlockAchievement("water_to_homes");
         havenRef.current?.returnToBoard(false);setScreen("camp");
       }
       else if (next.energy === 0) {
@@ -134,7 +147,7 @@ function App() {
   };
   useEffect(() => {
     if (screen !== "game" && screen !== "campaign") return;
-    const scene = new ExpeditionScene(screen==="campaign" ? initialState() : stateRef.current,muted);
+    const scene = new ExpeditionScene(screen==="campaign" ? initialState() : stateRef.current,muted,()=>setExpReady(true),()=>setLoadError(true));
     sceneRef.current = scene;
     const game = new Phaser.Game({
       type: Phaser.AUTO,
@@ -148,14 +161,14 @@ function App() {
       scene: [scene],
     });
     return () => {
-      sceneRef.current = null;
+      setExpReady(false);sceneRef.current = null;
       game.destroy(true);
     };
   }, [screen === "game" || screen === "campaign"]);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
       if (confirmNewGame && e.key === "Escape") { e.preventDefault(); setConfirmNewGame(false); return; }
-      if (screen !== "game") return;
+      if (screen !== "game" || !expReady) return;
       if(e.key==="Escape" && !e.repeat){if(puzzle)setPuzzle(false);else setMenu(menu?null:"pause");return}
       if(!puzzle && e.key.toLowerCase()==="i" && !e.repeat){setMenu(menu?null:"bag");return}
       if(puzzle || menu) return;
@@ -249,6 +262,72 @@ function App() {
     : near(map.well_site) && !state.waterConnected ? (state.wellBuilt?"Open waterworks":"Build well · 1 kit")
     : state.waterConnected && state.position.join()===map.extraction.join() ? "Finish expedition" : "";
   const reachable = pipeReachable(state.pipes);
+  const expPillInfo: BuildingInfo | null = (() => {
+    if (screen !== "game" || !sceneRef.current || puzzle || menu) return null;
+    const n = map.nodes.find(n => near(n.position) && state.stocks[n.id] > 0);
+    if (n) {
+      const pt = sceneRef.current.screenPointOf(n.position);
+      if (!pt) return null;
+      return {
+        name: n.material.toUpperCase() + " Cache",
+        func: `Gather ${n.material} · ${state.stocks[n.id]} remaining`,
+        x: pt.x,
+        y: pt.y - 12
+      };
+    }
+    if (near(map.workshop)) {
+      const pt = sceneRef.current.screenPointOf(map.workshop);
+      if (!pt) return null;
+      return {
+        name: "Depot Workshop",
+        func: state.inventory.kit || state.wellBuilt ? "Well kit crafted" : "Craft Well Kit · 2 Wood, 2 Stone, 1 Metal",
+        x: pt.x,
+        y: pt.y - 12
+      };
+    }
+    if (near(map.bridge)) {
+      const pt = sceneRef.current.screenPointOf(map.bridge);
+      if (!pt) return null;
+      return {
+        name: "Broken River Bridge",
+        func: state.bridgeRepaired ? "River Crossing Repaired" : "Repair Bridge · 2 Extra Wood",
+        x: pt.x,
+        y: pt.y - 12
+      };
+    }
+    if (near(map.well_site)) {
+      const pt = sceneRef.current.screenPointOf(map.well_site);
+      if (!pt) return null;
+      return {
+        name: "Community Well Site",
+        func: state.waterConnected ? "Water Restored & Flowing" : state.wellBuilt ? "Waterworks · Lay pipes to both homes" : "Build Well · 1 Well Kit",
+        x: pt.x,
+        y: pt.y - 12
+      };
+    }
+    const home = map.homes.find(h => near(h));
+    if (home) {
+      const pt = sceneRef.current.screenPointOf(home);
+      if (!pt) return null;
+      return {
+        name: "Village Home",
+        func: state.waterConnected ? "Clean water supplied" : "Drought Cottage · Connect water pipeline",
+        x: pt.x,
+        y: pt.y - 12
+      };
+    }
+    if (state.waterConnected && state.position.join() === map.extraction.join()) {
+      const pt = sceneRef.current.screenPointOf(map.extraction);
+      if (!pt) return null;
+      return {
+        name: "Village Trailhead",
+        func: "Finish Expedition · Record demo outcome",
+        x: pt.x,
+        y: pt.y - 12
+      };
+    }
+    return null;
+  })();
   return (
     <main className={`game-shell screen-${screen}`} ref={shellRef}>
       {screen === "title" && (
@@ -262,9 +341,9 @@ function App() {
           </div>
         </section>
       )}
-      <HavenView onComplete={title=>setBadge({title,detail:"Himalayan Haven"})} missionDone={missionDone} preview={screen==="title"} ref={havenRef} visible={screen === "camp"} muted={muted} player={state} onBoard={() => setScreen("campaign")} onGrove={() => setScreen("grove")} onToggleMuted={() => setMuted(!muted)} />
+      <HavenView onReady={()=>setHavenReady(true)} onError={()=>setLoadError(true)} onComplete={title=>setBadge({title,detail:"Himalayan Haven"})} missionDone={missionDone} preview={screen==="title"} ref={havenRef} visible={screen === "camp"} muted={muted} player={state} onBoard={() => setScreen("campaign")} onGrove={() => setScreen("grove")} onToggleMuted={() => setMuted(!muted)} />
       {badge && (screen==="camp" || screen==="grove") && <aside className="mission-ribbon" role="status"><img src="/assets/branding/ripple_emblem_1024.png" alt=""/><div><small>Mission complete</small><strong>{badge.title}</strong><span>{badge.detail}</span></div><button onClick={()=>setBadge(null)} aria-label="Dismiss mission badge">×</button></aside>}
-      {screen === "grove" && <GroveView onComplete={title=>setBadge({title,detail:"Komodo Grove"})} muted={muted} onMute={() => setMuted(!muted)} onReturn={() => { havenRef.current?.returnToBoard(); setScreen("camp"); }} onBoard={() => { havenRef.current?.returnToBoard(); setScreen("campaign"); }} />}
+      {screen === "grove" && <GroveView onComplete={title=>setBadge({title,detail:"Komodo Grove"})} muted={muted} onMute={() => setMuted(!muted)} onReturn={() => { havenRef.current?.returnToBoard(); setScreen("camp"); }} onBoard={() => { havenRef.current?.returnToBoard(); setScreen("camp"); }} />}
       {(screen==="campaign" || screen==="game") && <div className="exp-map" id="game-canvas" aria-label="Operation Komodo map"/>}
       {screen==="campaign" && <section className="campaign-card embark" aria-label="Expedition briefing">
         <div className="embark-note"><img src="/assets/sprites/aurora_portrait.png" alt="Aurora"/><div>
@@ -278,6 +357,7 @@ function App() {
       </section></div>}
       {screen === "game" && (
         <div className="game-layout">
+          <BuildingPill info={expPillInfo}/>
           <section className="world">
             <div className="touch-controls" aria-label="Touch controls">
               <TouchJoystick onMove={dir => dispatch({ type: "MOVE", dir })} disabled={puzzle || !!menu} />
@@ -378,8 +458,9 @@ function App() {
           </div>
         </div>
       </dialog>}
+      {(!havenReady || loadError || ((screen==="game" || screen==="campaign") && !expReady)) && <LoadScreen place={screen==="game" || screen==="campaign"?"Entering Operation Komodo":"Arriving at Himalayan Haven"} error={loadError}/>}
       <span className="shell-testnet">Sui Testnet · offline fixture · no official affiliation</span>
     </main>
   );
 }
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(<AssetBoot><App /></AssetBoot>);

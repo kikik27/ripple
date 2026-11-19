@@ -1,3 +1,4 @@
+import {loadWaterEffects,riverLife,craftEffectAt,restoreGlowAt} from "./worldEffects";
 import {bindMix,volume} from "./Mixer";
 import { placeLofi } from "./placeLofi";
 import Phaser from "phaser";
@@ -14,13 +15,15 @@ export class ExpeditionScene extends Phaser.Scene {
   private assets: Record<string, Asset> = {};
   private state: State;
   private muted = true;
-  constructor(state: State, muted=true) {
+  constructor(state: State, muted=true,private ready:()=>void,private fail:()=>void) {
 
     super("Expedition");
     this.muted=muted;
     this.state = state;
   }
   preload() {
+    loadWaterEffects(this,false);
+    this.load.once("loaderror",this.fail);
     for (const cat of ["sprites", "props", "icons", "ui", "fx", "puzzle"])
       this.load.atlas(
         cat,
@@ -57,6 +60,9 @@ export class ExpeditionScene extends Phaser.Scene {
   }
   create() {
     bindMix(this,"music_expedition","ambience_river");
+    riverLife(this,map.river_x*32+16,4*32);
+    riverLife(this,map.river_x*32+16,(map.bridge[1]+2)*32);
+    riverLife(this,map.river_x*32+16,15*32);
     this.assets = this.cache.json.get("manifest").assets;
     for (let y = 0; y < map.height; y++)
       for (let x = 0; x < map.width; x++) {
@@ -127,6 +133,7 @@ export class ExpeditionScene extends Phaser.Scene {
     this.cameras.main.startFollow(this.avatar,true,0.16,0.16);
     this.renderState(this.state, false);
     this.setMuted(this.muted);
+    this.game.events.once("postrender",this.ready);
   }
   private sprite(id: string, p: readonly number[]) {
     const a = this.assets[id];
@@ -185,6 +192,13 @@ export class ExpeditionScene extends Phaser.Scene {
       const icon=this.add.image(node.position[0]*32+16,node.position[1]*32+8,"icons","icon_"+node.material).setDepth(1500).setScale(.65);
       this.tweens.add({targets:icon,x:avatar.x,y:avatar.y-20,alpha:.2,duration:280,ease:"Sine.inOut",onComplete:()=>icon.destroy()});
     }
+    if (command.type === "REPAIR_BRIDGE") craftEffectAt(this, map.bridge[0]*32+16, map.bridge[1]*32+16);
+    if (command.type === "CRAFT_WELL") craftEffectAt(this, map.workshop[0]*32+16, map.workshop[1]*32+16);
+    if (command.type === "BUILD_WELL") craftEffectAt(this, map.well_site[0]*32+16, map.well_site[1]*32+16);
+    if (command.type === "CONNECT_WATER") {
+      restoreGlowAt(this, map.well_site[0]*32+16, map.well_site[1]*32+16);
+      map.homes.forEach(p => restoreGlowAt(this, p[0]*32+16, p[1]*32+16));
+    }
     avatar.anims.stop();
     // Authored action frames have 55–60 opaque rows. Idle has 36.
     const poseHeight=action==="BUILD_WELL" || action==="CRAFT_WELL" || action==="REPAIR_BRIDGE" ? 55 : 60;
@@ -211,5 +225,13 @@ export class ExpeditionScene extends Phaser.Scene {
   cue(id: string) {
     if (!this.muted && this.cache.audio.exists(id))
       this.sound.play(id, { volume: volume("sfx") });
+  }
+  screenPointOf(p: readonly number[]): { x: number; y: number } | null {
+    if (!this.game?.canvas) return null;
+    const canvas = this.game.canvas.getBoundingClientRect();
+    const cam = this.cameras.main;
+    const sx = canvas.left + (p[0] * 32 + 16 - cam.worldView.x) * canvas.width / cam.worldView.width;
+    const sy = canvas.top + (p[1] * 32 - cam.worldView.y) * canvas.height / cam.worldView.height;
+    return { x: sx, y: sy };
   }
 }

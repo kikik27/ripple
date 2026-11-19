@@ -16,7 +16,7 @@ test("living rules match the reference route and never produce scored rewards", 
   assert.equal(s.animals.dog.friendship, 13); assert.equal(act(s, "animal_dog", "play").ok, false);
   assert.equal(act(s, "animal_fish", "feed").ok, false);
   assert.equal(act(s, "animal_fish", "observe").ok, true);
-  for (const id of ["npc_elder", "npc_farmer"]) s = act(s, id, "talk").state;
+  for (const id of ["npc_elder", "npc_farmer"]) s = act(s, id, "talk","accept").state;
   assert.equal(claimLiving(s, "greet_three").ok, false);
   s = act(s, "npc_child", "talk").state;
   s = claimLiving(s, "greet_three").state;

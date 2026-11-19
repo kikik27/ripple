@@ -1,3 +1,4 @@
+import {flame} from "./worldEffects";
 import {bindMix,volume} from "./Mixer";
 import { placeLofi } from "./placeLofi";
 import Phaser from "phaser";
@@ -15,7 +16,10 @@ export class HavenScene extends Phaser.Scene {
     this.position = position;
     this.ready = ready;
   }
+  fail=()=>{};
   preload() {
+    this.load.once("loaderror",()=>this.fail());
+    this.load.image("waygate","/assets/fx/fx_interaction_ring.png");
     this.load.image("trail-bird","/assets/living/sprites/lw_animal_bird.png");
     for(const tile of ["snow_0","snow_1","snow_2","snow_rock_0","ice_0","camp_path_0"])this.load.image("trail-"+tile,"/assets/tiles/tile_"+tile+".png");
     this.load.image("terrain", "/assets/cinematic/haven_terrain.png");
@@ -39,6 +43,10 @@ export class HavenScene extends Phaser.Scene {
       this.playLayers.push(this.add.image(px,py,"props",prop.asset)
         .setOrigin(prop.origin[0],prop.origin[1]).setScale(sizes[prop.asset] ?? 1)
         .setDepth(py).setVisible(false));
+      if(prop.asset==="campfire"){
+        const glow=flame(this,this.playLayers[this.playLayers.length-1]);
+        if(glow)this.playLayers.push(glow.setVisible(false));
+      }
     }
     const sheet=this.textures.createCanvas("highland-ground",highlands.width*32,highlands.height*32)!;
     for(let y=0;y<highlands.height;y++)for(let x=0;x<highlands.width;x++){
@@ -86,6 +94,10 @@ export class HavenScene extends Phaser.Scene {
       const foot=y*32+28;
       this.playLayers.push(this.add.image(x*32+16,foot,"props",asset).setOrigin(.5,.97).setScale(scale).setDepth(foot).setVisible(false));
     };
+    const waygate=this.add.image(14*32+16,8*32+19,"waygate").setDisplaySize(46,22).setDepth(1).setVisible(false);
+    this.playLayers.push(waygate);
+    if(!matchMedia("(prefers-reduced-motion: reduce)").matches)this.tweens.add({targets:waygate,alpha:.45,duration:900,yoyo:true,repeat:-1});
+    propAt(14,7,"lamp",.57);
     for(const [x,y] of trailTrees)propAt(x,y,"pine",1);
     for(const [x,y] of [[11,13],[13,12],[14,14],[16,13],[18,14],[19,13],[18,3]])propAt(x,y,"pine",.9);
     propAt(19,10,"flags",.72);
@@ -162,5 +174,13 @@ export class HavenScene extends Phaser.Scene {
       this.sound.stopByKey("haven-music");
       this.sound.stopByKey("haven-ambience");
     }
+  }
+  screenPointOf(tile: readonly number[]): { x: number; y: number } | null {
+    if (!this.game?.canvas) return null;
+    const canvas = this.game.canvas.getBoundingClientRect();
+    const cam = this.cameras.main;
+    const sx = canvas.left + (tile[0] * haven.tileSize + 16 - cam.worldView.x) * canvas.width / cam.worldView.width;
+    const sy = canvas.top + (tile[1] * haven.tileSize - cam.worldView.y) * canvas.height / cam.worldView.height;
+    return { x: sx, y: sy };
   }
 }

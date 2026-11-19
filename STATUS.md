@@ -1,5 +1,17 @@
 # Ripple implementation status
 
+## v1.4 RPG Polish, Asset Preloading, Living FX & Hover Indicators — 2026-11-19
+
+- **Asset Cache & Unified Loading**: Implemented `AssetBoot.tsx` and `art-worker.js` with CacheStorage preloading for over 400 assets. Created a styled `LoadScreen` overlay that displays during asset prep and every scene transition (Himalayan Haven, Komodo Grove, Operation Komodo), guaranteeing zero missing textures or half-rendered scenes. Features authentic RPG textured gauge (`bar_track_empty.png` + `bar_fill_energy.png`), master panoramic artwork (`campaign_komodo_1280x720.png`), and official Ripple wordmark.
+- **Campfire Particle Color Tuning**: Diagnosed and eliminated cyan/green particles in fire animations. Tuned `worldEffects.ts` to emit warm fire embers (`#ff4400`, `#ff7700`, `#ffaa11`, `#ffcc33`), a warm fire tint (`#ffd788`) on flame sprites, and neutral ash smoke (`#d0c4b0`). Removed cyan `aurora_pulse_01` from ground fire in `HavenScene.ts`.
+- **Interactive Building Signpost Hover Indicators (`BuildingPill.tsx`)**: Upgraded hover pills into an authentic cozy RPG signpost badge with dark timber border (`#57432e`), parchment fill (`#fbf1dd`), carved `[E]` key prompt, downward indicator arrow, and floating animation.
+- **On-Screen RPG Quest Tracker HUD (`QuestHUD.tsx`)**: Redesigned quest tracking with an authentic community notice-board card (`/assets/props/notice_board.png`), `COMMUNITY LOG` badge, checkmark-based `TaskTitle`, and pulsing ready-to-claim highlights. Preserved backward-compatible classes and selectors for automated test runners.
+- **NPC Quest Dialogue & Particle Sparkle Trajectory**: Configured quest proposals with explicit Accept / Decline choices. Accepting a quest shoots a multi-star sparkle trail (`questSpark.ts`) from the NPC to the on-screen Quest HUD with an arrival pulse animation.
+- **RPG Achievements / Feats System (`achievements.ts`, `AchievementsList.tsx`)**: Implemented an offline-first 8-feat progression tracking system spanning Haven, Grove, and Operation Komodo. Features instant toast banner notifications on unlock and an interactive "Feats" browser tab inside the bag journal.
+- **Living World FX**: Added multi-point river fish jumping with emergence/splashdown water particle animations (`fx_water_splash`) and current flow ripples. Campfires now feature animated flame scaling, rising smoke puffs (`fx_smoke`), and floating ember sparks (`fx_sparkle`). Added hammer strikes and restoration glow animations during construction and water connectivity.
+- **Waygate / Portal System**: Connected Himalayan Haven East Waygate and Komodo Grove Waygate with glowing portal rings and travel modals, removing disorienting instant teleportation.
+- **Tests & Builds**: `pnpm typecheck`: PASS (0 errors). `pnpm test`: PASS (100% test suite passing, including content, haven, living, input, and opening visual regression MAE 0.000000/255). `pnpm build`: PASS (Vite production bundle generated cleanly in 10.27s).
+
 ## v1.2 fullscreen shell increment — 2026-11-19
 
 - Inspected the bundled v1.2 specification, backlog, reference, current source, and existing uncommitted work. The first game-facing unblocked ticket is FS01; B01 remains open for clean-install and CI verification. This increment changes `apps/web/src/main.tsx`, `apps/web/src/shell.css`, and `apps/web/index.html`.
