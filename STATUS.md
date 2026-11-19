@@ -1,5 +1,20 @@
 # Ripple implementation status
 
+## v1.6 Title Screen UI Centering & Pixel-Art Polish — 2026-11-20
+
+- **Fixed Title Screen Centering**:
+  - Identified root cause of the shifted layout: `<div className="title-wallet-badge">` had been inserted as a direct child of flexbox container `<section className="hero">`, causing flexbox to lay out the badge and title box as two columns side-by-side.
+  - Relocated `.title-wallet-badge` outside `.hero` directly under `.game-shell`.
+  - Re-centered the Ripple title logo and action buttons ("New Game", "Continue", "Sound off") perfectly in the viewport with zero drift.
+- **Top-Right Status Badge & Asset Icons**:
+  - Positioned `.title-wallet-badge` cleanly at the top-right corner of the title screen (`position: absolute; top: max(16px, env(safe-area-inset-top)); right: max(16px, env(safe-area-inset-right)); z-index: 20;`).
+  - Replaced temporary icons with official bundled pixel-art assets: `/assets/icons/icon_coin.png` for wallet/ledger and `/assets/ui/button_secondary_idle.png` for the RPG pill frame.
+  - Updated all wallet modal headers, option panels, and in-game wallet navigation pills to consistently use bundled RPG assets.
+- **Verification & Test Suite**:
+  - `pnpm typecheck`: PASS (0 errors across `packages/game-core`, `apps/web`, `apps/api`).
+  - `pnpm test`: PASS (100% test suite passing, including visual regression MAE 0.000000/255 and 8 Move unit tests).
+  - `pnpm build`: PASS (Vite production bundle generated cleanly in 12.96s).
+
 ## v1.5 Sui Move Contracts (M3), Impact Board & Wallet (M4), and Aurora AI Pipeline (M5) — 2026-11-20
 
 - **Sui Move Smart Contracts (Milestone M3: B09, B10, B11, B12)**:
