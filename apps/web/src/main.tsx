@@ -346,20 +346,21 @@ function App() {
   return (
     <main className={`game-shell screen-${screen}`} ref={shellRef}>
       {screen === "title" && (
+        <div
+          className={`title-wallet-badge ${walletAddress ? "is-connected" : "is-guest"}`}
+          onClick={() => setShowStartingWalletModal(true)}
+          role="button"
+          tabIndex={0}
+          aria-label={walletAddress ? `Connected as ${walletAddress}` : "Connect Sui Wallet"}
+        >
+          <img src="/assets/icons/icon_coin.png" alt="" />
+          <span>{walletAddress ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : "Connect Wallet"}</span>
+          <small>{walletAddress ? "Sui Testnet" : "Optional"}</small>
+        </div>
+      )}
+      {screen === "title" && (
         <section className="hero">
           <span className="title-weather" aria-hidden="true"/>
-          <div
-            className={`title-wallet-badge ${walletAddress ? "is-connected" : "is-guest"}`}
-            onClick={() => setShowStartingWalletModal(true)}
-            role="button"
-            tabIndex={0}
-            aria-label={walletAddress ? `Connected as ${walletAddress}` : "Connect Sui Wallet"}
-          >
-            <img src="/assets/icons/icon_water_canister.png" alt="" />
-            <span>{walletAddress ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : "Connect Wallet"}</span>
-            <small>{walletAddress ? "Sui Testnet" : "Optional"}</small>
-          </div>
-
           <div>
             <h1><img className="title-logo" src={A + "branding/ripple_logo.png"} alt="Ripple" /></h1>
             <div className="title-actions">
@@ -508,7 +509,7 @@ function App() {
           tabIndex={0}
           title={walletAddress ? `Sui Testnet: ${walletAddress}` : "Guest Mode · Click to link Sui wallet"}
         >
-          <img src="/assets/icons/icon_water_canister.png" alt="" />
+          <img src="/assets/icons/icon_coin.png" alt="" />
           <span>{walletAddress ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : "Guest"}</span>
           <small>{walletAddress ? "Testnet" : "Ledger"}</small>
         </div>

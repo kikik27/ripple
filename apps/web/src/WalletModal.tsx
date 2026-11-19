@@ -200,7 +200,7 @@ export function WalletModal({
         <header className="quest-board-header">
           <img
             className="ledger-logo-img"
-            src={isStartingFlow ? "/assets/branding/ripple_emblem_1024.png" : "/assets/icons/icon_water_canister.png"}
+            src={isStartingFlow ? "/assets/branding/ripple_emblem_1024.png" : "/assets/icons/icon_coin.png"}
             alt=""
             aria-hidden="true"
           />
@@ -217,7 +217,7 @@ export function WalletModal({
               aria-pressed={tab === "claim"}
               onClick={() => setTab("claim")}
             >
-              <img src="/assets/icons/icon_water_canister.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 5 }} />
+              <img src="/assets/icons/icon_coin.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 5 }} />
               Passport & Claim
             </button>
             <button
@@ -241,7 +241,7 @@ export function WalletModal({
             <div className={`wallet-card-panel wallet-card-option ${walletAddress ? "is-connected-opt" : ""}`}>
               <div className="wallet-card-header">
                 <span className="wallet-card-tag">
-                  <img src="/assets/icons/icon_water_canister.png" alt="" />
+                  <img src="/assets/icons/icon_coin.png" alt="" />
                   Option A · Sui Testnet Passport (Recommended)
                 </span>
                 <span style={{ font: "bold 10px system-ui", background: "#396b5e", color: "white", padding: "1px 5px", border: "1px solid #23483f" }}>
@@ -282,7 +282,7 @@ export function WalletModal({
                           disabled={isConnecting}
                           style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
                         >
-                          <img src="/assets/icons/icon_water_canister.png" alt="" style={{ width: 14, height: 14 }} />
+                          <img src="/assets/icons/icon_coin.png" alt="" style={{ width: 14, height: 14 }} />
                           {isConnecting ? "Connecting..." : `Connect ${w.name} Extension`}
                         </button>
                       ))}
@@ -345,7 +345,7 @@ export function WalletModal({
             <div className="wallet-card-panel">
               <div className="wallet-card-header">
                 <span className="wallet-card-tag">
-                  <img src="/assets/icons/icon_water_canister.png" alt="" />
+                  <img src="/assets/icons/icon_coin.png" alt="" />
                   Sui Wallet Connection
                 </span>
                 <span style={{ font: "bold 10px system-ui", background: "#396b5e", color: "white", padding: "1px 5px", border: "1px solid #23483f" }}>
@@ -376,7 +376,7 @@ export function WalletModal({
                     disabled={isConnecting}
                     style={{ width: "100%" }}
                   >
-                    <img src="/assets/icons/icon_water_canister.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 6 }} />
+                    <img src="/assets/icons/icon_coin.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 6 }} />
                     {isConnecting ? "Connecting to Extension..." : "Connect Sui Wallet Extension"}
                   </button>
                 </div>
