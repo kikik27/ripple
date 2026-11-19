@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "animals": {
+    "goat": {
+      "name": "Mochi",
+      "species": "goat",
+      "food": "hay",
+      "actions": [
+        "observe",
+        "feed",
+        "play"
+      ],
+      "feedGain": 8,
+      "playGain": 5,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "gentle_pet",
+      "description": "Mochi is a goat living in Komodo Grove."
+    },
+    "sheep": {
+      "name": "Cloud",
+      "species": "sheep",
+      "food": "hay",
+      "actions": [
+        "observe",
+        "feed",
+        "play"
+      ],
+      "feedGain": 8,
+      "playGain": 5,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "gentle_pet",
+      "description": "Cloud is a sheep living in Komodo Grove."
+    },
+    "dog": {
+      "name": "Biscuit",
+      "species": "dog",
+      "food": "kibble",
+      "actions": [
+        "observe",
+        "feed",
+        "play"
+      ],
+      "feedGain": 8,
+      "playGain": 5,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "fetch",
+      "description": "Biscuit is a dog living in Komodo Grove."
+    },
+    "cat": {
+      "name": "Miso",
+      "species": "cat",
+      "food": "kibble",
+      "actions": [
+        "observe",
+        "feed",
+        "play"
+      ],
+      "feedGain": 8,
+      "playGain": 5,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "chase_toy",
+      "description": "Miso is a cat living in Komodo Grove."
+    },
+    "chicken": {
+      "name": "Sunny",
+      "species": "chicken",
+      "food": "seed",
+      "actions": [
+        "observe",
+        "feed",
+        "play"
+      ],
+      "feedGain": 8,
+      "playGain": 5,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "follow",
+      "description": "Sunny is a chicken living in Komodo Grove."
+    },
+    "duck": {
+      "name": "Puddle",
+      "species": "duck",
+      "food": "seed",
+      "actions": [
+        "observe",
+        "feed",
+        "play"
+      ],
+      "feedGain": 8,
+      "playGain": 5,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "waddle",
+      "description": "Puddle is a duck living in Komodo Grove."
+    },
+    "bird": {
+      "name": "Sky",
+      "species": "bird",
+      "food": null,
+      "actions": [
+        "observe"
+      ],
+      "feedGain": 0,
+      "playGain": 0,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "observe",
+      "description": "Sky is a bird living in Komodo Grove."
+    },
+    "chick": {
+      "name": "Pip",
+      "species": "chick",
+      "food": null,
+      "actions": [
+        "observe"
+      ],
+      "feedGain": 0,
+      "playGain": 0,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "observe",
+      "description": "Pip is a chick living in Komodo Grove."
+    },
+    "duckling": {
+      "name": "Dew",
+      "species": "duckling",
+      "food": null,
+      "actions": [
+        "observe"
+      ],
+      "feedGain": 0,
+      "playGain": 0,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "observe",
+      "description": "Dew is a duckling living in Komodo Grove."
+    },
+    "fish": {
+      "name": "Silverfin",
+      "species": "fish",
+      "food": null,
+      "actions": [
+        "observe"
+      ],
+      "feedGain": 0,
+      "playGain": 0,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "observe",
+      "description": "Silverfin is a fish living in Komodo Grove."
+    },
+    "butterfly": {
+      "name": "Flutter",
+      "species": "butterfly",
+      "food": null,
+      "actions": [
+        "observe"
+      ],
+      "feedGain": 0,
+      "playGain": 0,
+      "maxFriendship": 100,
+      "dailyFeedLimit": 1,
+      "dailyPlayLimit": 1,
+      "playStyle": "observe",
+      "description": "Flutter is a butterfly living in Komodo Grove."
+    }
+  },
+  "npcs": {
+    "elder": {
+      "name": "Elder Toma",
+      "role": "village guide",
+      "dialogue": [
+        "Welcome to Komodo Grove, little explorer.",
+        "A thriving village needs care, not only construction. Meet the animals and help the neighbors."
+      ],
+      "quest": "greet_three"
+    },
+    "engineer": {
+      "name": "Piko",
+      "role": "engineer",
+      "dialogue": [
+        "Our water lab is running again!",
+        "Keep the pump clean and refill your watering can at the garden."
+      ]
+    },
+    "child": {
+      "name": "Nia",
+      "role": "animal friend",
+      "dialogue": [
+        "Biscuit loves to play!",
+        "Try feeding the animals their favorite food. You can play once per day."
+      ]
+    },
+    "recycler": {
+      "name": "Rumi",
+      "role": "recycler",
+      "dialogue": [
+        "Even small things can have a second life.",
+        "The recycling station is for learning; it does not create scored expedition resources."
+      ]
+    },
+    "farmer": {
+      "name": "Ari",
+      "role": "farmer",
+      "dialogue": [
+        "Water crops once a day. A new day starts when you rest.",
+        "Harvest ripe produce and trade it for animal supplies."
+      ],
+      "quest": "first_harvest"
+    },
+    "fisher": {
+      "name": "Banyu",
+      "role": "fisher",
+      "dialogue": [
+        "The river is full of life.",
+        "Try fishing at the marked dock. One catch per day keeps the river healthy."
+      ]
+    },
+    "merchant": {
+      "name": "Mira",
+      "role": "merchant",
+      "dialogue": [
+        "Welcome! Trade one produce for two animal food items.",
+        "No real money needed. This is a little village exchange."
+      ],
+      "trade": true
+    }
+  },
+  "quests": {
+    "greet_three": {
+      "title": "New neighbors",
+      "objective": "Talk to three unique NPCs",
+      "reward": {
+        "seed": 2
+      }
+    },
+    "first_harvest": {
+      "title": "Garden helper",
+      "objective": "Harvest a ripe crop",
+      "reward": {
+        "hay": 2
+      }
+    }
+  },
+  "initialInventory": {
+    "hay": 3,
+    "kibble": 3,
+    "seed": 3,
+    "produce": 0,
+    "fish": 0,
+    "water": 3
+  },
+  "rules": {
+    "inventoryCapPerItem": 99,
+    "friendshipCap": 100,
+    "dailyReset": "rest_confirmed",
+    "socialOnly": true,
+    "tradeCost": {
+      "produce": 1
+    },
+    "tradeGain": 2,
+    "waterCapacity": 3,
+    "cropStages": [
+      "seed",
+      "sprout",
+      "growing",
+      "flower",
+      "ripe"
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+html,body,#root{width:100%;height:100%;overflow:hidden}
+.game-shell{position:fixed;inset:0;width:100%;height:100%;height:100dvh;min-height:0;display:block;overflow:hidden;background:#142c40;color:#f3eadc;isolation:isolate}
+.game-shell button{min-width:44px;min-height:44px}
+.shell-testnet{position:absolute;left:max(12px,env(safe-area-inset-left));bottom:max(8px,env(safe-area-inset-bottom));z-index:4;font-size:11px;color:white;background:#142c40b8;border-radius:6px;padding:4px 8px;pointer-events:none}
+.game-shell .hero{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:max(20px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) max(32px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left));display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#142c40ed 0%,#142c40c4 42%,#142c4033 100%),url('/assets/branding/campaign_komodo_1280x720.png') center/cover no-repeat}
+.game-shell .hero>div{position:relative;z-index:1;width:min(480px,calc(100vw - 40px));max-height:100%;overflow:auto;text-align:center}
+.game-shell .hero h1{font-size:clamp(30px,5vw,64px)}
+.game-shell .hero p{color:#f3eadc}
+.game-shell .hero .eyebrow{color:#a5e7e5}
+.game-shell .hero-art{display:none}
+.game-shell .title-logo{display:block;width:min(300px,60vw);max-height:100px;object-fit:contain;margin:20px auto 0}
+.game-shell .title-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.game-shell .title-actions button{border:1px solid #a5e7e5;border-radius:12px;padding:10px 18px;background:#f3eadc;color:#142c40;font-weight:800}
+.game-shell .title-actions .primary{background:#259d8c;color:white}
+.game-shell .haven-shell,.game-shell .grove-shell{position:absolute;inset:0;width:100%;height:100%;margin:0;overflow:hidden}
+.game-shell .haven-hidden{visibility:hidden;pointer-events:none;left:0;top:0}
+.game-shell .haven-stage{position:absolute;top:50%;left:50%;width:min(100vw,177.7778dvh);height:min(100dvh,56.25vw);max-width:none;margin:0;transform:translate(-50%,-50%);aspect-ratio:16/9;border-radius:0;box-shadow:none}
+.game-shell .haven-video-overlay{background:transparent}
+.game-shell .haven-hud{position:absolute;top:max(12px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));z-index:3;width:min(320px,calc(100% - 24px));margin:0;background:#f3eadce8;color:#142c40}
+.game-shell .haven-actions{position:absolute;right:max(12px,env(safe-area-inset-right));bottom:max(36px,env(safe-area-inset-bottom));z-index:3;width:auto;background:#142c40a8;border-radius:14px}
+.game-shell .haven-board{position:absolute;left:50%;top:50%;z-index:5;transform:translate(-50%,-50%);max-height:90%;overflow:auto;margin:0;color:#142c40}
+.game-shell .campaign-card,.game-shell .result{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:clamp(20px,4vw,60px);overflow:auto;background:#142c40e8;grid-template-columns:minmax(0,1fr) minmax(0,1fr);z-index:5}
+.game-shell .campaign-card>img,.game-shell .result>img{max-height:65dvh;object-fit:contain}
+.game-shell .campaign-card>div,.game-shell .result>div{max-height:90dvh;overflow:auto}
+.game-shell .game-layout{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;display:block}
+.game-shell .world,.game-shell .grove-world{position:absolute;inset:0;width:100%;height:100%;padding:0;border-radius:0;background:#173d48;overflow:hidden}
+.game-shell .world #game-canvas,.game-shell .grove-world #grove-canvas{width:100%;height:100%;aspect-ratio:auto;border-radius:0}
+.game-shell .hud,.game-shell .grove-panel{position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:3;width:min(310px,calc(100% - 24px));max-height:calc(100% - 72px);overflow:auto;background:#f3eadce8;color:#142c40}
+.game-shell .hud .actions,.game-shell .hud .progress-pair,.game-shell .hud-footer,.game-shell .grove-map{display:none}
+.game-shell .touch-controls,.game-shell .grove-controls{position:absolute;left:50%;bottom:max(36px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:3;background:#142c409e;border-radius:14px}
+.game-shell .grove-title{position:absolute;top:max(12px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));z-index:4;width:min(340px,calc(100% - 24px));padding:10px;background:#142c40bb;color:white;border-radius:12px}
+.game-shell .grove-layout{position:absolute;inset:0;display:block}
+.game-shell .grove-dialogue{color:#142c40}
+.game-shell .modal-backdrop{z-index:8}
+@media(max-width:700px){.game-shell .hero{background-position:65% center}.game-shell .hero>div{background:#142c40c9;padding:16px;border-radius:18px}.game-shell .haven-hud,.game-shell .hud,.game-shell .grove-panel{top:max(8px,env(safe-area-inset-top));left:max(8px,env(safe-area-inset-left));right:auto;width:min(250px,calc(100% - 16px));max-height:32dvh;padding:8px;font-size:12px}.game-shell .haven-hud p,.game-shell .hud h2{margin:3px 0;font-size:13px}.game-shell .haven-actions,.game-shell .touch-controls,.game-shell .grove-controls{bottom:max(26px,env(safe-area-inset-bottom));max-width:calc(100% - 16px)}.game-shell .campaign-card,.game-shell .result{display:block;padding:16px}.game-shell .campaign-card>img,.game-shell .result>img{display:none}.game-shell .grove-title{top:auto;bottom:max(94px,env(safe-area-inset-bottom));width:210px}.game-shell .grove-title h1{font-size:16px}.game-shell .grove-title p{display:none}}
+
+.game-shell .touch-joystick{position:relative;display:block;width:112px;height:112px;flex:none;border:2px solid #b9f7f7a8;border-radius:50%;background:#142c406b;touch-action:none;pointer-events:auto}
+.game-shell .touch-joystick[hidden]{display:none}
+.touch-joystick-knob{position:absolute;left:50%;top:50%;width:46px;height:46px;margin:-23px;border:2px solid #d7ffffb3;border-radius:50%;background:#70c9ea70;pointer-events:none}
+.game-shell .touch-controls,.game-shell .grove-controls,.game-shell .haven-actions{left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:max(28px,env(safe-area-inset-bottom));width:auto;max-width:none;transform:none;justify-content:space-between;background:none;pointer-events:none}
+.game-shell .touch-controls>button,.game-shell .grove-controls>button,.game-shell .haven-actions>button{pointer-events:auto}
+.game-shell .touch-action,.game-shell .touch-controls .interact{width:72px;height:72px;min-width:72px;border:2px solid #d7ffffb3;border-radius:50%;background:#142c406b;color:white}
+.game-shell .haven-actions>button:not(.touch-action),.game-shell .grove-controls>button:not(.touch-action){position:absolute;right:0;bottom:82px;min-height:44px;background:#142c40b8;color:white}
+.game-shell .haven-actions>button:last-child{bottom:134px}
+.game-shell .touch-controls:has(.touch-joystick[hidden]),.game-shell .haven-actions:has(.touch-joystick[hidden]) .touch-action,.game-shell .grove-controls:has(.touch-joystick[hidden]) .touch-action{display:none}
+.game-shell .hero{background:#a7cbd6 url('/assets/cinematic/haven_background.png') center/cover no-repeat;image-rendering:pixelated}
+.game-shell .hero>div{background:none;padding:0;border:0}
+.game-shell .hero h1{margin:0}
+.game-shell .title-logo{width:min(430px,78vw);height:min(40dvh,300px);max-height:none;margin:0 auto;filter:drop-shadow(0 4px 1px #19384b69)}
+.game-shell .title-actions{flex-direction:column;gap:6px}
+.game-shell .title-actions button{font:700 18px Georgia,serif;min-width:160px;border:2px solid #57432e;border-radius:3px;background:#f3eadc;color:#243949;box-shadow:inset 0 -3px #ceb791,0 3px #534436}
+.game-shell .title-actions .primary{background:#f8ebce;color:#243949}
+.story-layer{position:absolute;inset:0;z-index:12;display:grid;align-items:end;justify-items:center;padding:clamp(10px,3vw,32px);background:#10232a25}
+.story-box,.journal{color:#273d42;background:#f6ead1;border:3px double #785f40;box-shadow:0 4px 0 #493e34;font-family:Georgia,serif}
+.story-box{width:min(720px,100%);padding:16px;display:grid;grid-template-columns:clamp(64px,15vw,108px) 1fr;gap:16px}
+.story-box img{width:100%;image-rendering:pixelated}.story-box p{min-height:3em;margin:6px 0}.story-box strong{color:#336863}
+.journal{width:min(470px,96%);max-height:90%;overflow:auto;padding:18px}
+.journal button,.story-box button,.grove-bag{background:#e6d5b4;color:#273d42;border:1px solid #836b4c;padding:6px 14px;font:inherit}
+.grove-bag{position:absolute;bottom:max(110px,env(safe-area-inset-bottom));right:16px;z-index:4}
+.game-shell .grove-title{top:14px;bottom:auto;left:14px;width:auto;background:#233c3bec;border-radius:3px;font-size:12px}.game-shell .grove-title h1{font:700 18px Georgia,serif}.game-shell .grove-title .eyebrow{display:none}
+@media(max-aspect-ratio:165/100){.game-shell .haven-stage.exploring{width:100%;height:100%;aspect-ratio:auto}}
+.game-shell .haven-hud{width:auto;display:flex;align-items:center;gap:6px;border-radius:2px;padding:3px 10px 3px 3px;border:2px solid #644e37;background:#f4e9d3}.haven-hud img{width:44px}.haven-hud small{display:block}
+.camp-objective,.camp-hint{position:absolute;padding:6px 10px;background:#213a40ed;color:#fff4df;font:15px Georgia,serif}.camp-objective{right:10px;top:10px}.camp-objective button{margin-left:8px}.camp-hint{bottom:16%;left:50%;transform:translateX(-50%);white-space:nowrap}
+.game-shell .haven-actions>button:last-child{bottom:92px}
+.exp-objective{position:absolute;right:10px;top:10px;background:#20383a;color:#fff1d8;padding:6px;max-width:48%;font:15px Georgia,serif}.exp-objective strong{display:block}.exp-objective button,.camp-objective button{background:#efdfbd;color:#233744;border:1px solid #76654a}.screen-game .camp-hint{white-space:normal;width:max-content;max-width:65%;text-align:center}
+.mix{margin:12px 0;border:1px solid #897654}.mix label{display:flex;justify-content:space-between;text-transform:capitalize;align-items:center;min-height:32px}.mix input{accent-color:#36756d}
+/* Shared Ripple field journal and equipment art. */
+.game-shell{--ink:#203651;--paper:#f6ebd9;--blue:#406493}
+.game-shell .journal,.game-shell .story-box,.game-shell .haven-board,.game-shell .puzzle{background:transparent url('/assets/ui/panel_wide.png') center/100% 100% no-repeat;color:var(--ink);border:none;border-radius:0;box-shadow:none;padding:clamp(30px,5vh,48px) clamp(24px,5vw,48px);font-family:Georgia,serif}
+.game-shell .journal{width:min(460px,96vw);padding-bottom:38px;text-align:center}.game-shell .journal h2,.game-shell .haven-board h2{font: bold 23px Georgia,serif;color:#264764}
+.game-shell .modal-backdrop,.story-layer{background:#14283964}
+.game-shell :is(.journal,.title-actions,.story-box,.haven-board,.camp-objective,.exp-objective,.grove-title,.campaign-card,.result) button,.game-shell .grove-bag,.game-shell .haven-actions>button:not(.touch-action){border:none;border-radius:0;box-shadow:none;color:white;text-shadow:0 1px 2px #183859;background:transparent url('/assets/ui/button_primary_idle.png') center/100% 100% no-repeat;padding:9px 21px;font:bold 15px Georgia,serif;min-height:44px}
+.game-shell :is(.journal,.title-actions,.story-box,.haven-board) button:hover{background-image:url('/assets/ui/button_primary_hover.png')}
+.game-shell :is(.journal,.title-actions,.story-box,.haven-board) button:active{background-image:url('/assets/ui/button_primary_pressed.png')}
+.game-shell .mix{border:1px solid #9daebc;text-align:left;padding:8px 14px;background:#fff6e8a8}.mix legend{padding:0 5px}
+.game-shell .rpg-profile{position:absolute;left:max(8px,env(safe-area-inset-left));top:max(8px,env(safe-area-inset-top));display:flex;align-items:center;gap:5px;padding:6px 12px 6px 7px;background:url('/assets/ui/hud_profile_frame_empty.png') center/100% 100%;color:var(--ink);z-index:3;pointer-events:none;font:15px Georgia,serif}
+.rpg-profile small{display:block;font:11px system-ui}.rpg-portrait{width:46px;height:46px;image-rendering:pixelated}
+.energy-track{width:82px;height:14px;margin-top:2px;position:relative;background:url('/assets/ui/bar_track_empty.png') center/100% 100%;padding:2px 3px}.energy-track i{display:block;height:100%;background:url('/assets/ui/bar_fill_energy.png') left/100% 100%}.energy-track span{position:absolute;inset:0;text-align:center;color:white;font:bold 10px system-ui;text-shadow:0 1px 2px #172938}
+.game-shell :is(.camp-objective,.exp-objective,.grove-title){background:transparent url('/assets/ui/hud_profile_frame_empty.png') center/100% 100%;color:var(--ink);border:0;left:auto;right:8px;top:8px;bottom:auto;padding:6px 10px;max-width:48%;width:auto;display:flex;align-items:center;gap:6px;flex-direction:row}
+.game-shell .grove-title h1{font: bold 15px Georgia,serif}.game-shell .grove-title p{display:none}.game-shell .grove-title>button{margin:0}.game-shell .exp-objective{flex-wrap:wrap}.game-shell .camp-hint{font-size:14px;border-radius:2px}
+.game-shell .grove-inventory>div.rpg-slots,.game-shell .rpg-slots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;max-width:310px;margin:10px auto}
+.game-shell .rpg-slots button{position:relative;aspect-ratio:1;padding:8px;background:#dfd0b6 url('/assets/ui/slot_empty.png') center/100% 100%;border-radius:10px}.game-shell .rpg-slots button[aria-pressed=true]{outline:2px solid #2c7979;outline-offset:-4px;background-color:#c5e0d6}.rpg-slots img{width:65%;height:65%;object-fit:contain;image-rendering:pixelated}.rpg-slots b{position:absolute;bottom:9%;right:14%;color:#172c41;background:#fff3d7;font:700 12px system-ui;padding:0 2px;text-shadow:none}.item-caption strong{text-transform:capitalize}.item-caption p{margin:3px auto 12px;font-size:14px}
+.game-shell .story-box{padding:26px 36px 24px;align-items:center;gap:12px}.story-box p{min-height:2.8em}.game-shell .story-box button{float:right}
+@media(max-width:500px){.game-shell .camp-objective{font-size:12px;flex-direction:column;gap:0}.game-shell .camp-objective button{margin:0}.rpg-portrait{width:36px;height:36px}.game-shell .story-box{padding:24px 20px;grid-template-columns:58px 1fr}.game-shell .exp-objective{font-size:12px}.game-shell .journal{padding:30px 24px}}
+.game-shell .journal{position:relative;background:#f4eadb;border:14px solid transparent;border-image:url('/assets/ui/hud_profile_frame_empty.png') 28 fill / 14px stretch;padding:16px 18px 22px;scrollbar-width:thin}
+.game-shell .book-tabs{display:flex;gap:5px;justify-content:center;margin:4px auto}.game-shell .book-tabs button[aria-pressed=false]{background-image:url('/assets/ui/button_secondary_idle.png');color:#243e5c;text-shadow:none}
+.game-shell .journal:has(.book-tabs)>button:first-child{position:absolute;right:0;top:0;font-size:13px;padding:5px 12px;min-height:38px}
+.game-shell .grove-inventory>.item-caption{display:block;padding-top:8px}.game-shell .journal .grove-inventory,.game-shell .journal .grove-quests{border:0;margin-top:4px;padding:0}.game-shell .journal .grove-quests>div{background:none;border-bottom:1px solid #ac9d83;border-radius:0}
+/* Keep corner ornaments and end caps at a fixed scale when the text wraps. */
+.game-shell :is(.story-box,.haven-board,.puzzle,.camp-objective,.exp-objective,.grove-title,.rpg-profile){
+ background:none;border:8px solid transparent;border-image:url('/assets/ui/hud_profile_frame_empty.png') 24 fill / 8px stretch;color:#203651}
+.game-shell :is(.story-box,.haven-board,.puzzle){padding:16px}
+.game-shell :is(.journal,.title-actions,.story-box,.haven-board,.camp-objective,.exp-objective,.grove-title,.campaign-card,.result) button:not(.rpg-slots button),.game-shell .grove-bag,.game-shell .haven-actions>button:not(.touch-action){
+ background:none;border:5px solid transparent;border-image:url('/assets/ui/button_primary_idle.png') 25 45 fill / 13px 23px stretch;padding:4px 16px}
+.game-shell .puzzle{width:min(440px,96vw);max-height:93dvh;overflow:auto}
+.game-shell .puzzle-grid{width:min(100%,318px);margin:10px auto;grid-template-columns:repeat(6,minmax(0,1fr));gap:2px}
+.game-shell .puzzle-grid button{padding:0;min-width:0;min-height:0;color:#10293c;text-shadow:0 0 3px white;background-size:contain;font:bold 11px system-ui;aspect-ratio:1}
+.game-shell .puzzle-grid :is(.source,.home,.blocked){opacity:1}.game-shell .puzzle-grid .wet{border-color:#158eab}
+#haven-canvas canvas,#grove-canvas canvas{object-fit:contain}
+.exp-map{position:absolute;inset:0}.game-shell.screen-game .world{background:transparent;pointer-events:none}.game-shell.screen-game .touch-controls{pointer-events:none}
+.game-shell .campaign-card.embark{background:linear-gradient(transparent 40%,#12283d80);display:flex;align-items:flex-end;justify-content:center;padding:16px;pointer-events:none}
+.game-shell .embark>.embark-note{pointer-events:auto;display:flex;align-items:center;gap:16px;width:min(660px,100%);color:#23384d;background:#f3e6cb;border:10px solid transparent;border-image:url('/assets/ui/hud_profile_frame_empty.png') 24 fill / 10px stretch;padding:12px 20px;margin-bottom:20px;max-height:80dvh;overflow:auto}
+.embark-note>img{width:clamp(50px,10vw,96px);image-rendering:pixelated}.game-shell .embark h1{font: bold clamp(22px,4vw,34px) Georgia,serif;margin:4px 0}.embark p{margin:6px 0}.embark details{font-size:12px;margin:8px 0}
+.game-shell .title-companion{position:absolute;left:20%;bottom:24%;width:clamp(32px,5vw,72px);animation:drift-companion 6s ease-in-out infinite alternate;image-rendering:pixelated}
+.title-weather{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 22px 30px,#fff 80%,transparent),radial-gradient(1.5px 1.5px at 80px 55px,#fff 75%,transparent);background-size:167px 151px;animation:camp-snow 14s linear infinite}
+@keyframes drift-companion{to{transform:translate(45px,-18px)}}@keyframes camp-snow{to{background-position:167px 151px}}
+@media(prefers-reduced-motion:reduce){.game-shell .title-companion,.title-weather{animation:none}}
+.game-shell.screen-title .hero{z-index:2;background:linear-gradient(0deg,#162f4650,transparent 55%);isolation:isolate}
+.game-shell.screen-title .haven-shell{z-index:0;pointer-events:none}
+.game-shell.screen-title .haven-shell>:not(.haven-stage){display:none}
+.game-shell.screen-title .hero>div{background:transparent}
+.game-shell .story-layer{background:linear-gradient(transparent 50%,#17283c55);padding-bottom:max(18px,env(safe-area-inset-bottom))}
+.game-shell .story-box{position:relative;isolation:isolate;border:3px solid #39496a;border-image:none;border-radius:32px 32px 32px 12px;background:#fbf0dc;box-shadow:inset 0 0 0 3px #abc2dd,0 4px 0 #23354a77;padding:20px 24px;grid-template-columns:clamp(62px,12vw,100px) 1fr}
+.story-box>img{object-fit:contain;align-self:center;border-radius:22%}.story-copy{min-width:0}.speaker-name{color:#30596b;font-size:18px}.story-copy p{line-height:1.45;margin:6px 0;min-height:2.9em}.story-buttons{display:flex;justify-content:flex-end;gap:8px}.story-buttons .dialogue-voice{margin-right:auto}
+.quest-slip{border-top:1px solid #cabda3;margin:8px 0;padding-top:6px}.quest-slip small{display:block}.game-shell .quest-slip button{float:none}
+@media(max-height:480px){.game-shell .story-layer{padding:6px}.game-shell .story-box{max-height:95dvh;overflow:auto;padding:10px 16px}}
+.game-shell dialog.new-journey:not([open]){display:none}
+.game-shell dialog.new-journey{margin:auto;width:min(560px,calc(100% - 32px));max-height:calc(100dvh - 32px);position:fixed;inset:0;height:fit-content;color:#203651}
+.new-journey::backdrop{background:#10233894}
+.new-journey h2{margin:5px 0;font: bold clamp(21px,4vw,28px) Georgia,serif}
+.new-journey .journey-choices{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.game-shell dialog.new-journey .journey-choices .primary{border-image-source:url('/assets/ui/button_secondary_idle.png');color:#203651;text-shadow:none}
+@media(max-width:500px){.game-shell dialog.new-journey{grid-template-columns:52px 1fr;padding:18px 14px;align-items:start}.new-journey>img{align-self:start}.new-journey .journey-choices{gap:6px}}
+
+.trail-stamps{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0;margin:12px auto;max-width:380px}
+.trail-stamps li{border:1px dashed #a59c8a;border-radius:5px;padding:7px 3px;display:grid;justify-items:center;gap:3px;color:#665a49}
+.trail-stamps li::before{content:"";width:22px;height:22px;mask:url("/assets/ui/trail-stamp.svg") center/contain no-repeat;background:currentColor;opacity:.35}
+.trail-stamps li[data-stamped=true]{color:#29594d;border:3px double #719586;background:#dce7d655}
+.trail-stamps li[data-stamped=true]::before{opacity:1;transform:rotate(-9deg)}
+.village-atlas canvas{display:block;width:100%;max-height:45dvh;object-fit:contain;image-rendering:pixelated;margin:8px auto}
+.village-atlas label{display:flex;gap:8px;align-items:center;justify-content:center;margin:10px 0;color:#264764}
+.village-atlas select{font:inherit;color:#203951;background:#fbf0dc;padding:5px;border:1px solid #847f68}
+.game-shell .journal .book-tabs button[aria-pressed=false]{border-image-source:url('/assets/ui/button_secondary_idle.png');color:#263c58;text-shadow:none}

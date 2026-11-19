@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.local
+coverage/
+.npm-cache/
+.local-app-data/
+.pnpm-store/
+apps/web/public/qa/
+docs/qa/
+apps/web/*.png

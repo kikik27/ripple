@@ -1,4 +1,12 @@
-# Ripple — Complete Development & Resource Kit v1.1
+# Ripple — Fullscreen RPG development kit v1.2
+
+## Implementation in progress (2026-11-19)
+
+The offline Operation Komodo source is in `apps/web` and the deterministic rules are in `packages/game-core`. New Game plays the Opening Kit cinematic over a preloaded Phaser Himalayan Haven scene. After Aurora's tutorial, the world board offers Operation Komodo and the new Komodo Grove social hub. Grove uses the supplied 40×28 map, NPCs, animals, garden and daily activities, with a separate local social save. A headless title screenshot was captured, but interactive Phaser and mobile QA remain open; see `STATUS.md` for exact results. No onchain action, live funding, or AI publication is connected. Demo credit has no monetary value.
+
+The v1.2 player route now uses a fixed viewport game shell and requests fullscreen when New Game is clicked. This is an FS01 increment, not a completed v1.2 release; see `STATUS.md` for the current tests and remaining browser and input work. The bundled kit is in `Ripple_Complete_Development_Kit_v1.2/`.
+
+For a Node 22 environment, run `pnpm install --frozen-lockfile` and `python -m pip install -r requirements-dev.txt`, then `pnpm validate:content`, `python tools/validate_assets.py`, `python tools/validate-living.py`, `pnpm typecheck`, `pnpm test`, and `pnpm build`. Start the local game with `pnpm dev:offline`. The Opening and Living World handoffs are in `docs/OPENING_HANDOFF.md` and `docs/LIVING_WORLD_HANDOFF.md`. The original expedition fixtures and rules remain in their supplied locations. Production use requires the permissions and checks in `LICENSES.md`.
 
 **Small Actions. Big Impact.**
 

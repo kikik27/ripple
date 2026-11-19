@@ -1,0 +1,15 @@
+{
+  "name": "ripple",
+  "private": true,
+  "packageManager": "pnpm@12.11.2",
+  "scripts": {
+    "dev": "pnpm --filter @ripple/web dev",
+    "dev:offline": "pnpm dev",
+    "build": "pnpm --filter @ripple/web build",
+    "typecheck": "tsc -p packages/game-core/tsconfig.json && tsc -p apps/web/tsconfig.json",
+    "lint": "pnpm typecheck",
+    "test": "pnpm --filter @ripple/core test && node --experimental-strip-types apps/web/src/haven.test.ts && node --experimental-strip-types apps/web/src/living.test.ts && node --experimental-strip-types apps/web/src/input.test.ts && node tools/test-living.cjs && python tools/test_opening_visual.py",
+    "validate:content": "pnpm --filter @ripple/core validate"
+  },
+  "devDependencies": {"typescript": "5.9.3"}
+}

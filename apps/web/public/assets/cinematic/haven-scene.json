@@ -1,0 +1,1267 @@
+{
+  "id": "himalayan_haven_intro_v1",
+  "tileSize": 32,
+  "width": 20,
+  "height": 12,
+  "viewport": {
+    "width": 640,
+    "height": 360,
+    "cameraX": 0,
+    "cameraY": 12,
+    "displayScale": 2
+  },
+  "terrain": [
+    [
+      "tile_snow_rock_0",
+      "tile_snow_rock_0",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_rock_0",
+      "tile_snow_rock_0"
+    ],
+    [
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_0"
+    ],
+    [
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_0"
+    ],
+    [
+      "tile_snow_rock_0",
+      "tile_snow_rock_0",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_rock_0",
+      "tile_snow_rock_0"
+    ],
+    [
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_0"
+    ],
+    [
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_0"
+    ],
+    [
+      "tile_snow_rock_0",
+      "tile_snow_rock_0",
+      "tile_snow_2",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_snow_2",
+      "tile_snow_rock_0",
+      "tile_snow_rock_0"
+    ],
+    [
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_0",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_2"
+    ],
+    [
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_0"
+    ],
+    [
+      "tile_snow_rock_0",
+      "tile_snow_rock_0",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_0",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_rock_0",
+      "tile_snow_rock_0"
+    ],
+    [
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_camp_path_0",
+      "tile_camp_path_0",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_1"
+    ],
+    [
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_2",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_2",
+      "tile_snow_1",
+      "tile_snow_1",
+      "tile_snow_0",
+      "tile_snow_1",
+      "tile_snow_1"
+    ]
+  ],
+  "props": [
+    {
+      "asset": "pine",
+      "tile": [
+        0,
+        2
+      ],
+      "position": [
+        16,
+        80
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        2,
+        2
+      ],
+      "position": [
+        80,
+        80
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        4,
+        1
+      ],
+      "position": [
+        144,
+        48
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        7,
+        1
+      ],
+      "position": [
+        240,
+        48
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        10,
+        1
+      ],
+      "position": [
+        336,
+        48
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        13,
+        1
+      ],
+      "position": [
+        432,
+        48
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        16,
+        2
+      ],
+      "position": [
+        528,
+        80
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        19,
+        2
+      ],
+      "position": [
+        624,
+        80
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        0,
+        5
+      ],
+      "position": [
+        16,
+        176
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        19,
+        5
+      ],
+      "position": [
+        624,
+        176
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        0,
+        9
+      ],
+      "position": [
+        16,
+        304
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        2,
+        10
+      ],
+      "position": [
+        80,
+        336
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        5,
+        11
+      ],
+      "position": [
+        176,
+        368
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        14,
+        11
+      ],
+      "position": [
+        464,
+        368
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        17,
+        10
+      ],
+      "position": [
+        560,
+        336
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "pine",
+      "tile": [
+        19,
+        9
+      ],
+      "position": [
+        624,
+        304
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "snow_boulder",
+      "tile": [
+        3,
+        4
+      ],
+      "position": [
+        112,
+        144
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "snow_boulder",
+      "tile": [
+        16,
+        4
+      ],
+      "position": [
+        528,
+        144
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "snow_bush",
+      "tile": [
+        2,
+        7
+      ],
+      "position": [
+        80,
+        240
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "snow_bush",
+      "tile": [
+        17,
+        7
+      ],
+      "position": [
+        560,
+        240
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "snow_boulder",
+      "tile": [
+        7,
+        10
+      ],
+      "position": [
+        240,
+        336
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "snow_boulder",
+      "tile": [
+        12,
+        10
+      ],
+      "position": [
+        400,
+        336
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "home_snow",
+      "tile": [
+        5,
+        4
+      ],
+      "position": [
+        176,
+        144
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "workshop",
+      "tile": [
+        9,
+        4
+      ],
+      "position": [
+        304,
+        144
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "camp_tent",
+      "tile": [
+        14,
+        4
+      ],
+      "position": [
+        464,
+        144
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "storage_shed",
+      "tile": [
+        16,
+        6
+      ],
+      "position": [
+        528,
+        208
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "campfire",
+      "tile": [
+        6,
+        7
+      ],
+      "position": [
+        208,
+        240
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "notice_board",
+      "tile": [
+        12,
+        7
+      ],
+      "position": [
+        400,
+        240
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "lamp",
+      "tile": [
+        8,
+        5
+      ],
+      "position": [
+        272,
+        176
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "lamp",
+      "tile": [
+        11,
+        5
+      ],
+      "position": [
+        368,
+        176
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "crate",
+      "tile": [
+        4,
+        7
+      ],
+      "position": [
+        144,
+        240
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "barrel",
+      "tile": [
+        15,
+        8
+      ],
+      "position": [
+        496,
+        272
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "flags",
+      "tile": [
+        9,
+        2
+      ],
+      "position": [
+        304,
+        80
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    },
+    {
+      "asset": "signpost",
+      "tile": [
+        10,
+        9
+      ],
+      "position": [
+        336,
+        304
+      ],
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "blocked": true
+    }
+  ],
+  "blockedTiles": [
+    [
+      0,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      13,
+      1
+    ],
+    [
+      16,
+      2
+    ],
+    [
+      19,
+      2
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      19,
+      5
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      14,
+      11
+    ],
+    [
+      17,
+      10
+    ],
+    [
+      19,
+      9
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      16,
+      4
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      17,
+      7
+    ],
+    [
+      7,
+      10
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      14,
+      4
+    ],
+    [
+      16,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      12,
+      7
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      11,
+      5
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      15,
+      8
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      10,
+      9
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      11,
+      0
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      13,
+      0
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      15,
+      0
+    ],
+    [
+      16,
+      0
+    ],
+    [
+      17,
+      0
+    ],
+    [
+      18,
+      0
+    ],
+    [
+      19,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      19,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      19,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      19,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      19,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      19,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      19,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      19,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      19,
+      8
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      19,
+      9
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      19,
+      10
+    ],
+    [
+      0,
+      11
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      3,
+      11
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      11
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      8,
+      11
+    ],
+    [
+      9,
+      11
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      11
+    ],
+    [
+      12,
+      11
+    ],
+    [
+      13,
+      11
+    ],
+    [
+      14,
+      11
+    ],
+    [
+      15,
+      11
+    ],
+    [
+      16,
+      11
+    ],
+    [
+      17,
+      11
+    ],
+    [
+      18,
+      11
+    ],
+    [
+      19,
+      11
+    ]
+  ],
+  "spawn": {
+    "tile": [
+      9,
+      7
+    ],
+    "position": [
+      304,
+      240
+    ],
+    "texture": "yeti_idle_down",
+    "facing": "down",
+    "origin": [
+      0.5,
+      0.8333333333333334
+    ]
+  },
+  "aurora": {
+    "position": [
+      336,
+      228
+    ],
+    "texture": "aurora_idle",
+    "origin": [
+      0.5,
+      0.5
+    ]
+  },
+  "interactions": [
+    {
+      "id": "world_board",
+      "tile": [
+        12,
+        7
+      ],
+      "approach": [
+        11,
+        7
+      ],
+      "action": "open_campaign_board",
+      "campaign": "operation-komodo"
+    },
+    {
+      "id": "workshop",
+      "tile": [
+        9,
+        4
+      ],
+      "approach": [
+        9,
+        5
+      ],
+      "action": "open_workshop_tutorial"
+    }
+  ],
+  "initialState": {
+    "energy": 100,
+    "xp": 0,
+    "inventory": [],
+    "walletRequired": false,
+    "hudVisibleAtHandoff": false,
+    "tutorial": "meet_aurora_then_world_board"
+  },
+  "background": "cinematic/haven_background.png",
+  "terrainImage": "cinematic/haven_terrain.png"
+}

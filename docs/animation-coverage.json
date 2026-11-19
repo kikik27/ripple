@@ -1,0 +1,60 @@
+{
+  "lofiWalkPixelHashes": {
+    "down": {
+      "yeti_walk_down_00": "150fc5fb86db6932ff957048dd1396ae87647aa4340c2a41458de2de8da423eb",
+      "yeti_walk_down_01": "b9bc4e530da229ea3f106b141213a39e0c40dcd14ca8b79f03fe96c5ef4d483e",
+      "yeti_walk_down_02": "150fc5fb86db6932ff957048dd1396ae87647aa4340c2a41458de2de8da423eb",
+      "yeti_walk_down_03": "c0f70891fdca2c951b2378e9b2188302295118ce084e93e5a2f21a6fd2146b82"
+    },
+    "up": {
+      "yeti_walk_up_00": "fb6c0e3b178bd0ba77a79a6ddd7fd1175df3b48de9c76c6b85aa788c7a622a48",
+      "yeti_walk_up_01": "746aa0f33f3ea0296785a37827e0ac0e334acf42feaa44d95d160519f09828d7",
+      "yeti_walk_up_02": "fb6c0e3b178bd0ba77a79a6ddd7fd1175df3b48de9c76c6b85aa788c7a622a48",
+      "yeti_walk_up_03": "f1f45a73e622cda2a540f9f6b3030de73d23249bab0f0ce36c16d7d13f837b57"
+    },
+    "left": {
+      "yeti_walk_left_00": "212665e014815ded92118287de9fb9bcdd473e10c91122d2da695685f45259a1",
+      "yeti_walk_left_01": "3e7375b6052d39cd6242ef202c4b8cb3561fc4c667a3dd34a884019f50da00ca",
+      "yeti_walk_left_02": "212665e014815ded92118287de9fb9bcdd473e10c91122d2da695685f45259a1",
+      "yeti_walk_left_03": "53fbded9f74c28c91d3e584e0b6ccd0262f08a71d765abfdfbed851260cb9ade"
+    },
+    "right": {
+      "yeti_walk_right_00": "5d6a6a210ea5719f6ed2aa959d3be4f12f2248c8a626ea7daf3f94b77b197921",
+      "yeti_walk_right_01": "99263b7365ecf3cf2469cfd19356319fbec29e3d0f10b10af148892d75700e2c",
+      "yeti_walk_right_02": "5d6a6a210ea5719f6ed2aa959d3be4f12f2248c8a626ea7daf3f94b77b197921",
+      "yeti_walk_right_03": "c88c0cc11bbdae1da0b52288c73fec9bc7168fc5eef8ea4e87e6704359353255"
+    }
+  },
+  "actionPoses": [
+    "yeti_carry",
+    "yeti_build",
+    "yeti_celebrate"
+  ],
+  "missing": [
+    "Lofi gather, craft, water and interact sequences",
+    "NPC north/south stride cycles and work cycles",
+    "Animal eating and play cycles, vertical dog gait, other animal gait cycles"
+  ],
+  "groveSideWalk": {
+    "actors": [
+      "elder",
+      "engineer",
+      "child",
+      "recycler",
+      "ari",
+      "fisher",
+      "merchant",
+      "biscuit"
+    ],
+    "cell": [
+      48,
+      48
+    ],
+    "frames": 4,
+    "fps": 8,
+    "directions": [
+      "right",
+      "left (mirrored)"
+    ]
+  }
+}

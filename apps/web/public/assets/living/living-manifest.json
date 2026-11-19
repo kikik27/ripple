@@ -1,0 +1,1417 @@
+{
+  "version": "1.0.0",
+  "basePath": "/assets/",
+  "tileSize": 32,
+  "assets": {
+    "lw_animal_goat": {
+      "path": "living/sprites/lw_animal_goat.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_goat"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_goat_left": {
+      "path": "living/sprites/lw_animal_goat_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_goat_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_sheep": {
+      "path": "living/sprites/lw_animal_sheep.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_sheep"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_sheep_left": {
+      "path": "living/sprites/lw_animal_sheep_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_sheep_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_dog": {
+      "path": "living/sprites/lw_animal_dog.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_dog"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_dog_left": {
+      "path": "living/sprites/lw_animal_dog_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_dog_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_cat": {
+      "path": "living/sprites/lw_animal_cat.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_cat"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_cat_left": {
+      "path": "living/sprites/lw_animal_cat_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_cat_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_bird": {
+      "path": "living/sprites/lw_animal_bird.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_bird"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_bird_left": {
+      "path": "living/sprites/lw_animal_bird_left.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_bird_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_chicken": {
+      "path": "living/sprites/lw_animal_chicken.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_chicken"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_chicken_left": {
+      "path": "living/sprites/lw_animal_chicken_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_chicken_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_chick": {
+      "path": "living/sprites/lw_animal_chick.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_chick"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_chick_left": {
+      "path": "living/sprites/lw_animal_chick_left.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_chick_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_duck": {
+      "path": "living/sprites/lw_animal_duck.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_duck"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_duck_left": {
+      "path": "living/sprites/lw_animal_duck_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_duck_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_duckling": {
+      "path": "living/sprites/lw_animal_duckling.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_duckling"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_duckling_left": {
+      "path": "living/sprites/lw_animal_duckling_left.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_duckling_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_fish": {
+      "path": "living/sprites/lw_animal_fish.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_fish"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_fish_left": {
+      "path": "living/sprites/lw_animal_fish_left.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_fish_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_butterfly": {
+      "path": "living/sprites/lw_animal_butterfly.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_butterfly"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_animal_butterfly_left": {
+      "path": "living/sprites/lw_animal_butterfly_left.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_animal_butterfly_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_farmer_front": {
+      "path": "living/sprites/lw_npc_farmer_front.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_farmer_front"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_portrait_farmer": {
+      "path": "living/portraits/lw_portrait_farmer.png",
+      "width": 128,
+      "height": 128,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_portrait_farmer"
+      },
+      "category": "portraits",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_farmer_right": {
+      "path": "living/sprites/lw_npc_farmer_right.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_farmer_right"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_farmer_left": {
+      "path": "living/sprites/lw_npc_farmer_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_farmer_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_farmer_happy": {
+      "path": "living/sprites/lw_npc_farmer_happy.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_farmer_happy"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_farmer_back": {
+      "path": "living/sprites/lw_npc_farmer_back.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_farmer_back"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_fisher_front": {
+      "path": "living/sprites/lw_npc_fisher_front.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_fisher_front"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_portrait_fisher": {
+      "path": "living/portraits/lw_portrait_fisher.png",
+      "width": 128,
+      "height": 128,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_portrait_fisher"
+      },
+      "category": "portraits",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_fisher_right": {
+      "path": "living/sprites/lw_npc_fisher_right.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_fisher_right"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_fisher_left": {
+      "path": "living/sprites/lw_npc_fisher_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_fisher_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_fisher_happy": {
+      "path": "living/sprites/lw_npc_fisher_happy.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_fisher_happy"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_fisher_back": {
+      "path": "living/sprites/lw_npc_fisher_back.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_fisher_back"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_merchant_front": {
+      "path": "living/sprites/lw_npc_merchant_front.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_merchant_front"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_portrait_merchant": {
+      "path": "living/portraits/lw_portrait_merchant.png",
+      "width": 128,
+      "height": 128,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_portrait_merchant"
+      },
+      "category": "portraits",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_merchant_right": {
+      "path": "living/sprites/lw_npc_merchant_right.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_merchant_right"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_merchant_left": {
+      "path": "living/sprites/lw_npc_merchant_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_merchant_left"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_merchant_happy": {
+      "path": "living/sprites/lw_npc_merchant_happy.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_merchant_happy"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_npc_merchant_back": {
+      "path": "living/sprites/lw_npc_merchant_back.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_npc_merchant_back"
+      },
+      "category": "sprites",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_grass_tall": {
+      "path": "living/props/lw_prop_grass_tall.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_grass_tall"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_grass_short": {
+      "path": "living/props/lw_prop_grass_short.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_grass_short"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_fern": {
+      "path": "living/props/lw_prop_fern.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_fern"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_red_fern": {
+      "path": "living/props/lw_prop_red_fern.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_red_fern"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_moss_rock": {
+      "path": "living/props/lw_prop_moss_rock.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_moss_rock"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_flower_rock": {
+      "path": "living/props/lw_prop_flower_rock.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_flower_rock"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_fallen_log": {
+      "path": "living/props/lw_prop_fallen_log.png",
+      "width": 64,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_fallen_log"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_vine_stone": {
+      "path": "living/props/lw_prop_vine_stone.png",
+      "width": 48,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_vine_stone"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_vine_hanging": {
+      "path": "living/props/lw_prop_vine_hanging.png",
+      "width": 32,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_vine_hanging"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_vine_arch": {
+      "path": "living/props/lw_prop_vine_arch.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_vine_arch"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_mushroom_stump": {
+      "path": "living/props/lw_prop_mushroom_stump.png",
+      "width": 64,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_mushroom_stump"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_berry_bush": {
+      "path": "living/props/lw_prop_berry_bush.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_berry_bush"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_hibiscus": {
+      "path": "living/props/lw_prop_hibiscus.png",
+      "width": 32,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_hibiscus"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_tropical_flower": {
+      "path": "living/props/lw_prop_tropical_flower.png",
+      "width": 32,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_tropical_flower"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_cattails": {
+      "path": "living/props/lw_prop_cattails.png",
+      "width": 40,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_cattails"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_lotus": {
+      "path": "living/props/lw_prop_lotus.png",
+      "width": 48,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_lotus"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_river_grass": {
+      "path": "living/props/lw_prop_river_grass.png",
+      "width": 32,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_river_grass"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_bench": {
+      "path": "living/props/lw_prop_bench.png",
+      "width": 64,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_bench"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_stump_seat": {
+      "path": "living/props/lw_prop_stump_seat.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_stump_seat"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_stone_bench": {
+      "path": "living/props/lw_prop_stone_bench.png",
+      "width": 64,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_stone_bench"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_birdhouse": {
+      "path": "living/props/lw_prop_birdhouse.png",
+      "width": 48,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_birdhouse"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_flower_box": {
+      "path": "living/props/lw_prop_flower_box.png",
+      "width": 64,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_flower_box"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_stone_planter": {
+      "path": "living/props/lw_prop_stone_planter.png",
+      "width": 64,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_stone_planter"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_curved_bench": {
+      "path": "living/props/lw_prop_curved_bench.png",
+      "width": 64,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.9583333333333334
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_curved_bench"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_produce_cart": {
+      "path": "living/props/lw_prop_produce_cart.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_produce_cart"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_market_stall": {
+      "path": "living/props/lw_prop_market_stall.png",
+      "width": 96,
+      "height": 96,
+      "origin": [
+        0.5,
+        0.9791666666666666
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_market_stall"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_fish_stall": {
+      "path": "living/props/lw_prop_fish_stall.png",
+      "width": 96,
+      "height": 96,
+      "origin": [
+        0.5,
+        0.9791666666666666
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_fish_stall"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_water_pump": {
+      "path": "living/props/lw_prop_water_pump.png",
+      "width": 64,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.9722222222222222
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_water_pump"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_recycle_station": {
+      "path": "living/props/lw_prop_recycle_station.png",
+      "width": 80,
+      "height": 80,
+      "origin": [
+        0.5,
+        0.975
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_recycle_station"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_fishing_spot": {
+      "path": "living/props/lw_prop_fishing_spot.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_fishing_spot"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_construction_pad": {
+      "path": "living/props/lw_prop_construction_pad.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_construction_pad"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_wildflower_patch": {
+      "path": "living/props/lw_prop_wildflower_patch.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_wildflower_patch"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_fruit_tree": {
+      "path": "living/props/lw_prop_fruit_tree.png",
+      "width": 64,
+      "height": 80,
+      "origin": [
+        0.5,
+        0.975
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_fruit_tree"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_blossom_tree": {
+      "path": "living/props/lw_prop_blossom_tree.png",
+      "width": 80,
+      "height": 88,
+      "origin": [
+        0.5,
+        0.9772727272727273
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_blossom_tree"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_mangrove": {
+      "path": "living/props/lw_prop_mangrove.png",
+      "width": 88,
+      "height": 96,
+      "origin": [
+        0.5,
+        0.9791666666666666
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_mangrove"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_waterfall": {
+      "path": "living/props/lw_prop_waterfall.png",
+      "width": 128,
+      "height": 112,
+      "origin": [
+        0.5,
+        0.9821428571428571
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_waterfall"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_pond": {
+      "path": "living/props/lw_prop_pond.png",
+      "width": 112,
+      "height": 80,
+      "origin": [
+        0.5,
+        0.975
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_pond"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_prop_rune_stone": {
+      "path": "living/props/lw_prop_rune_stone.png",
+      "width": 56,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.9722222222222222
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_prop_rune_stone"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_tomato_seed": {
+      "path": "living/props/lw_crop_tomato_seed.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_tomato_seed"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_tomato_sprout": {
+      "path": "living/props/lw_crop_tomato_sprout.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_tomato_sprout"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_tomato_growing": {
+      "path": "living/props/lw_crop_tomato_growing.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_tomato_growing"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_tomato_flower": {
+      "path": "living/props/lw_crop_tomato_flower.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_tomato_flower"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_tomato_ripe": {
+      "path": "living/props/lw_crop_tomato_ripe.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_tomato_ripe"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_pumpkin_seed": {
+      "path": "living/props/lw_crop_pumpkin_seed.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_pumpkin_seed"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_pumpkin_sprout": {
+      "path": "living/props/lw_crop_pumpkin_sprout.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_pumpkin_sprout"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_pumpkin_growing": {
+      "path": "living/props/lw_crop_pumpkin_growing.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_pumpkin_growing"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_pumpkin_flower": {
+      "path": "living/props/lw_crop_pumpkin_flower.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_pumpkin_flower"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_crop_pumpkin_ripe": {
+      "path": "living/props/lw_crop_pumpkin_ripe.png",
+      "width": 40,
+      "height": 40,
+      "origin": [
+        0.5,
+        0.95
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_crop_pumpkin_ripe"
+      },
+      "category": "props",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_icon_produce": {
+      "path": "living/icons/lw_icon_produce.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_icon_produce"
+      },
+      "category": "icons",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_icon_seed_bag": {
+      "path": "living/icons/lw_icon_seed_bag.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_icon_seed_bag"
+      },
+      "category": "icons",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_icon_fish": {
+      "path": "living/icons/lw_icon_fish.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_icon_fish"
+      },
+      "category": "icons",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_icon_hay": {
+      "path": "living/icons/lw_icon_hay.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_icon_hay"
+      },
+      "category": "icons",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_icon_kibble": {
+      "path": "living/icons/lw_icon_kibble.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_icon_kibble"
+      },
+      "category": "icons",
+      "source": "original generated sheet; cropped and normalized"
+    },
+    "lw_icon_seed": {
+      "path": "living/icons/lw_icon_seed.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "atlas": {
+        "key": "living",
+        "frame": "lw_icon_seed"
+      },
+      "category": "icons",
+      "source": "original generated sheet; cropped and normalized"
+    }
+  }
+}

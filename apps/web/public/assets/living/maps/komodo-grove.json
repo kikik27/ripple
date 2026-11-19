@@ -1,0 +1,6831 @@
+{
+  "id": "komodo_grove_v1",
+  "version": 1,
+  "purpose": "optional non-competitive social hub; not canonical scored expedition",
+  "tileSize": 32,
+  "width": 40,
+  "height": 28,
+  "spawn": [
+    4,
+    13
+  ],
+  "terrain": [
+    [
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_river_2",
+      "tile_river_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_river_1",
+      "tile_river_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_river_0",
+      "tile_river_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_river_2",
+      "tile_river_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_planks_0",
+      "tile_planks_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_planks_0",
+      "tile_planks_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_river_2",
+      "tile_river_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_river_2",
+      "tile_river_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_river_2",
+      "tile_river_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_river_1",
+      "tile_river_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_river_0",
+      "tile_river_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_planks_0",
+      "tile_planks_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_planks_0",
+      "tile_planks_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_planks_0",
+      "tile_planks_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_river_0",
+      "tile_river_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_river_1",
+      "tile_river_0",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "lw_tile_plaza",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_river_2",
+      "tile_river_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_river_1",
+      "tile_river_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_river_2",
+      "tile_river_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_river_2",
+      "tile_river_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_river_2",
+      "tile_river_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_planks_0",
+      "tile_planks_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_planks_0",
+      "tile_planks_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_river_0",
+      "tile_river_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_dirt_0",
+      "tile_dirt_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_river_1",
+      "tile_river_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_river_0",
+      "tile_river_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_grass_1",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_2",
+      "tile_grass_0",
+      "tile_grass_2",
+      "tile_grass_1",
+      "tile_border_0"
+    ],
+    [
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0",
+      "tile_border_0"
+    ]
+  ],
+  "blocked": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      0,
+      11
+    ],
+    [
+      0,
+      12
+    ],
+    [
+      0,
+      13
+    ],
+    [
+      0,
+      14
+    ],
+    [
+      0,
+      15
+    ],
+    [
+      0,
+      16
+    ],
+    [
+      0,
+      17
+    ],
+    [
+      0,
+      18
+    ],
+    [
+      0,
+      19
+    ],
+    [
+      0,
+      20
+    ],
+    [
+      0,
+      21
+    ],
+    [
+      0,
+      22
+    ],
+    [
+      0,
+      23
+    ],
+    [
+      0,
+      24
+    ],
+    [
+      0,
+      25
+    ],
+    [
+      0,
+      26
+    ],
+    [
+      0,
+      27
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      27
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      15
+    ],
+    [
+      2,
+      18
+    ],
+    [
+      2,
+      20
+    ],
+    [
+      2,
+      23
+    ],
+    [
+      2,
+      25
+    ],
+    [
+      2,
+      27
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      27
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      4,
+      20
+    ],
+    [
+      4,
+      27
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      5,
+      19
+    ],
+    [
+      5,
+      20
+    ],
+    [
+      5,
+      27
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      6,
+      20
+    ],
+    [
+      6,
+      27
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      7,
+      18
+    ],
+    [
+      7,
+      27
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      8,
+      27
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      9,
+      27
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      10,
+      25
+    ],
+    [
+      10,
+      27
+    ],
+    [
+      11,
+      0
+    ],
+    [
+      11,
+      27
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      12,
+      4
+    ],
+    [
+      12,
+      8
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      12,
+      27
+    ],
+    [
+      13,
+      0
+    ],
+    [
+      13,
+      2
+    ],
+    [
+      13,
+      3
+    ],
+    [
+      13,
+      4
+    ],
+    [
+      13,
+      9
+    ],
+    [
+      13,
+      10
+    ],
+    [
+      13,
+      18
+    ],
+    [
+      13,
+      27
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      14,
+      4
+    ],
+    [
+      14,
+      8
+    ],
+    [
+      14,
+      10
+    ],
+    [
+      14,
+      20
+    ],
+    [
+      14,
+      27
+    ],
+    [
+      15,
+      0
+    ],
+    [
+      15,
+      3
+    ],
+    [
+      15,
+      9
+    ],
+    [
+      15,
+      17
+    ],
+    [
+      15,
+      19
+    ],
+    [
+      15,
+      20
+    ],
+    [
+      15,
+      25
+    ],
+    [
+      15,
+      27
+    ],
+    [
+      16,
+      0
+    ],
+    [
+      16,
+      8
+    ],
+    [
+      16,
+      9
+    ],
+    [
+      16,
+      20
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      17,
+      0
+    ],
+    [
+      17,
+      9
+    ],
+    [
+      17,
+      11
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      17,
+      25
+    ],
+    [
+      17,
+      27
+    ],
+    [
+      18,
+      0
+    ],
+    [
+      18,
+      20
+    ],
+    [
+      18,
+      27
+    ],
+    [
+      19,
+      0
+    ],
+    [
+      19,
+      1
+    ],
+    [
+      19,
+      2
+    ],
+    [
+      19,
+      3
+    ],
+    [
+      19,
+      4
+    ],
+    [
+      19,
+      7
+    ],
+    [
+      19,
+      8
+    ],
+    [
+      19,
+      9
+    ],
+    [
+      19,
+      10
+    ],
+    [
+      19,
+      11
+    ],
+    [
+      19,
+      15
+    ],
+    [
+      19,
+      16
+    ],
+    [
+      19,
+      17
+    ],
+    [
+      19,
+      18
+    ],
+    [
+      19,
+      19
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      19,
+      21
+    ],
+    [
+      19,
+      24
+    ],
+    [
+      19,
+      25
+    ],
+    [
+      19,
+      26
+    ],
+    [
+      19,
+      27
+    ],
+    [
+      20,
+      0
+    ],
+    [
+      20,
+      1
+    ],
+    [
+      20,
+      2
+    ],
+    [
+      20,
+      3
+    ],
+    [
+      20,
+      4
+    ],
+    [
+      20,
+      7
+    ],
+    [
+      20,
+      8
+    ],
+    [
+      20,
+      9
+    ],
+    [
+      20,
+      10
+    ],
+    [
+      20,
+      11
+    ],
+    [
+      20,
+      15
+    ],
+    [
+      20,
+      16
+    ],
+    [
+      20,
+      17
+    ],
+    [
+      20,
+      18
+    ],
+    [
+      20,
+      19
+    ],
+    [
+      20,
+      20
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      20,
+      24
+    ],
+    [
+      20,
+      25
+    ],
+    [
+      20,
+      26
+    ],
+    [
+      20,
+      27
+    ],
+    [
+      21,
+      0
+    ],
+    [
+      21,
+      27
+    ],
+    [
+      22,
+      0
+    ],
+    [
+      22,
+      2
+    ],
+    [
+      22,
+      7
+    ],
+    [
+      22,
+      11
+    ],
+    [
+      22,
+      27
+    ],
+    [
+      23,
+      0
+    ],
+    [
+      23,
+      4
+    ],
+    [
+      23,
+      20
+    ],
+    [
+      23,
+      25
+    ],
+    [
+      23,
+      27
+    ],
+    [
+      24,
+      0
+    ],
+    [
+      24,
+      2
+    ],
+    [
+      24,
+      3
+    ],
+    [
+      24,
+      4
+    ],
+    [
+      24,
+      11
+    ],
+    [
+      24,
+      18
+    ],
+    [
+      24,
+      27
+    ],
+    [
+      25,
+      0
+    ],
+    [
+      25,
+      4
+    ],
+    [
+      25,
+      9
+    ],
+    [
+      25,
+      10
+    ],
+    [
+      25,
+      11
+    ],
+    [
+      25,
+      17
+    ],
+    [
+      25,
+      18
+    ],
+    [
+      25,
+      27
+    ],
+    [
+      26,
+      0
+    ],
+    [
+      26,
+      11
+    ],
+    [
+      26,
+      18
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      27,
+      0
+    ],
+    [
+      27,
+      3
+    ],
+    [
+      27,
+      20
+    ],
+    [
+      27,
+      27
+    ],
+    [
+      28,
+      0
+    ],
+    [
+      28,
+      8
+    ],
+    [
+      28,
+      10
+    ],
+    [
+      28,
+      25
+    ],
+    [
+      28,
+      27
+    ],
+    [
+      29,
+      0
+    ],
+    [
+      29,
+      2
+    ],
+    [
+      29,
+      27
+    ],
+    [
+      30,
+      0
+    ],
+    [
+      30,
+      25
+    ],
+    [
+      30,
+      27
+    ],
+    [
+      31,
+      0
+    ],
+    [
+      31,
+      17
+    ],
+    [
+      31,
+      19
+    ],
+    [
+      31,
+      21
+    ],
+    [
+      31,
+      27
+    ],
+    [
+      32,
+      0
+    ],
+    [
+      32,
+      3
+    ],
+    [
+      32,
+      8
+    ],
+    [
+      32,
+      17
+    ],
+    [
+      32,
+      19
+    ],
+    [
+      32,
+      21
+    ],
+    [
+      32,
+      27
+    ],
+    [
+      33,
+      0
+    ],
+    [
+      33,
+      4
+    ],
+    [
+      33,
+      11
+    ],
+    [
+      33,
+      15
+    ],
+    [
+      33,
+      19
+    ],
+    [
+      33,
+      21
+    ],
+    [
+      33,
+      25
+    ],
+    [
+      33,
+      27
+    ],
+    [
+      34,
+      0
+    ],
+    [
+      34,
+      3
+    ],
+    [
+      34,
+      4
+    ],
+    [
+      34,
+      8
+    ],
+    [
+      34,
+      10
+    ],
+    [
+      34,
+      11
+    ],
+    [
+      34,
+      15
+    ],
+    [
+      34,
+      18
+    ],
+    [
+      34,
+      19
+    ],
+    [
+      34,
+      21
+    ],
+    [
+      34,
+      27
+    ],
+    [
+      35,
+      0
+    ],
+    [
+      35,
+      4
+    ],
+    [
+      35,
+      11
+    ],
+    [
+      35,
+      15
+    ],
+    [
+      35,
+      19
+    ],
+    [
+      35,
+      21
+    ],
+    [
+      35,
+      27
+    ],
+    [
+      36,
+      0
+    ],
+    [
+      36,
+      2
+    ],
+    [
+      36,
+      4
+    ],
+    [
+      36,
+      7
+    ],
+    [
+      36,
+      9
+    ],
+    [
+      36,
+      15
+    ],
+    [
+      36,
+      21
+    ],
+    [
+      36,
+      27
+    ],
+    [
+      37,
+      0
+    ],
+    [
+      37,
+      15
+    ],
+    [
+      37,
+      16
+    ],
+    [
+      37,
+      17
+    ],
+    [
+      37,
+      18
+    ],
+    [
+      37,
+      19
+    ],
+    [
+      37,
+      20
+    ],
+    [
+      37,
+      21
+    ],
+    [
+      37,
+      24
+    ],
+    [
+      37,
+      27
+    ],
+    [
+      38,
+      0
+    ],
+    [
+      38,
+      27
+    ],
+    [
+      39,
+      0
+    ],
+    [
+      39,
+      1
+    ],
+    [
+      39,
+      2
+    ],
+    [
+      39,
+      3
+    ],
+    [
+      39,
+      4
+    ],
+    [
+      39,
+      5
+    ],
+    [
+      39,
+      6
+    ],
+    [
+      39,
+      7
+    ],
+    [
+      39,
+      8
+    ],
+    [
+      39,
+      9
+    ],
+    [
+      39,
+      10
+    ],
+    [
+      39,
+      11
+    ],
+    [
+      39,
+      12
+    ],
+    [
+      39,
+      13
+    ],
+    [
+      39,
+      14
+    ],
+    [
+      39,
+      15
+    ],
+    [
+      39,
+      16
+    ],
+    [
+      39,
+      17
+    ],
+    [
+      39,
+      18
+    ],
+    [
+      39,
+      19
+    ],
+    [
+      39,
+      20
+    ],
+    [
+      39,
+      21
+    ],
+    [
+      39,
+      22
+    ],
+    [
+      39,
+      23
+    ],
+    [
+      39,
+      24
+    ],
+    [
+      39,
+      25
+    ],
+    [
+      39,
+      26
+    ],
+    [
+      39,
+      27
+    ]
+  ],
+  "objects": [
+    {
+      "id": "workshop",
+      "asset": "workshop",
+      "tile": [
+        5,
+        4
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "actions": [
+        "workshop"
+      ],
+      "scale": 1.35,
+      "approaches": [
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "storage",
+      "asset": "storage_shed",
+      "tile": [
+        13,
+        4
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          12,
+          4
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          14,
+          4
+        ],
+        [
+          13,
+          3
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 1.35,
+      "approaches": [
+        [
+          13,
+          5
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          15,
+          4
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          14,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "water_lab",
+      "asset": "filter_station",
+      "tile": [
+        16,
+        9
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          15,
+          9
+        ],
+        [
+          16,
+          9
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          16,
+          8
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 1.35,
+      "approaches": [
+        [
+          16,
+          10
+        ],
+        [
+          16,
+          7
+        ],
+        [
+          15,
+          8
+        ],
+        [
+          17,
+          8
+        ],
+        [
+          18,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ]
+      ]
+    },
+    {
+      "id": "home_1",
+      "asset": "home_restored",
+      "tile": [
+        24,
+        4
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          23,
+          4
+        ],
+        [
+          24,
+          4
+        ],
+        [
+          25,
+          4
+        ],
+        [
+          24,
+          3
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 1.35,
+      "approaches": [
+        [
+          24,
+          5
+        ],
+        [
+          23,
+          3
+        ],
+        [
+          25,
+          3
+        ],
+        [
+          22,
+          4
+        ],
+        [
+          26,
+          4
+        ],
+        [
+          23,
+          5
+        ],
+        [
+          25,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "home_2",
+      "asset": "home_restored",
+      "tile": [
+        34,
+        4
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          33,
+          4
+        ],
+        [
+          34,
+          4
+        ],
+        [
+          35,
+          4
+        ],
+        [
+          34,
+          3
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 1.35,
+      "approaches": [
+        [
+          34,
+          5
+        ],
+        [
+          34,
+          2
+        ],
+        [
+          33,
+          3
+        ],
+        [
+          35,
+          3
+        ],
+        [
+          32,
+          4
+        ],
+        [
+          33,
+          5
+        ],
+        [
+          35,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "market",
+      "asset": "lw_prop_market_stall",
+      "tile": [
+        25,
+        11
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          24,
+          11
+        ],
+        [
+          25,
+          11
+        ],
+        [
+          26,
+          11
+        ],
+        [
+          25,
+          10
+        ]
+      ],
+      "actions": [
+        "trade"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          25,
+          12
+        ],
+        [
+          24,
+          10
+        ],
+        [
+          26,
+          10
+        ],
+        [
+          23,
+          11
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          24,
+          12
+        ],
+        [
+          26,
+          12
+        ]
+      ]
+    },
+    {
+      "id": "fish_market",
+      "asset": "lw_prop_fish_stall",
+      "tile": [
+        34,
+        11
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          33,
+          11
+        ],
+        [
+          34,
+          11
+        ],
+        [
+          35,
+          11
+        ],
+        [
+          34,
+          10
+        ]
+      ],
+      "actions": [
+        "trade"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          34,
+          12
+        ],
+        [
+          34,
+          9
+        ],
+        [
+          33,
+          10
+        ],
+        [
+          35,
+          10
+        ],
+        [
+          32,
+          11
+        ],
+        [
+          36,
+          11
+        ],
+        [
+          33,
+          12
+        ],
+        [
+          35,
+          12
+        ]
+      ]
+    },
+    {
+      "id": "recycling",
+      "asset": "lw_prop_recycle_station",
+      "tile": [
+        5,
+        10
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          5,
+          11
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ]
+    },
+    {
+      "id": "camp",
+      "asset": "camp_tent",
+      "tile": [
+        5,
+        20
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          4,
+          20
+        ],
+        [
+          5,
+          20
+        ],
+        [
+          6,
+          20
+        ],
+        [
+          5,
+          19
+        ]
+      ],
+      "actions": [
+        "rest"
+      ],
+      "scale": 1.35,
+      "approaches": [
+        [
+          5,
+          21
+        ],
+        [
+          5,
+          18
+        ],
+        [
+          4,
+          19
+        ],
+        [
+          6,
+          19
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          7,
+          20
+        ],
+        [
+          4,
+          21
+        ],
+        [
+          6,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "barn",
+      "asset": "storage_shed",
+      "tile": [
+        34,
+        19
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          33,
+          19
+        ],
+        [
+          34,
+          19
+        ],
+        [
+          35,
+          19
+        ],
+        [
+          34,
+          18
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 1.35,
+      "approaches": [
+        [
+          34,
+          20
+        ],
+        [
+          34,
+          17
+        ],
+        [
+          33,
+          18
+        ],
+        [
+          35,
+          18
+        ],
+        [
+          36,
+          19
+        ],
+        [
+          33,
+          20
+        ],
+        [
+          35,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "well",
+      "asset": "well_flowing",
+      "tile": [
+        13,
+        10
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          12,
+          10
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          14,
+          10
+        ],
+        [
+          13,
+          9
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 1.35,
+      "approaches": [
+        [
+          13,
+          11
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          14,
+          11
+        ]
+      ]
+    },
+    {
+      "id": "world_board",
+      "asset": "notice_board",
+      "tile": [
+        25,
+        18
+      ],
+      "kind": "building",
+      "footprint": [
+        [
+          24,
+          18
+        ],
+        [
+          25,
+          18
+        ],
+        [
+          26,
+          18
+        ],
+        [
+          25,
+          17
+        ]
+      ],
+      "actions": [
+        "board"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          25,
+          19
+        ],
+        [
+          25,
+          16
+        ],
+        [
+          24,
+          17
+        ],
+        [
+          26,
+          17
+        ],
+        [
+          23,
+          18
+        ],
+        [
+          27,
+          18
+        ],
+        [
+          24,
+          19
+        ],
+        [
+          26,
+          19
+        ]
+      ]
+    },
+    {
+      "id": "plaza_sprout",
+      "asset": "impact_monument",
+      "tile": [
+        17,
+        11
+      ],
+      "kind": "landmark",
+      "footprint": [
+        [
+          17,
+          11
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 1.1,
+      "approaches": [
+        [
+          17,
+          10
+        ],
+        [
+          16,
+          11
+        ],
+        [
+          18,
+          11
+        ],
+        [
+          17,
+          12
+        ]
+      ]
+    },
+    {
+      "id": "garden_pond",
+      "asset": "lw_prop_pond",
+      "tile": [
+        15,
+        20
+      ],
+      "kind": "landmark",
+      "footprint": [
+        [
+          14,
+          20
+        ],
+        [
+          15,
+          20
+        ],
+        [
+          16,
+          20
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          15,
+          21
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          14,
+          19
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          14,
+          21
+        ],
+        [
+          16,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "waterfall",
+      "asset": "lw_prop_waterfall",
+      "tile": [
+        19,
+        3
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1.0
+    },
+    {
+      "id": "fishing_dock",
+      "asset": "lw_prop_fishing_spot",
+      "tile": [
+        18,
+        20
+      ],
+      "kind": "activity",
+      "footprint": [
+        [
+          18,
+          20
+        ]
+      ],
+      "actions": [
+        "fish"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          18,
+          19
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "campfire",
+      "asset": "campfire",
+      "tile": [
+        7,
+        18
+      ],
+      "kind": "activity",
+      "footprint": [
+        [
+          7,
+          18
+        ]
+      ],
+      "actions": [
+        "rest"
+      ],
+      "scale": 0.8,
+      "approaches": [
+        [
+          7,
+          17
+        ],
+        [
+          6,
+          18
+        ],
+        [
+          8,
+          18
+        ],
+        [
+          7,
+          19
+        ]
+      ]
+    },
+    {
+      "id": "bench_plaza",
+      "asset": "lw_prop_bench",
+      "tile": [
+        22,
+        11
+      ],
+      "kind": "activity",
+      "footprint": [
+        [
+          22,
+          11
+        ]
+      ],
+      "actions": [
+        "sit"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          22,
+          10
+        ],
+        [
+          21,
+          11
+        ],
+        [
+          23,
+          11
+        ],
+        [
+          22,
+          12
+        ]
+      ]
+    },
+    {
+      "id": "bench_garden",
+      "asset": "lw_prop_curved_bench",
+      "tile": [
+        13,
+        18
+      ],
+      "kind": "activity",
+      "footprint": [
+        [
+          13,
+          18
+        ]
+      ],
+      "actions": [
+        "sit"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          13,
+          17
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          13,
+          19
+        ]
+      ]
+    },
+    {
+      "id": "pump",
+      "asset": "lw_prop_water_pump",
+      "tile": [
+        27,
+        20
+      ],
+      "kind": "activity",
+      "footprint": [
+        [
+          27,
+          20
+        ]
+      ],
+      "actions": [
+        "refill"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          27,
+          19
+        ],
+        [
+          26,
+          20
+        ],
+        [
+          28,
+          20
+        ],
+        [
+          27,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "birdhouse",
+      "asset": "lw_prop_birdhouse",
+      "tile": [
+        12,
+        8
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          12,
+          8
+        ]
+      ],
+      "actions": [
+        "inspect"
+      ],
+      "scale": 0.9,
+      "approaches": [
+        [
+          12,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          12,
+          9
+        ]
+      ]
+    },
+    {
+      "id": "fruit_tree",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        7,
+        9
+      ],
+      "kind": "plant",
+      "footprint": [
+        [
+          7,
+          9
+        ]
+      ],
+      "actions": [
+        "harvest"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          7,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          7,
+          10
+        ]
+      ]
+    },
+    {
+      "id": "berry_bush",
+      "asset": "lw_prop_berry_bush",
+      "tile": [
+        14,
+        8
+      ],
+      "kind": "plant",
+      "footprint": [
+        [
+          14,
+          8
+        ]
+      ],
+      "actions": [
+        "harvest"
+      ],
+      "scale": 1,
+      "approaches": [
+        [
+          14,
+          7
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          15,
+          8
+        ]
+      ]
+    },
+    {
+      "id": "plot_0_0",
+      "asset": "lw_crop_tomato_ripe",
+      "tile": [
+        31,
+        17
+      ],
+      "kind": "crop",
+      "footprint": [
+        [
+          31,
+          17
+        ]
+      ],
+      "actions": [
+        "water",
+        "harvest"
+      ],
+      "scale": 1,
+      "crop": "tomato",
+      "initialStage": 4,
+      "approaches": [
+        [
+          31,
+          16
+        ],
+        [
+          30,
+          17
+        ],
+        [
+          31,
+          18
+        ]
+      ]
+    },
+    {
+      "id": "plot_0_1",
+      "asset": "lw_crop_tomato_ripe",
+      "tile": [
+        32,
+        17
+      ],
+      "kind": "crop",
+      "footprint": [
+        [
+          32,
+          17
+        ]
+      ],
+      "actions": [
+        "water",
+        "harvest"
+      ],
+      "scale": 1,
+      "crop": "tomato",
+      "initialStage": 4,
+      "approaches": [
+        [
+          32,
+          16
+        ],
+        [
+          33,
+          17
+        ],
+        [
+          32,
+          18
+        ]
+      ]
+    },
+    {
+      "id": "plot_1_0",
+      "asset": "lw_crop_pumpkin_seed",
+      "tile": [
+        31,
+        19
+      ],
+      "kind": "crop",
+      "footprint": [
+        [
+          31,
+          19
+        ]
+      ],
+      "actions": [
+        "water",
+        "harvest"
+      ],
+      "scale": 1,
+      "crop": "pumpkin",
+      "initialStage": 0,
+      "approaches": [
+        [
+          31,
+          18
+        ],
+        [
+          30,
+          19
+        ],
+        [
+          31,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "plot_1_1",
+      "asset": "lw_crop_pumpkin_seed",
+      "tile": [
+        32,
+        19
+      ],
+      "kind": "crop",
+      "footprint": [
+        [
+          32,
+          19
+        ]
+      ],
+      "actions": [
+        "water",
+        "harvest"
+      ],
+      "scale": 1,
+      "crop": "pumpkin",
+      "initialStage": 0,
+      "approaches": [
+        [
+          32,
+          18
+        ],
+        [
+          32,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "plot_2_0",
+      "asset": "lw_crop_tomato_seed",
+      "tile": [
+        31,
+        21
+      ],
+      "kind": "crop",
+      "footprint": [
+        [
+          31,
+          21
+        ]
+      ],
+      "actions": [
+        "water",
+        "harvest"
+      ],
+      "scale": 1,
+      "crop": "tomato",
+      "initialStage": 0,
+      "approaches": [
+        [
+          31,
+          20
+        ],
+        [
+          30,
+          21
+        ],
+        [
+          31,
+          22
+        ]
+      ]
+    },
+    {
+      "id": "plot_2_1",
+      "asset": "lw_crop_tomato_seed",
+      "tile": [
+        32,
+        21
+      ],
+      "kind": "crop",
+      "footprint": [
+        [
+          32,
+          21
+        ]
+      ],
+      "actions": [
+        "water",
+        "harvest"
+      ],
+      "scale": 1,
+      "crop": "tomato",
+      "initialStage": 0,
+      "approaches": [
+        [
+          32,
+          20
+        ],
+        [
+          32,
+          22
+        ]
+      ]
+    },
+    {
+      "id": "npc_elder",
+      "asset": "npc_elder_front",
+      "tile": [
+        17,
+        15
+      ],
+      "kind": "npc",
+      "footprint": [],
+      "actions": [
+        "talk"
+      ],
+      "scale": 1,
+      "npcId": "elder",
+      "approaches": [
+        [
+          17,
+          15
+        ],
+        [
+          17,
+          14
+        ],
+        [
+          16,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          17,
+          16
+        ]
+      ]
+    },
+    {
+      "id": "npc_engineer",
+      "asset": "npc_engineer_front",
+      "tile": [
+        6,
+        7
+      ],
+      "kind": "npc",
+      "footprint": [],
+      "actions": [
+        "talk"
+      ],
+      "scale": 1,
+      "npcId": "engineer",
+      "approaches": [
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ]
+    },
+    {
+      "id": "npc_child",
+      "asset": "npc_child_front",
+      "tile": [
+        22,
+        14
+      ],
+      "kind": "npc",
+      "footprint": [],
+      "actions": [
+        "talk"
+      ],
+      "scale": 1,
+      "npcId": "child",
+      "approaches": [
+        [
+          22,
+          14
+        ],
+        [
+          22,
+          13
+        ],
+        [
+          21,
+          14
+        ],
+        [
+          23,
+          14
+        ],
+        [
+          22,
+          15
+        ]
+      ]
+    },
+    {
+      "id": "npc_recycler",
+      "asset": "npc_recycler_front",
+      "tile": [
+        6,
+        11
+      ],
+      "kind": "npc",
+      "footprint": [],
+      "actions": [
+        "talk"
+      ],
+      "scale": 1,
+      "npcId": "recycler",
+      "approaches": [
+        [
+          6,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          6,
+          12
+        ]
+      ]
+    },
+    {
+      "id": "npc_farmer",
+      "asset": "lw_npc_farmer_front",
+      "tile": [
+        32,
+        16
+      ],
+      "kind": "npc",
+      "footprint": [],
+      "actions": [
+        "talk"
+      ],
+      "scale": 1,
+      "npcId": "farmer",
+      "approaches": [
+        [
+          32,
+          16
+        ],
+        [
+          32,
+          15
+        ],
+        [
+          31,
+          16
+        ],
+        [
+          33,
+          16
+        ]
+      ]
+    },
+    {
+      "id": "npc_fisher",
+      "asset": "lw_npc_fisher_front",
+      "tile": [
+        17,
+        21
+      ],
+      "kind": "npc",
+      "footprint": [],
+      "actions": [
+        "talk"
+      ],
+      "scale": 1,
+      "npcId": "fisher",
+      "approaches": [
+        [
+          17,
+          21
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          16,
+          21
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          17,
+          22
+        ]
+      ]
+    },
+    {
+      "id": "npc_merchant",
+      "asset": "lw_npc_merchant_front",
+      "tile": [
+        26,
+        12
+      ],
+      "kind": "npc",
+      "footprint": [],
+      "actions": [
+        "talk"
+      ],
+      "scale": 1,
+      "npcId": "merchant",
+      "approaches": [
+        [
+          26,
+          12
+        ],
+        [
+          25,
+          12
+        ],
+        [
+          27,
+          12
+        ],
+        [
+          26,
+          13
+        ]
+      ]
+    },
+    {
+      "id": "animal_goat",
+      "asset": "lw_animal_goat",
+      "tile": [
+        35,
+        17
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "feed",
+        "play",
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "goat",
+      "approaches": [
+        [
+          35,
+          17
+        ],
+        [
+          35,
+          16
+        ],
+        [
+          34,
+          17
+        ],
+        [
+          36,
+          17
+        ],
+        [
+          35,
+          18
+        ]
+      ]
+    },
+    {
+      "id": "animal_sheep",
+      "asset": "lw_animal_sheep",
+      "tile": [
+        36,
+        20
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "feed",
+        "play",
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "sheep",
+      "approaches": [
+        [
+          36,
+          20
+        ],
+        [
+          36,
+          19
+        ],
+        [
+          35,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "animal_dog",
+      "asset": "lw_animal_dog",
+      "tile": [
+        24,
+        14
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "feed",
+        "play",
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "dog",
+      "approaches": [
+        [
+          24,
+          14
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          23,
+          14
+        ],
+        [
+          25,
+          14
+        ],
+        [
+          24,
+          15
+        ]
+      ]
+    },
+    {
+      "id": "animal_cat",
+      "asset": "lw_animal_cat",
+      "tile": [
+        26,
+        16
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "feed",
+        "play",
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "cat",
+      "approaches": [
+        [
+          26,
+          16
+        ],
+        [
+          26,
+          15
+        ],
+        [
+          25,
+          16
+        ],
+        [
+          27,
+          16
+        ],
+        [
+          26,
+          17
+        ]
+      ]
+    },
+    {
+      "id": "animal_bird",
+      "asset": "lw_animal_bird",
+      "tile": [
+        13,
+        7
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "bird",
+      "approaches": [
+        [
+          13,
+          7
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          13,
+          8
+        ]
+      ]
+    },
+    {
+      "id": "animal_chicken",
+      "asset": "lw_animal_chicken",
+      "tile": [
+        34,
+        16
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "feed",
+        "play",
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "chicken",
+      "approaches": [
+        [
+          34,
+          16
+        ],
+        [
+          33,
+          16
+        ],
+        [
+          35,
+          16
+        ],
+        [
+          34,
+          17
+        ]
+      ]
+    },
+    {
+      "id": "animal_chick",
+      "asset": "lw_animal_chick",
+      "tile": [
+        35,
+        16
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "chick",
+      "approaches": [
+        [
+          35,
+          16
+        ],
+        [
+          34,
+          16
+        ],
+        [
+          36,
+          16
+        ],
+        [
+          35,
+          17
+        ]
+      ]
+    },
+    {
+      "id": "animal_duck",
+      "asset": "lw_animal_duck",
+      "tile": [
+        16,
+        21
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "feed",
+        "play",
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "duck",
+      "approaches": [
+        [
+          16,
+          21
+        ],
+        [
+          15,
+          21
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          16,
+          22
+        ]
+      ]
+    },
+    {
+      "id": "animal_duckling",
+      "asset": "lw_animal_duckling",
+      "tile": [
+        17,
+        20
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "duckling",
+      "approaches": [
+        [
+          17,
+          20
+        ],
+        [
+          17,
+          19
+        ],
+        [
+          17,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "animal_fish",
+      "asset": "lw_animal_fish",
+      "tile": [
+        20,
+        18
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "fish",
+      "approaches": [
+        [
+          21,
+          18
+        ]
+      ]
+    },
+    {
+      "id": "animal_butterfly",
+      "asset": "lw_animal_butterfly",
+      "tile": [
+        12,
+        17
+      ],
+      "kind": "animal",
+      "footprint": [],
+      "actions": [
+        "observe"
+      ],
+      "scale": 1,
+      "animalId": "butterfly",
+      "approaches": [
+        [
+          12,
+          17
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          11,
+          17
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          12,
+          18
+        ]
+      ]
+    },
+    {
+      "id": "return_haven",
+      "asset": "signpost",
+      "tile": [
+        3,
+        13
+      ],
+      "kind": "exit",
+      "footprint": [],
+      "actions": [
+        "return_haven"
+      ],
+      "scale": 0.8,
+      "approaches": [
+        [
+          3,
+          13
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          3,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "fence_33_15",
+      "asset": "fence",
+      "tile": [
+        33,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          33,
+          15
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_34_15",
+      "asset": "fence",
+      "tile": [
+        34,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          34,
+          15
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_35_15",
+      "asset": "fence",
+      "tile": [
+        35,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          35,
+          15
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_36_15",
+      "asset": "fence",
+      "tile": [
+        36,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          36,
+          15
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_37_15",
+      "asset": "fence",
+      "tile": [
+        37,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          37,
+          15
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_37_17",
+      "asset": "fence",
+      "tile": [
+        37,
+        17
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          37,
+          17
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_37_18",
+      "asset": "fence",
+      "tile": [
+        37,
+        18
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          37,
+          18
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_37_19",
+      "asset": "fence",
+      "tile": [
+        37,
+        19
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          37,
+          19
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_37_20",
+      "asset": "fence",
+      "tile": [
+        37,
+        20
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          37,
+          20
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_37_21",
+      "asset": "fence",
+      "tile": [
+        37,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          37,
+          21
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_33_21",
+      "asset": "fence",
+      "tile": [
+        33,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          33,
+          21
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_34_21",
+      "asset": "fence",
+      "tile": [
+        34,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          34,
+          21
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_35_21",
+      "asset": "fence",
+      "tile": [
+        35,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          35,
+          21
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "fence_36_21",
+      "asset": "fence",
+      "tile": [
+        36,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          36,
+          21
+        ]
+      ],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "planter_8_4",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        8,
+        4
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_11_4",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        11,
+        4
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_15_4",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        15,
+        4
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_23_7",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        23,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_26_7",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        26,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_32_7",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        32,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_35_7",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        35,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_8_15",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        8,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_11_16",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        11,
+        16
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_14_15",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        14,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_25_15",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        25,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_28_15",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        28,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_31_15",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        31,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_3_15",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        3,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_4_15",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        4,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_5_15",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        5,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_6_15",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        6,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_3_24",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        3,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_6_24",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        6,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_12_24",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        12,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_16_24",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        16,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_23_24",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        23,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_26_24",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        26,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_32_24",
+      "asset": "lw_prop_stone_planter",
+      "tile": [
+        32,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "planter_35_24",
+      "asset": "lw_prop_flower_box",
+      "tile": [
+        35,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.75
+    },
+    {
+      "id": "decor_2_2",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        2,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_3_2",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        3,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_4_2",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        4,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_5_2",
+      "asset": "palm_coconut",
+      "tile": [
+        5,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          5,
+          2
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "tree_7_2",
+      "asset": "palm",
+      "tile": [
+        7,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          7,
+          2
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_9_2",
+      "asset": "lw_prop_moss_rock",
+      "tile": [
+        9,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_10_2",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        10,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          10,
+          2
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_12_2",
+      "asset": "lw_prop_grass_tall",
+      "tile": [
+        12,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_13_2",
+      "asset": "palm_coconut",
+      "tile": [
+        13,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          13,
+          2
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_16_2",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        16,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_17_2",
+      "asset": "lw_prop_grass_tall",
+      "tile": [
+        17,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_22_2",
+      "asset": "palm",
+      "tile": [
+        22,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          22,
+          2
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "tree_24_2",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        24,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          24,
+          2
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_26_2",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        26,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_28_2",
+      "asset": "lw_prop_red_fern",
+      "tile": [
+        28,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_29_2",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        29,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          29,
+          2
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "decor_31_2",
+      "asset": "flower_yellow",
+      "tile": [
+        31,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_33_2",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        33,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_34_2",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        34,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_36_2",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        36,
+        2
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          36,
+          2
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_2_3",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        2,
+        3
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_3_3",
+      "asset": "palm",
+      "tile": [
+        3,
+        3
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          3,
+          3
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "tree_15_3",
+      "asset": "palm_coconut",
+      "tile": [
+        15,
+        3
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          15,
+          3
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_17_3",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        17,
+        3
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_26_3",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        26,
+        3
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_27_3",
+      "asset": "palm_coconut",
+      "tile": [
+        27,
+        3
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          27,
+          3
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "tree_32_3",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        32,
+        3
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          32,
+          3
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "tree_36_4",
+      "asset": "palm",
+      "tile": [
+        36,
+        4
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          36,
+          4
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "decor_2_5",
+      "asset": "lw_prop_fern",
+      "tile": [
+        2,
+        5
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_2_7",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        2,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          2,
+          7
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_8_7",
+      "asset": "flower_white",
+      "tile": [
+        8,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_16_7",
+      "asset": "lw_prop_fern",
+      "tile": [
+        16,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_22_7",
+      "asset": "palm_coconut",
+      "tile": [
+        22,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          22,
+          7
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_25_7",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        25,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_27_7",
+      "asset": "flower_yellow",
+      "tile": [
+        27,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_31_7",
+      "asset": "bush_white",
+      "tile": [
+        31,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_33_7",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        33,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_34_7",
+      "asset": "lw_prop_red_fern",
+      "tile": [
+        34,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_36_7",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        36,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          36,
+          7
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "decor_24_8",
+      "asset": "lw_prop_grass_tall",
+      "tile": [
+        24,
+        8
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_25_8",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        25,
+        8
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_28_8",
+      "asset": "palm",
+      "tile": [
+        28,
+        8
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          28,
+          8
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "tree_32_8",
+      "asset": "palm_coconut",
+      "tile": [
+        32,
+        8
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          32,
+          8
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "tree_34_8",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        34,
+        8
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          34,
+          8
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_3_9",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        3,
+        9
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_22_9",
+      "asset": "lw_prop_grass_tall",
+      "tile": [
+        22,
+        9
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_25_9",
+      "asset": "palm",
+      "tile": [
+        25,
+        9
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          25,
+          9
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_36_9",
+      "asset": "palm",
+      "tile": [
+        36,
+        9
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          36,
+          9
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_2_10",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        2,
+        10
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_3_10",
+      "asset": "flower_pink",
+      "tile": [
+        3,
+        10
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_11_10",
+      "asset": "flower_pink",
+      "tile": [
+        11,
+        10
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_28_10",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        28,
+        10
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          28,
+          10
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "decor_31_10",
+      "asset": "lw_prop_red_fern",
+      "tile": [
+        31,
+        10
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_32_10",
+      "asset": "lw_prop_red_fern",
+      "tile": [
+        32,
+        10
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_2_11",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        2,
+        11
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_3_11",
+      "asset": "lw_prop_grass_tall",
+      "tile": [
+        3,
+        11
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_11_11",
+      "asset": "bush_white",
+      "tile": [
+        11,
+        11
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_31_11",
+      "asset": "bush_white",
+      "tile": [
+        31,
+        11
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_36_11",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        36,
+        11
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_37_11",
+      "asset": "bush_green",
+      "tile": [
+        37,
+        11
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_2_15",
+      "asset": "palm_coconut",
+      "tile": [
+        2,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          2,
+          15
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_7_15",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        7,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_13_15",
+      "asset": "lw_prop_grass_tall",
+      "tile": [
+        13,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_15_15",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        15,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_7_16",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        7,
+        16
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_15_16",
+      "asset": "lw_prop_moss_rock",
+      "tile": [
+        15,
+        16
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_24_16",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        24,
+        16
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_28_16",
+      "asset": "flower_pink",
+      "tile": [
+        28,
+        16
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_37_16",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        37,
+        16
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          37,
+          16
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_2_17",
+      "asset": "lw_prop_red_fern",
+      "tile": [
+        2,
+        17
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_3_17",
+      "asset": "bush_white",
+      "tile": [
+        3,
+        17
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_4_17",
+      "asset": "bush_white",
+      "tile": [
+        4,
+        17
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_5_17",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        5,
+        17
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_15_17",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        15,
+        17
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          15,
+          17
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_22_17",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        22,
+        17
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_23_17",
+      "asset": "bush_green",
+      "tile": [
+        23,
+        17
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_28_17",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        28,
+        17
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_2_18",
+      "asset": "palm",
+      "tile": [
+        2,
+        18
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          2,
+          18
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_17_18",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        17,
+        18
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          17,
+          18
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "decor_23_18",
+      "asset": "flower_pink",
+      "tile": [
+        23,
+        18
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_28_18",
+      "asset": "bush_white",
+      "tile": [
+        28,
+        18
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_11_19",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        11,
+        19
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_22_19",
+      "asset": "lw_prop_fern",
+      "tile": [
+        22,
+        19
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_23_19",
+      "asset": "flower_pink",
+      "tile": [
+        23,
+        19
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_2_20",
+      "asset": "palm",
+      "tile": [
+        2,
+        20
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          2,
+          20
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_8_20",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        8,
+        20
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_12_20",
+      "asset": "bush_green",
+      "tile": [
+        12,
+        20
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_13_20",
+      "asset": "lw_prop_red_fern",
+      "tile": [
+        13,
+        20
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_23_20",
+      "asset": "palm_coconut",
+      "tile": [
+        23,
+        20
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          23,
+          20
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_25_20",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        25,
+        20
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_11_21",
+      "asset": "bush_white",
+      "tile": [
+        11,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_13_21",
+      "asset": "lw_prop_fern",
+      "tile": [
+        13,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_25_21",
+      "asset": "flower_white",
+      "tile": [
+        25,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_2_22",
+      "asset": "bush_white",
+      "tile": [
+        2,
+        22
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_37_22",
+      "asset": "flower_pink",
+      "tile": [
+        37,
+        22
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_2_23",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        2,
+        23
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          2,
+          23
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_37_23",
+      "asset": "flower_pink",
+      "tile": [
+        37,
+        23
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_4_24",
+      "asset": "flower_white",
+      "tile": [
+        4,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_7_24",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        7,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_11_24",
+      "asset": "lw_prop_moss_rock",
+      "tile": [
+        11,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_17_24",
+      "asset": "lw_prop_red_fern",
+      "tile": [
+        17,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_22_24",
+      "asset": "bush_white",
+      "tile": [
+        22,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_24_24",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        24,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_31_24",
+      "asset": "lw_prop_grass_short",
+      "tile": [
+        31,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_33_24",
+      "asset": "lw_prop_grass_tall",
+      "tile": [
+        33,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_34_24",
+      "asset": "flower_yellow",
+      "tile": [
+        34,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_37_24",
+      "asset": "palm_coconut",
+      "tile": [
+        37,
+        24
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          37,
+          24
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_2_25",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        2,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          2,
+          25
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_4_25",
+      "asset": "lw_prop_red_fern",
+      "tile": [
+        4,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_5_25",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        5,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_6_25",
+      "asset": "flower_yellow",
+      "tile": [
+        6,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_7_25",
+      "asset": "lw_prop_moss_rock",
+      "tile": [
+        7,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_8_25",
+      "asset": "lw_prop_red_fern",
+      "tile": [
+        8,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_10_25",
+      "asset": "palm",
+      "tile": [
+        10,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          10,
+          25
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "decor_12_25",
+      "asset": "bush_green",
+      "tile": [
+        12,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_13_25",
+      "asset": "lw_prop_wildflower_patch",
+      "tile": [
+        13,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "decor_14_25",
+      "asset": "bush_green",
+      "tile": [
+        14,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "tree_15_25",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        15,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          15,
+          25
+        ]
+      ],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_17_25",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        17,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          17,
+          25
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_22_25",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        22,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 1
+    },
+    {
+      "id": "tree_23_25",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        23,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          23,
+          25
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "decor_25_25",
+      "asset": "lw_prop_grass_tall",
+      "tile": [
+        25,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "decor_26_25",
+      "asset": "flower_white",
+      "tile": [
+        26,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_28_25",
+      "asset": "lw_prop_blossom_tree",
+      "tile": [
+        28,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          28,
+          25
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "tree_30_25",
+      "asset": "palm_coconut",
+      "tile": [
+        30,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          30,
+          25
+        ]
+      ],
+      "actions": [],
+      "scale": 1.1
+    },
+    {
+      "id": "decor_32_25",
+      "asset": "bush_white",
+      "tile": [
+        32,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.8
+    },
+    {
+      "id": "tree_33_25",
+      "asset": "lw_prop_fruit_tree",
+      "tile": [
+        33,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [
+        [
+          33,
+          25
+        ]
+      ],
+      "actions": [],
+      "scale": 0.85
+    },
+    {
+      "id": "decor_35_25",
+      "asset": "lw_prop_hibiscus",
+      "tile": [
+        35,
+        25
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_8_11",
+      "asset": "lamp",
+      "tile": [
+        8,
+        11
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_11_15",
+      "asset": "lamp",
+      "tile": [
+        11,
+        15
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_15_13",
+      "asset": "lamp",
+      "tile": [
+        15,
+        13
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_24_13",
+      "asset": "lamp",
+      "tile": [
+        24,
+        13
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_28_11",
+      "asset": "lamp",
+      "tile": [
+        28,
+        11
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_31_14",
+      "asset": "lamp",
+      "tile": [
+        31,
+        14
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_8_21",
+      "asset": "lamp",
+      "tile": [
+        8,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_28_21",
+      "asset": "lamp",
+      "tile": [
+        28,
+        21
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_11_7",
+      "asset": "lamp",
+      "tile": [
+        11,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    },
+    {
+      "id": "lamp_28_7",
+      "asset": "lamp",
+      "tile": [
+        28,
+        7
+      ],
+      "kind": "decor",
+      "footprint": [],
+      "actions": [],
+      "scale": 0.65
+    }
+  ],
+  "zones": [
+    {
+      "id": "workshop",
+      "name": "Workshop & Water Lab",
+      "bounds": [
+        2,
+        2,
+        17,
+        11
+      ]
+    },
+    {
+      "id": "residential",
+      "name": "Residential Grove",
+      "bounds": [
+        22,
+        2,
+        37,
+        7
+      ]
+    },
+    {
+      "id": "plaza",
+      "name": "Ripple Plaza",
+      "bounds": [
+        15,
+        10,
+        24,
+        16
+      ]
+    },
+    {
+      "id": "market",
+      "name": "Market Lane",
+      "bounds": [
+        24,
+        8,
+        37,
+        14
+      ]
+    },
+    {
+      "id": "camp",
+      "name": "Camp & Garden",
+      "bounds": [
+        2,
+        16,
+        18,
+        25
+      ]
+    },
+    {
+      "id": "farm",
+      "name": "Farm & Animal Sanctuary",
+      "bounds": [
+        28,
+        15,
+        37,
+        25
+      ]
+    }
+  ],
+  "exit": {
+    "id": "return_haven",
+    "destination": "himalayan_haven_intro_v1",
+    "returnSpawnPolicy": "world board approach, validate against original fixture"
+  },
+  "entry": {
+    "scene": "himalayan_haven_intro_v1",
+    "requires": "introSeen && auroraTutorialComplete",
+    "via": "world_board:visit_grove"
+  }
+}

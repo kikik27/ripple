@@ -9,3 +9,12 @@
 
 - Ripple logo and emblem are original AI-generated provisional game artwork. App icons derive from the existing Yeti portrait. The brand-board image is concept reference only, not a runtime asset. Name clearance and authorization to use Lofi-related IP are pending.
 - Audio v2 is original procedural synthesis, no external samples or soundfonts bundled.
+- Opening Kit v1.0 cinematic, Haven background, terrain, and handoff reference were supplied in `Ripple_Opening_Kit_v1.zip`. The kit describes the film as a sprite-based animatic using existing provisional Ripple art, procedural backgrounds, and original Audio Pack v2. The same Lofi and Ripple IP clearance limits above apply before public release.
+- Living World Expansion v1.0 assets, atlas, portraits, map and reference code were supplied in `Ripple_Living_World_Expansion_v1.zip`. The kit describes source art as generated and processed provisional Ripple demo art; base sprites and audio are reused. These assets carry the same Lofi/Ripple IP clearance limits above before public release.
+
+## Highland trail stamp
+The backpack journal uses the Lucide stamp icon from https://github.com/lucide-icons/lucide/blob/main/icons/stamp.svg under the ISC License. The distributed notice is in apps/web/public/assets/ui/trail-stamp-LICENSE.txt.
+
+## Grove character animation and foley
+- Eight four-frame side walk sheets under apps/web/public/assets/living/sprites were generated from supplied Ripple character references and fitted to the original 48×48 sprite cells. The existing provisional character rights apply.
+- Kenney Vleugels, 50 RPG sound effects. handleCoins.ogg, bookOpen.ogg and cloth1.ogg are unmodified files from RPGsounds_Kenney.zip, distributed under CC0 1.0. Source https://opengameart.org/content/50-rpg-sound-effects · https://creativecommons.org/publicdomain/zero/1.0/
