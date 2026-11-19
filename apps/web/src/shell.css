@@ -227,17 +227,45 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 
 @media(prefers-reduced-motion:reduce){.fishing-pool[data-phase=bite] .float,.building-hover-pill{animation:none}}
 
-/* Real Sui Wallet Standard & Navigation Badge */
-.title-wallet-badge{position:absolute;top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right));display:inline-flex;align-items:center;gap:6px;background:#fbf1dd;border:2px solid #57432e;border-radius:6px;padding:6px 12px;font:bold 13px Georgia,serif;color:#243949;box-shadow:inset 0 -2px #ceb791,0 2px 4px rgba(0,0,0,0.3);cursor:pointer;z-index:10;transition:transform 0.15s,background 0.15s}
-.title-wallet-badge:hover{background:#f3e4c7;transform:translateY(-1px)}
-.title-wallet-badge img{width:16px;height:16px;object-fit:contain;image-rendering:pixelated}
+/* Real Sui Wallet Standard & Navigation Badge with bundled assets */
+.title-wallet-badge{position:absolute;top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right));display:inline-flex;align-items:center;gap:8px;background:none;border:5px solid transparent;border-image:url('/assets/ui/button_secondary_idle.png') 25 45 fill / 13px 23px stretch;padding:6px 18px;font:bold 14px Georgia,serif;color:#243e5c;cursor:pointer;z-index:10;transition:transform 0.15s}
+.title-wallet-badge:hover{border-image:url('/assets/ui/button_secondary_hover.png') 25 45 fill / 13px 23px stretch;transform:translateY(-1px)}
+.title-wallet-badge:active{border-image:url('/assets/ui/button_secondary_pressed.png') 25 45 fill / 13px 23px stretch}
+.title-wallet-badge img{width:18px;height:18px;object-fit:contain;image-rendering:pixelated}
 .title-wallet-badge small{font:bold 10px system-ui;background:#396b5e;color:white;padding:1px 5px;border-radius:3px;margin-left:4px}
 .title-wallet-badge.is-guest small{background:#7a6d59}
 
-.wallet-pill{position:absolute;top:max(8px,env(safe-area-inset-top));right:max(120px,env(safe-area-inset-right));display:inline-flex;align-items:center;gap:5px;background:#fbf1dd url('/assets/ui/hud_profile_frame_empty.png') center/100% 100%;border:1px solid #785f40;border-radius:4px;padding:4px 9px;font:bold 12px Georgia,serif;color:#203651;box-shadow:0 2px 4px rgba(0,0,0,0.25);cursor:pointer;z-index:9;transition:background 0.15s}
-.wallet-pill:hover{background-color:#ecdcb8}
-.wallet-pill img{width:14px;height:14px;object-fit:contain;image-rendering:pixelated}
-.wallet-pill small{font:bold 10px system-ui;background:#315f53;color:white;padding:1px 4px;border-radius:2px}
+.wallet-pill{position:absolute;top:max(8px,env(safe-area-inset-top));right:max(130px,env(safe-area-inset-right));display:inline-flex;align-items:center;gap:5px;background:none;border:4px solid transparent;border-image:url('/assets/ui/hud_profile_frame_empty.png') 24 fill / 6px stretch;padding:4px 10px;font:bold 12px Georgia,serif;color:#203651;cursor:pointer;z-index:9}
+.wallet-pill:hover{filter:brightness(1.08)}
+.wallet-pill img{width:16px;height:16px;object-fit:contain;image-rendering:pixelated}
+.wallet-pill small{font:bold 10px system-ui;background:#315f53;color:white;padding:1px 5px;border-radius:2px}
 .wallet-pill.is-guest small{background:#8a765c}
 @media(max-width:600px){.wallet-pill{right:85px;padding:3px 6px;font-size:11px}}
+
+/* Authentic RPG Ledger & Wallet Board using bundled assets */
+.wallet-board{width:min(520px,96vw);max-height:90dvh;overflow-y:auto;padding-bottom:34px}
+.wallet-board header{display:flex;align-items:center;gap:12px;margin-bottom:12px;border-bottom:1px solid #b5a78d;padding-bottom:8px}
+.wallet-board .ledger-logo-img{width:42px;height:42px;object-fit:contain;image-rendering:pixelated;flex:none}
+.wallet-board header small{font:bold 11px Georgia,serif;color:#506e67;letter-spacing:0.06em;display:block}
+.wallet-board header h2{font:bold 22px Georgia,serif;color:#203651;margin:0}
+
+.wallet-card-panel{background:#fdf6e9 url('/assets/ui/hud_profile_frame_empty.png') center/100% 100%;border:8px solid transparent;border-image:url('/assets/ui/hud_profile_frame_empty.png') 24 fill / 8px stretch;padding:10px 14px;margin-bottom:10px;text-align:left}
+.wallet-card-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #cfc2aa;padding-bottom:4px;margin-bottom:6px}
+.wallet-card-tag{display:inline-flex;align-items:center;gap:6px;font:bold 11px Georgia,serif;color:#355a53;text-transform:uppercase;letter-spacing:0.04em}
+.wallet-card-tag img{width:16px;height:16px;object-fit:contain;image-rendering:pixelated}
+.wallet-card-panel p{margin:4px 0 8px;font-size:13px;color:#273f4e;line-height:1.35}
+
+.wallet-card-option{cursor:pointer;transition:transform .15s ease,filter .15s ease}
+.wallet-card-option:hover{filter:brightness(1.03);transform:translateY(-1px)}
+.wallet-card-option.is-connected-opt{background-color:#edf6f1}
+
+.rpg-wallet-code{font:bold 12px monospace;background:#efe3cb;padding:3px 7px;border-radius:4px;border:1px solid #cbba9d;color:#18364b;word-break:break-all}
+
+.receipt-banner{display:flex;align-items:center;gap:8px;padding:8px 10px;background:#e9f3ec;border:1px solid #5a9678;border-radius:6px;margin-top:8px}
+.receipt-banner img{width:18px;height:18px;object-fit:contain;image-rendering:pixelated;flex:none}
+.receipt-banner strong{display:block;font:bold 12px Georgia,serif;color:#185331}
+.receipt-banner small{display:block;font:11px monospace;color:#2a503a;word-break:break-all}
+
+.status-badge-historical{font:bold 10px system-ui;background:#d8c6a5;color:#493826;padding:2px 6px;border-radius:3px;border:1px solid #ad9773}
+.wallet-board .board-close{display:block;margin:12px auto 0;min-width:140px}
 

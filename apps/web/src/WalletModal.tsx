@@ -35,7 +35,6 @@ export function WalletModal({
   const isAlreadyClaimed = typeof window !== "undefined" && localStorage.getItem("ripple.komodo.claimed.v1") === "true";
 
   useEffect(() => {
-    // Subscribe to real wallet connection state
     const unsubscribe = suiWallet.subscribe((state) => {
       setWalletAddress(state.address);
       setWalletName(state.name);
@@ -56,7 +55,7 @@ export function WalletModal({
   const handleConnectRealWallet = async (preferredName?: string) => {
     setIsConnecting(true);
     setErrorMessage("");
-    setStatusMessage("Opening wallet approval prompt...");
+    setStatusMessage("Opening wallet approval prompt in extension...");
 
     try {
       const address = await suiWallet.connect(preferredName);
@@ -95,7 +94,6 @@ export function WalletModal({
       let signature = "simulated_sig_" + Math.random().toString(16).slice(2, 10);
       let challengeId = "chal_" + Math.random().toString(16).slice(2, 10);
 
-      // Attempt challenge and personal message signing via real wallet
       try {
         const chalRes = await fetch("http://127.0.0.1:4188/v1/auth/challenge", {
           method: "POST",
@@ -138,7 +136,7 @@ export function WalletModal({
           }
         }
       } catch {
-        // Fallback for offline play
+        // Fallback for offline mode
       }
 
       setClaimStatus("claimed");
@@ -197,280 +195,355 @@ export function WalletModal({
 
   return (
     <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label="Sui Testnet Expedition Ledger">
-      <section className="journal wallet-journal" style={{ maxWidth: 560, width: "95%" }}>
-        <button
-          className="close"
-          onClick={onClose}
-          aria-label="Close ledger"
-          style={{ position: "absolute", top: 12, right: 16 }}
-        >
-          ×
-        </button>
-
-        {isStartingFlow ? (
-          <div style={{ textAlign: "center", marginBottom: 12 }}>
-            <img src="/assets/branding/ripple_emblem_1024.png" alt="Ripple" style={{ width: 44, height: 44, margin: "0 auto 6px" }} />
-            <h2 style={{ margin: "0 0 4px", fontSize: 22, color: "#254866" }}>Choose Expedition Mode</h2>
-            <p style={{ fontSize: 13, color: "#54402d", margin: "0 0 16px" }}>
-              Start as a verified Sui Testnet Explorer, or embark freely as a Guest.
-            </p>
+      <section className="haven-board quest-board wallet-board">
+        {/* Authentic Header */}
+        <header className="quest-board-header">
+          <img
+            className="ledger-logo-img"
+            src={isStartingFlow ? "/assets/branding/ripple_emblem_1024.png" : "/assets/icons/icon_water_canister.png"}
+            alt=""
+            aria-hidden="true"
+          />
+          <div className="quest-board-titles">
+            <small>{isStartingFlow ? "EXPEDITION ONBOARDING" : "SUI TESTNET EXPEDITION"}</small>
+            <strong className="quest-board-name">{isStartingFlow ? "Choose Expedition Mode" : "Field Ledger & Impact"}</strong>
           </div>
-        ) : (
-          <div style={{ display: "flex", gap: 10, justifyContent: "center", marginBottom: 14 }}>
+        </header>
+
+        {/* Tab switcher using Ripple's .book-tabs */}
+        {!isStartingFlow && (
+          <nav className="book-tabs">
             <button
+              aria-pressed={tab === "claim"}
               onClick={() => setTab("claim")}
-              style={{
-                background: tab === "claim" ? "#dfd0b6" : "transparent",
-                fontWeight: tab === "claim" ? 800 : 600,
-                border: "1px solid #7a6348",
-              }}
             >
-              <img src="/assets/icons/icon_water_canister.png" alt="" style={{ width: 16, height: 16, verticalAlign: "middle", marginRight: 6 }} />
+              <img src="/assets/icons/icon_water_canister.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 5 }} />
               Passport & Claim
             </button>
             <button
+              aria-pressed={tab === "impact"}
               onClick={() => setTab("impact")}
-              style={{
-                background: tab === "impact" ? "#dfd0b6" : "transparent",
-                fontWeight: tab === "impact" ? 800 : 600,
-                border: "1px solid #7a6348",
-              }}
             >
-              <img src="/assets/fx/fx_campaign_star.png" alt="" style={{ width: 16, height: 16, verticalAlign: "middle", marginRight: 6 }} />
+              <img src="/assets/icons/icon_impact.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 5 }} />
               Impact Board
             </button>
-          </div>
+          </nav>
         )}
 
-        {/* Tab 1: Claim / Connect */}
-        {tab === "claim" && (
-          <div>
-            {!isStartingFlow && <h2 style={{ margin: "4px 0 8px" }}>Sui Testnet Passport</h2>}
+        {/* Starting Flow: Choice between Verified Sui Explorer or Free Guest */}
+        {isStartingFlow && (
+          <div className="starting-options-flow">
+            <p style={{ margin: "2px 0 10px", fontSize: 13, color: "#324e5b", textAlign: "left" }}>
+              Choose how you wish to embark. You may link your Sui wallet now or play freely offline as a guest.
+            </p>
 
-            {/* Wallet Connection Card */}
-            <div style={{ background: "#efe4cf", border: "1px solid #c2ad8e", borderRadius: 6, padding: "12px 14px", marginBottom: 12, textAlign: "left" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ fontSize: 12, fontWeight: 700, color: "#6e553c", textTransform: "uppercase" }}>
-                  Sui Wallet Connection
+            {/* Option 1: Sui Testnet Passport */}
+            <div className={`wallet-card-panel wallet-card-option ${walletAddress ? "is-connected-opt" : ""}`}>
+              <div className="wallet-card-header">
+                <span className="wallet-card-tag">
+                  <img src="/assets/icons/icon_water_canister.png" alt="" />
+                  Option A · Sui Testnet Passport (Recommended)
                 </span>
-                <span style={{ fontSize: 11, background: "#dfd0b6", padding: "1px 6px", borderRadius: 3, color: "#4d3926", fontWeight: 700 }}>
-                  Testnet
+                <span style={{ font: "bold 10px system-ui", background: "#396b5e", color: "white", padding: "1px 5px", border: "1px solid #23483f" }}>
+                  Onchain
                 </span>
               </div>
 
               {walletAddress ? (
-                <div style={{ marginTop: 8 }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
-                    <div>
-                      <small style={{ display: "block", color: "#695542" }}>Connected ({walletName || "Sui Wallet"}):</small>
-                      <code style={{ fontSize: 13, color: "#1c384d", background: "#f8f3e8", padding: "3px 8px", borderRadius: 4, display: "inline-block", marginTop: 2 }}>
-                        {walletAddress.slice(0, 10)}...{walletAddress.slice(-8)}
-                      </code>
-                    </div>
-                    <button onClick={handleDisconnect} style={{ fontSize: 12, padding: "4px 10px", minHeight: 30 }}>
+                <div>
+                  <p>
+                    Connected: <code className="rpg-wallet-code">{walletAddress.slice(0, 10)}...{walletAddress.slice(-8)}</code> ({walletName || "Sui Wallet"})
+                  </p>
+                  <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
+                    <button
+                      className="primary"
+                      onClick={() => onStartWithWallet && onStartWithWallet(walletAddress)}
+                      style={{ flex: 1 }}
+                    >
+                      Enter Haven as Verified Explorer →
+                    </button>
+                    <button onClick={handleDisconnect} style={{ flex: "none" }}>
                       Disconnect
                     </button>
                   </div>
-                  {isStartingFlow && onStartWithWallet && (
-                    <div style={{ marginTop: 12, textAlign: "center" }}>
-                      <button
-                        className="primary"
-                        onClick={() => onStartWithWallet(walletAddress)}
-                        style={{ width: "100%", padding: "10px", fontSize: 15 }}
-                      >
-                        Start Game as Verified Explorer →
-                      </button>
-                    </div>
-                  )}
                 </div>
               ) : (
-                <div style={{ marginTop: 8 }}>
-                  <p style={{ fontSize: 13, color: "#4a3828", margin: "0 0 10px" }}>
-                    Link your real browser wallet (Sui Wallet, Nightly, Surf) to mint your soulbound passport and claim onchain rewards.
+                <div>
+                  <p>
+                    Mint your soulbound player passport, record verified restoration points (RP), and release pre-funded demo milestones.
                   </p>
-
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                    {availableWallets.length > 0 ? (
-                      availableWallets.map((w) => (
+                  {availableWallets.length > 0 ? (
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                      {availableWallets.map((w) => (
                         <button
                           key={w.name}
                           className="primary"
                           onClick={() => handleConnectRealWallet(w.name)}
                           disabled={isConnecting}
-                          style={{ fontSize: 13, padding: "6px 14px", display: "inline-flex", alignItems: "center", gap: 6 }}
+                          style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
                         >
                           <img src="/assets/icons/icon_water_canister.png" alt="" style={{ width: 14, height: 14 }} />
-                          {isConnecting ? "Connecting..." : `Connect ${w.name}`}
+                          {isConnecting ? "Connecting..." : `Connect ${w.name} Extension`}
                         </button>
-                      ))
-                    ) : (
-                      <div style={{ width: "100%" }}>
-                        <button
-                          className="primary"
-                          onClick={() => handleConnectRealWallet()}
-                          disabled={isConnecting}
-                          style={{ fontSize: 13, padding: "8px 16px", marginBottom: 6 }}
+                      ))}
+                    </div>
+                  ) : (
+                    <div>
+                      <button
+                        className="primary"
+                        onClick={() => handleConnectRealWallet()}
+                        disabled={isConnecting}
+                        style={{ width: "100%", marginBottom: 6 }}
+                      >
+                        {isConnecting ? "Connecting to Extension..." : "Connect Sui Wallet Extension"}
+                      </button>
+                      <div style={{ fontSize: 11, color: "#617983", marginTop: 4 }}>
+                        Need an extension?{" "}
+                        <a
+                          href="https://chromewebstore.google.com/detail/sui-wallet/opcgpfmipidbgpenhmajoajpbobppdil"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: "#254866", textDecoration: "underline", fontWeight: 700 }}
                         >
-                          {isConnecting ? "Connecting to Extension..." : "Connect Sui Wallet Extension"}
-                        </button>
-                        <div style={{ fontSize: 12, color: "#77634f", marginTop: 4 }}>
-                          Don't have a Sui wallet?{" "}
-                          <a
-                            href="https://chromewebstore.google.com/detail/sui-wallet/opcgpfmipidbgpenhmajoajpbobppdil"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: "#254866", textDecoration: "underline", fontWeight: 700 }}
-                          >
-                            Install Sui Wallet Extension
-                          </a>
-                        </div>
+                          Install official Sui Wallet (Chrome/Edge)
+                        </a>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
 
-            {/* Starting Flow Guest Card */}
-            {isStartingFlow && onStartAsGuest && (
-              <div style={{ background: "#efe4cf", border: "1px dashed #b89f7f", borderRadius: 6, padding: "12px 14px", marginBottom: 12, textAlign: "left" }}>
-                <div style={{ fontSize: 12, fontWeight: 700, color: "#6e553c", textTransform: "uppercase" }}>
-                  Or Play as Free Guest
-                </div>
-                <p style={{ fontSize: 13, color: "#54402d", margin: "4px 0 10px" }}>
-                  Play immediately with zero wallet setup. You can always connect your Sui wallet later from Haven’s notice board.
-                </p>
-                <button
-                  onClick={onStartAsGuest}
-                  style={{ width: "100%", padding: "8px", fontSize: 14 }}
-                >
-                  Start as Guest Explorer (No Wallet Needed) →
-                </button>
+            {/* Option 2: Guest Explorer */}
+            <div className="wallet-card-panel wallet-card-option">
+              <div className="wallet-card-header">
+                <span className="wallet-card-tag">
+                  <img src="/assets/props/signpost.png" alt="" />
+                  Option B · Guest Explorer (Free Play)
+                </span>
+                <span style={{ font: "bold 10px system-ui", background: "#7a6d59", color: "white", padding: "1px 5px", border: "1px solid #4a3e2e" }}>
+                  Offline
+                </span>
               </div>
-            )}
-
-            {/* Expedition Replay Verification (When opened from within game) */}
-            {!isStartingFlow && (
-              <div style={{ background: "#efe4cf", border: "1px solid #c2ad8e", borderRadius: 6, padding: "10px 14px", marginBottom: 12, textAlign: "left" }}>
-                <div style={{ fontSize: 12, fontWeight: 700, color: "#6e553c", textTransform: "uppercase" }}>Expedition Replay</div>
-                {claimStatus === "claimed" ? (
-                  <div style={{ marginTop: 6, color: "#24613b", fontWeight: 700, fontSize: 13, display: "flex", alignItems: "center", gap: 6 }}>
-                    <img src="/assets/icons/icon_check.png" alt="" style={{ width: 16, height: 16 }} />
-                    Contribution verified & claimed onchain (+100 XP / +100 RP)
-                  </div>
-                ) : claimStatus === "ready" ? (
-                  <div style={{ marginTop: 6 }}>
-                    <p style={{ fontSize: 13, margin: "0 0 8px" }}>
-                      Operation Komodo complete! Replay buffer ready for server verification.
-                    </p>
-                    <button
-                      onClick={handleVerifyAndClaim}
-                      disabled={isVerifying || !walletAddress}
-                      className="primary"
-                      style={{ fontSize: 13, padding: "6px 14px" }}
-                    >
-                      {isVerifying ? "Verifying with Wallet..." : "Sign & Claim 100 RP"}
-                    </button>
-                    {!walletAddress && (
-                      <small style={{ display: "block", color: "#8a5829", marginTop: 4 }}>
-                        Connect your Sui wallet above to sign and claim.
-                      </small>
-                    )}
-                  </div>
-                ) : (
-                  <p style={{ fontSize: 13, color: "#77634f", margin: "6px 0 0" }}>
-                    No completed expedition in this session. Complete Operation Komodo to earn 100 XP and 100 RP!
-                  </p>
-                )}
-
-                {claimReceipt && (
-                  <div style={{ marginTop: 10, padding: 8, background: "#f8f3e8", borderRadius: 4, fontSize: 12, color: "#324856" }}>
-                    <strong>Receipt Digest:</strong> <code>{claimReceipt.digest}</code><br />
-                    <span>Network: {claimReceipt.network} · Confirmed: {claimReceipt.timestamp}</span>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {statusMessage && (
-              <p style={{ fontSize: 12, color: "#1c4a28", fontWeight: 600, margin: "6px 0" }}>
-                {statusMessage}
+              <p>
+                Begin your journey instantly with zero wallet requirements. Full gameplay is offline-ready; link your wallet anytime from the village notice board.
               </p>
-            )}
-            {errorMessage && (
-              <p style={{ fontSize: 12, color: "#8a2424", fontWeight: 600, margin: "6px 0" }}>
-                {errorMessage}
-              </p>
-            )}
+              <button
+                onClick={onStartAsGuest}
+                style={{ width: "100%" }}
+              >
+                Embark as Guest Explorer →
+              </button>
+            </div>
           </div>
         )}
 
-        {/* Tab 2: Impact Board */}
-        {tab === "impact" && (
+        {/* Tab: Passport & Claim (In-Game) */}
+        {!isStartingFlow && tab === "claim" && (
           <div>
-            <h2 style={{ margin: "4px 0 8px" }}>Community Impact Board</h2>
-            <p style={{ fontSize: 13, color: "#4d3926", margin: "0 0 14px" }}>
-              Independent tracking of virtual progress, demo sponsor escrow, and physical outcomes.
-            </p>
+            {/* Wallet Status Panel */}
+            <div className="wallet-card-panel">
+              <div className="wallet-card-header">
+                <span className="wallet-card-tag">
+                  <img src="/assets/icons/icon_water_canister.png" alt="" />
+                  Sui Wallet Connection
+                </span>
+                <span style={{ font: "bold 10px system-ui", background: "#396b5e", color: "white", padding: "1px 5px", border: "1px solid #23483f" }}>
+                  Sui Testnet
+                </span>
+              </div>
 
-            {/* 1. Virtual Progress */}
-            <div style={{ background: "#efe4cf", border: "1px solid #c2ad8e", borderRadius: 6, padding: "10px 14px", marginBottom: 10, textAlign: "left" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, fontWeight: 700, color: "#6e553c" }}>
-                <span>1. VIRTUAL GAMEPLAY RESTORATION</span>
-                <span>{claimStatus === "claimed" ? "100" : "0"} / 500 RP</span>
+              {walletAddress ? (
+                <div>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 6 }}>
+                    <div>
+                      <small style={{ color: "#4f6a73", display: "block" }}>Connected Wallet ({walletName || "Sui Wallet"}):</small>
+                      <code className="rpg-wallet-code">{walletAddress.slice(0, 10)}...{walletAddress.slice(-8)}</code>
+                    </div>
+                    <button onClick={handleDisconnect} style={{ fontSize: 12, padding: "4px 8px" }}>
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <p>
+                    Link your browser wallet extension to sign challenges and claim verified onchain restoration points.
+                  </p>
+                  <button
+                    className="primary"
+                    onClick={() => handleConnectRealWallet()}
+                    disabled={isConnecting}
+                    style={{ width: "100%" }}
+                  >
+                    <img src="/assets/icons/icon_water_canister.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 6 }} />
+                    {isConnecting ? "Connecting to Extension..." : "Connect Sui Wallet Extension"}
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Expedition Replay Verification Panel */}
+            <div className="wallet-card-panel">
+              <div className="wallet-card-header">
+                <span className="wallet-card-tag">
+                  <img src="/assets/icons/icon_quest.png" alt="" />
+                  Expedition Replay Verification
+                </span>
+                <span style={{ font: "bold 11px Georgia, serif", color: "#254866" }}>
+                  Operation Komodo
+                </span>
               </div>
-              <div style={{ height: 10, background: "#dfceb3", borderRadius: 5, overflow: "hidden", marginTop: 6 }}>
-                <div style={{ height: "100%", width: claimStatus === "claimed" ? "20%" : "0%", background: "#3d7e5d", transition: "width 0.4s" }} />
+
+              {claimStatus === "claimed" ? (
+                <div className="receipt-banner">
+                  <img src="/assets/icons/icon_check.png" alt="" />
+                  <div>
+                    <strong>Expedition Claim Confirmed (+100 XP / +100 RP)</strong>
+                    <small>Digest: {claimReceipt?.digest || "tx_verified_claim"}</small>
+                  </div>
+                </div>
+              ) : claimStatus === "ready" ? (
+                <div>
+                  <p>
+                    Expedition completed! Server replay verifier is ready to issue your nontransferable ClaimTicket.
+                  </p>
+                  <button
+                    className="primary"
+                    onClick={handleVerifyAndClaim}
+                    disabled={isVerifying || !walletAddress}
+                    style={{ width: "100%" }}
+                  >
+                    <img src="/assets/icons/icon_rp.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 6 }} />
+                    {isVerifying ? "Verifying with Extension..." : "Sign Replay & Claim 100 RP"}
+                  </button>
+                  {!walletAddress && (
+                    <small style={{ display: "block", color: "#8a5829", marginTop: 4, fontStyle: "italic" }}>
+                      Please connect your Sui wallet above to sign the verification challenge.
+                    </small>
+                  )}
+                </div>
+              ) : (
+                <p style={{ color: "#546870", fontStyle: "italic" }}>
+                  No completed expedition in this session. Complete Operation Komodo to claim 100 XP and 100 RP!
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Tab: Impact Board (In-Game) */}
+        {!isStartingFlow && tab === "impact" && (
+          <div>
+            {/* 1. Virtual Gameplay Restoration (Uses authentic bar_track_empty & bar_fill_rp) */}
+            <div className="wallet-card-panel">
+              <div className="wallet-card-header">
+                <span className="wallet-card-tag">
+                  <img src="/assets/icons/icon_rp.png" alt="" />
+                  1. Virtual Restoration Points
+                </span>
+                <span style={{ font: "bold 12px Georgia, serif", color: "#203651" }}>
+                  {claimStatus === "claimed" ? "100" : "0"} / 500 RP
+                </span>
               </div>
-              <small style={{ color: "#77634f", display: "block", marginTop: 4 }}>
-                Player expedition restoration points (non-monetary).
+              <div className="energy-track" style={{ width: "100%", height: 18, margin: "6px 0", boxSizing: "border-box" }}>
+                <i
+                  style={{
+                    width: `${claimStatus === "claimed" ? 20 : 0}%`,
+                    background: "url('/assets/ui/bar_fill_rp.png') left / 100% 100% repeat-x",
+                  }}
+                />
+                <span style={{ fontSize: 11 }}>{claimStatus === "claimed" ? "100" : "0"} / 500 RP</span>
+              </div>
+              <small style={{ color: "#475d60", display: "block", fontSize: 11, fontStyle: "italic" }}>
+                Verified in-game restoration progress (non-monetary).
               </small>
             </div>
 
-            {/* 2. Demo Funding Escrow */}
-            <div style={{ background: "#efe4cf", border: "1px solid #c2ad8e", borderRadius: 6, padding: "10px 14px", marginBottom: 10, textAlign: "left" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, fontWeight: 700, color: "#6e553c" }}>
-                <span>2. DEMO SPONSOR POOL ESCROW</span>
-                <span>25 DEMO_CREDIT</span>
+            {/* 2. Demo Sponsor Pool Escrow (Uses authentic bar_track_empty & bar_fill_funding) */}
+            <div className="wallet-card-panel">
+              <div className="wallet-card-header">
+                <span className="wallet-card-tag">
+                  <img src="/assets/icons/icon_coin.png" alt="" />
+                  2. Demo Sponsor Pool Escrow
+                </span>
+                <span style={{ font: "bold 12px Georgia, serif", color: "#203651" }}>
+                  25 DEMO_CREDIT
+                </span>
               </div>
-              <p style={{ fontSize: 13, margin: "6px 0 8px", color: "#2d4454" }}>
-                Milestone threshold: 100 RP. Status:{" "}
-                <strong style={{ color: claimStatus === "claimed" ? "#1d6a36" : "#8a5829" }}>
-                  {claimStatus === "claimed" ? "THRESHOLD ACHIEVED (ELIGIBLE)" : "AWAITING 100 RP"}
+              <div className="energy-track" style={{ width: "100%", height: 18, margin: "6px 0", boxSizing: "border-box" }}>
+                <i
+                  style={{
+                    width: releaseReceipt ? "100%" : (claimStatus === "claimed" ? "100%" : "0%"),
+                    background: "url('/assets/ui/bar_fill_funding.png') left / 100% 100% repeat-x",
+                  }}
+                />
+                <span style={{ fontSize: 11 }}>
+                  {releaseReceipt ? "RELEASED: 25 / 25 DEMO_CREDIT" : (claimStatus === "claimed" ? "ELIGIBLE: 25 ESCROWED" : "ESCROWED: 25 DEMO_CREDIT")}
+                </span>
+              </div>
+              <p style={{ margin: "4px 0 8px", fontSize: 12, color: "#203651" }}>
+                Target milestone: 100 RP. Status:{" "}
+                <strong style={{ color: claimStatus === "claimed" ? "#1e6837" : "#8a5829" }}>
+                  {releaseReceipt ? "MILESTONE RELEASED TO BENEFICIARY" : (claimStatus === "claimed" ? "THRESHOLD ACHIEVED (ELIGIBLE)" : "AWAITING 100 RP")}
                 </strong>
               </p>
               {claimStatus === "claimed" && !releaseReceipt && (
-                <button onClick={handleAdminRelease} disabled={isReleasing} className="primary" style={{ fontSize: 13, padding: "6px 14px" }}>
-                  {isReleasing ? "Releasing..." : "Release Milestone (Operator Gate)"}
+                <button
+                  className="primary"
+                  onClick={handleAdminRelease}
+                  disabled={isReleasing}
+                  style={{ width: "100%" }}
+                >
+                  <img src="/assets/icons/icon_impact.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 6 }} />
+                  {isReleasing ? "Releasing..." : "Release Milestone to Beneficiary →"}
                 </button>
               )}
               {releaseReceipt && (
-                <div style={{ marginTop: 8, padding: 8, background: "#f8f3e8", borderRadius: 4, fontSize: 12, color: "#1c542c" }}>
-                  <img src="/assets/icons/icon_check.png" alt="" style={{ width: 14, height: 14, verticalAlign: "middle", marginRight: 4 }} />
-                  <strong>Released 25 DEMO_CREDIT</strong> to <code>{releaseReceipt.recipient.slice(0, 10)}...</code><br />
-                  <span>Digest: {releaseReceipt.digest}</span>
+                <div className="receipt-banner">
+                  <img src="/assets/icons/icon_check.png" alt="" />
+                  <div>
+                    <strong>Released 25 DEMO_CREDIT to Beneficiary</strong>
+                    <small>Digest: {releaseReceipt.digest}</small>
+                  </div>
                 </div>
               )}
             </div>
 
             {/* 3. Physical Real-World Outcome */}
-            <div style={{ background: "#efe4cf", border: "1px solid #c2ad8e", borderRadius: 6, padding: "10px 14px", marginBottom: 14, textAlign: "left" }}>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#6e553c", textTransform: "uppercase" }}>3. PHYSICAL REAL-WORLD OUTCOME</div>
-              <div style={{ display: "inline-block", background: "#e8dcbe", border: "1px solid #a38c6d", padding: "2px 8px", borderRadius: 3, fontSize: 11, fontWeight: 700, color: "#54412e", margin: "6px 0" }}>
-                HISTORICAL / UNVERIFIED DEMO
+            <div className="wallet-card-panel">
+              <div className="wallet-card-header">
+                <span className="wallet-card-tag">
+                  <img src="/assets/icons/icon_impact.png" alt="" />
+                  3. Physical Real-World Outcome
+                </span>
+                <span className="status-badge-historical">
+                  HISTORICAL / UNVERIFIED DEMO
+                </span>
               </div>
-              <p style={{ fontSize: 12, color: "#5e4b39", margin: "0" }}>
+              <p style={{ margin: "4px 0 0", fontSize: 12, color: "#546870", lineHeight: 1.3 }}>
                 Based on historical East Nusa Tenggara clean water fixtures. No live donation solicitation or active community disbursement.
               </p>
             </div>
           </div>
         )}
 
-        <div style={{ textAlign: "center", marginTop: 12 }}>
-          <button onClick={onClose} style={{ minWidth: 120 }}>
-            {isStartingFlow ? "Back to Title" : "Close Ledger"}
-          </button>
-        </div>
+        {/* Status / Error Toasts */}
+        {statusMessage && (
+          <p style={{ fontSize: 12, color: "#1c4a28", fontWeight: 600, margin: "6px 0", textAlign: "center" }}>
+            {statusMessage}
+          </p>
+        )}
+        {errorMessage && (
+          <p style={{ fontSize: 12, color: "#8a2424", fontWeight: 600, margin: "6px 0", textAlign: "center" }}>
+            {errorMessage}
+          </p>
+        )}
+
+        {/* Clean Board Close Button using native board-close asset */}
+        <button className="board-close" onClick={onClose}>
+          {isStartingFlow ? "Back to Title" : "Close Ledger"}
+        </button>
       </section>
     </div>
   );
