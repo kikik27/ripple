@@ -188,11 +188,6 @@ export function GroveView({ onComplete,muted, onMute, onReturn, onBoard }: { onC
   };
   const label = (o: LivingObject) => o.kind === "npc" ? names[o.npcId!]?.name : o.kind === "animal" ? animals[o.animalId!]?.name : places[o.id as keyof typeof places] ?? o.id.replaceAll("_", " ");
   const nearest = grove.objects.filter(o => o.actions.length && nearby(o, state.position)).sort((a, b) => (a.kind === "npc" ? -1 : 0) - (b.kind === "npc" ? -1 : 0))[0];
-  useEffect(()=>{
-    const o=grove.objects.find(o=>(o.kind==="building" || o.kind==="activity") && nearby(o,state.position));
-    const verbs:Record<string,string>={rest:"Rest",fish:"Cast line",trade:"Trade",inspect:"Inspect",board:"Travel",refill:"Refill",workshop:"Visit workshop"};
-    scene.current?.showBuildingHint(locked?undefined:o,o?label(o):"",o?verbs[o.actions[0]] ?? "Inspect":"");
-  },[state.position,locked,ready]);
   const meet = (object:LivingObject) => {
     setChoices([]);openTarget(object.id);
     if(object.kind==="npc")interact(object,"talk");

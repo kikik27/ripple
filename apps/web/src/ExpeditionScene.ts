@@ -107,24 +107,6 @@ export class ExpeditionScene extends Phaser.Scene {
     this.sprite("aurora_idle", [map.spawn[0] + 1, map.spawn[1] - 1]).setDepth(
       800,
     );
-    this.add
-      .text(82, 295, "DEPOT  •  gather & craft", {
-        fontFamily: "system-ui",
-        fontSize: "11px",
-        color: "#142c40",
-        backgroundColor: "#f3eadc",
-        padding: { x: 5, y: 3 },
-      })
-      .setDepth(1001);
-    this.add
-      .text(520, 294, "WELL SITE", {
-        fontFamily: "system-ui",
-        fontSize: "11px",
-        color: "#142c40",
-        backgroundColor: "#f3eadc",
-        padding: { x: 5, y: 3 },
-      })
-      .setDepth(1001);
     this.cameras.main.setBounds(0, 0, 768, 640);
     const fit=()=>{const h=innerWidth<innerHeight?448:360;this.scale.setGameSize(Math.min(768,Math.round(h*innerWidth/innerHeight)),h)};
     fit();window.addEventListener("resize",fit);

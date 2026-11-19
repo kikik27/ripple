@@ -373,7 +373,7 @@ function App() {
           </section>
           <PlayerHUD location="Komodo" energy={state.energy} xp={state.xp}/>
           <div className="exp-objective"><strong>{objective}</strong><button onClick={()=>setMenu("pause")}>Pause</button><button onClick={()=>setMenu("bag")}>Bag</button></div>
-          <p className="camp-hint">{hint && <strong>{hint} · E / Act<br/></strong>}{message || (!hint && objective)}</p>
+          <p className="camp-hint">{!expPillInfo && hint && <strong>{hint} · E / Act<br/></strong>}{message || (!hint && objective)}</p>
           {menu && <div className="modal-backdrop"><section className="journal" role="dialog" aria-label={menu==="bag"?"Backpack":"Paused"}>
           {menu==="bag"?<><h2>Backpack</h2><p>{bagUsed(state)} / {map.rules.bag_capacity} spaces used</p><BagGrid items={(["wood","stone","metal","kit"] as const).map(id=>({name:id,icon:"/assets/icons/icon_"+id+".png",quantity:state.inventory[id],info:{wood:"Repair the bridge or craft a well kit.",stone:"Forms the foundation of the well.",metal:"Bring to the workshop.",kit:"Build at the well site."}[id]}))}/></>:<><h2>Paused</h2><Mixer/><button onClick={()=>{setMuted(!muted);sceneRef.current?.setMuted(!muted)}}>{muted?"Enable sound":"Mute sound"}</button><button onClick={()=>{restart();setMenu(null)}}>Restart expedition</button></>}
           <button onClick={()=>setMenu(null)}>Resume</button></section></div>}

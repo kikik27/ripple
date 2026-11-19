@@ -102,3 +102,8 @@ The broken and repaired bridge props span the river above its water layer. Draw 
       - Feat statuses in `AchievementsList.tsx` and checkboxes in `TaskTitle` use pixel icons `/assets/icons/icon_check.png` and `/assets/icons/icon_lock.png`.
     - Introduced a dynamic waypoint compass indicator in `GroveView.tsx` pointing towards marked village landmarks.
     - Refactored `BagGrid` in `GameUI.tsx` to render a detailed RPG item card with category tags, quantities, and expanded usage notes.
+
+12. **Unified Interaction Hints & Label Deduplication**:
+    - Removed hardcoded Phaser canvas text labels (`"DEPOT • gather & craft"` and `"WELL SITE"`) from `ExpeditionScene.ts` which conflicted with floating signposts.
+    - Deprecated the canvas `this.prompt` text overlay in `GroveScene.ts` and removed its trigger in `GroveView.tsx`.
+    - Deduplicated `.camp-hint` in `main.tsx` and `HavenView.tsx`: when `BuildingPill` is active above an object in the world, the bottom bar suppresses redundant action prompts and displays only story guidance and companion dialogue.

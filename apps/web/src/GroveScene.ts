@@ -104,13 +104,8 @@ export class GroveScene extends Phaser.Scene {
     });
     this.game.events.once("postrender", this.ready);
   }
-  private prompt?:Phaser.GameObjects.Text;
-  showBuildingHint(o:LivingObject|undefined,name:string,verb:string){
-    if(!this.player)return;
-    if(!this.prompt)this.prompt=this.add.text(0,0,"",{fontFamily:"Georgia",fontSize:"10px",color:"#fff1d8",backgroundColor:"#294453",padding:{x:4,y:3}}).setOrigin(.5,1).setDepth(3000);
-    const sprite=o && this.placed.get(o.id);
-    this.prompt.setVisible(!!sprite);
-    if(sprite)this.prompt.setText(name+" · "+verb).setPosition(sprite.x,sprite.y-sprite.displayHeight*.84);
+  showBuildingHint(_o?:LivingObject,_name?:string,_verb?:string){
+    // Deprecated in favor of unified RPG BuildingPill to prevent duplicate text
   }
   screenPointOf(objectId: string): { x: number; y: number } | null {
     const sprite = this.placed.get(objectId);
