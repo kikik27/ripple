@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-11-20 — Move smart contracts (M3), Impact Board (M4), and Aurora AI pipeline (M5)
+
+- **Sui Move 2024 Object Model & Role Capabilities**: Placed contracts under `contracts/ripple` using Move edition `2024.beta`. Role segregation is enforced by separate `AdminCap` and `VerifierCap` capabilities. Soulbound `Passport` and `ClaimTicket` omit `store` ability so they cannot be transferred or traded on external marketplaces.
+- **Atomic Claim Invariants**: Replay tickets must match the latest issued ticket ID recorded on the `Campaign` object to reject stale or replaced tickets. Claiming consumes the ticket, increments passport XP (+100) and campaign RP (+100) atomically, preventing replay attacks or double claims.
+- **Sponsor Pool Threshold & Refund Gates**: `SponsorPool<DEMO_CREDIT>` requires community milestone threshold (100 RP) before admin release is authorized, releasing exactly 25 DEMO_CREDIT to the immutable recipient. Refunds to sponsor are strictly blocked until the pool deadline has passed without reaching the threshold.
+- **Three Independent Impact Indicators**: Maintained strict architectural separation between (1) virtual gameplay restoration (RP), (2) demo funding transfer (DEMO_CREDIT escrowed & released), and (3) physical real-world outcomes (labeled `Historical / Unverified Demo`).
+- **Aurora AI Content Pipeline & Prompt Injection Defense**: Restricted Aurora generation to allowlisted templates (`clean_water_v1`) and maps (`komodo_v1`). Input excerpts are treated strictly as untrusted data; prompt injections or unauthorized instructions are intercepted and automatically flagged as `needs_review` / `SOURCE_INJECTION_DETECTED`. Campaign drafts strictly lock their SHA-256 canonical config hash upon operator approval before publication.
+
 ## 2026-11-19 — v1.2 viewport shell increment
 
 The existing React/Phaser scenes remain the source of local gameplay during FS01. The player route is fixed to the viewport and New Game requests fullscreen from the user gesture. Browser denial is ignored because the CSS viewport shell remains usable. The film and Haven canvas continue to share the exact 16:9 bounds. This is an interim shell integration; a single persistent Phaser instance and unified analog input are still required by later fullscreen tickets.

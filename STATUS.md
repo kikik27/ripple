@@ -1,5 +1,39 @@
 # Ripple implementation status
 
+## v1.5 Sui Move Contracts (M3), Impact Board & Wallet (M4), and Aurora AI Pipeline (M5) — 2026-11-20
+
+- **Sui Move Smart Contracts (Milestone M3: B09, B10, B11, B12)**:
+  - Created Sui Move package `ripple` in `contracts/ripple` with edition `2024.beta`.
+  - Implemented `sources/access.move`: AdminCap and VerifierCap capabilities for role segregation.
+  - Implemented `sources/demo_credit.move`: One-time witness currency `DEMO_CREDIT` (decimals: 0) with treasury minting.
+  - Implemented `sources/passport.move`: Shared `PlayerRegistry` enforcing unique 1-per-wallet registration; soulbound `Passport` (has `key` only, NO `store`) tracking `total_xp` and `completed_count`. Emits `PassportRegistered`.
+  - Implemented `sources/campaign.move`: Authoritative shared `Campaign` tracking target RP, versioning, 32-byte config hash, issued ticket IDs, and claimed address table. Emits `CampaignPublished`.
+  - Implemented `sources/claim.move`: Verifier-issued soulbound `ClaimTicket` with 32-byte replay hash, expiry, and fixed 100 XP / 100 RP rewards. Atomic `claim` consumes ticket, awards passport XP, increments campaign RP, and prevents duplicate claims or replay of stale/replaced tickets. Emits `TicketIssued` and `ContributionRecorded`.
+  - Implemented `sources/impact.move`: Shared `SponsorPool<T>` holding escrowed funds with immutable recipient. Enforces threshold RP (100 RP) before release, releases exactly 25 DEMO_CREDIT to recipient, and allows refund to sponsor only after deadline expiry. Emits `PoolFunded`, `MilestoneReleased`, and `PoolRefunded`.
+  - Automated Move Scenario Tests (`contracts/ripple/tests/test_all.move`): 8 tests passing with 0 warnings/failures covering T09, T10, T11, T12, T13, and T15.
+- **Sui Chain Adapter (`apps/api/src/chain.ts`)**:
+  - TypeScript transaction builder and read model adapter supporting PTB call construction (`passport::register`, `claim::issue`, `claim::claim`, `impact::release_milestone`) and simulated/testnet receipt generation.
+- **Wallet Modal & 3-Status Impact Board (Milestone M4: B13, B14)**:
+  - Built `WalletModal.tsx` in authentic Ripple RPG ledger style using native pixel art icons (zero emojis).
+  - Integrated optional Sui Testnet wallet connect with persistent address storage and disconnect support.
+  - Added Replay Verification & Claim interface submitting replay to API verifier and recording verified contribution receipt.
+  - Implemented the three independent status panels:
+    1. Virtual Gameplay Progress: 100/500 RP restoration bar.
+    2. Demo Funding Escrow: 25 DEMO_CREDIT pool, threshold eligibility check, and operator manual release gate emitting release receipt to immutable recipient.
+    3. Physical Real-World Outcome: Persistent `Historical / Unverified Demo` disclaimer.
+  - Wired into `HavenView` community task board, mission completion ribbon, and campaign briefing card.
+- **Aurora AI Campaign Draft & Publication Pipeline (Milestone M5: B15, B16)**:
+  - Implemented `apps/api/src/aurora.ts` conforming strictly to Handbook section 13 prompt contract.
+  - Allowlisted templates (`clean_water_v1`) and maps (`komodo_v1`).
+  - Strict 6-field schema validation (`title`, `summary`, `template_id`, `map_id`, `objectives`, `fiction_notice`).
+  - Prompt injection defense: intercepts attempts to override instructions, inject malicious addresses or tags, and flags drafts as `needs_review` / `SOURCE_INJECTION_DETECTED`.
+  - Operator review and publish lifecycle: draft approval strictly locks canonical SHA-256 config hash; publication requires prior approval.
+  - Automated test suite (`apps/api/src/aurora.test.ts`): Tests T14 (injection rejection), T15 (hash pinning), and end-to-end HTTP routes (`/v1/aurora/draft`, `/v1/admin/campaigns/approve`, `/v1/admin/campaigns/publish`, `/v1/admin/release`).
+- **Tests & Quality Verification**:
+  - `pnpm typecheck`: PASS (0 errors across `packages/game-core`, `apps/web`, `apps/api`).
+  - `pnpm test`: PASS (100% test suite passing: game core, content schemas, Haven, living world, analog input, server verifier, Aurora pipeline, visual regression MAE 0.000000/255, and 8 Move unit tests).
+  - `pnpm build`: PASS (Vite production bundle generated in 11.78s).
+
 ## v1.4 RPG Polish, Asset Preloading, Living FX & Hover Indicators — 2026-11-19
 
 - **Asset Cache & Unified Loading**: Implemented `AssetBoot.tsx` and `art-worker.js` with CacheStorage preloading for over 400 assets. Created a styled `LoadScreen` overlay that displays during asset prep and every scene transition (Himalayan Haven, Komodo Grove, Operation Komodo), guaranteeing zero missing textures or half-rendered scenes. Features authentic RPG textured gauge (`bar_track_empty.png` + `bar_fill_energy.png`), master panoramic artwork (`campaign_komodo_1280x720.png`), and official Ripple wordmark.

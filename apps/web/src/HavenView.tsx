@@ -19,7 +19,7 @@ type Direction = "N" | "S" | "E" | "W";
 
 const trailKey="ripple.havenTrail.v1";
 
-export const HavenView = forwardRef<HavenHandle, { onReady:()=>void;onError:()=>void;onComplete:(title:string)=>void;missionDone:boolean; preview:boolean; visible: boolean; muted: boolean; player: State; onBoard: () => void; onGrove: () => void; onToggleMuted: () => void }>(function HavenView({ onReady,onError,onComplete,missionDone,preview,visible, muted, player, onBoard, onGrove, onToggleMuted }, ref) {
+export const HavenView = forwardRef<HavenHandle, { onReady:()=>void;onError:()=>void;onComplete:(title:string)=>void;missionDone:boolean; preview:boolean; visible: boolean; muted: boolean; player: State; onBoard: () => void; onGrove: () => void; onToggleMuted: () => void; onOpenLedger?: () => void }>(function HavenView({ onReady,onError,onComplete,missionDone,preview,visible, muted, player, onBoard, onGrove, onToggleMuted, onOpenLedger }, ref) {
   const storage = useRef(browserStorage()).current;
   const initial = useRef<HavenPosition>(readHavenPosition(storage));
   const position = useRef<HavenPosition>(initial.current);
@@ -281,6 +281,7 @@ export const HavenView = forwardRef<HavenHandle, { onReady:()=>void;onError:()=>
       <header><img src="/assets/props/notice_board.png" alt=""/><div><small>Himalayan Haven</small><h2>Community task board</h2></div></header>
       <button className="primary task-link" onClick={()=>planTrip("campaign")}><TaskTitle done={missionDone} title="Operation Komodo"/><small>{missionDone?"Replay expedition →":"Accept expedition · East waygate"}</small></button>
       <button className="primary task-link" onClick={()=>planTrip("grove")}><TaskTitle done={village.nursery==="flowing"} title="Water for Eastbank"/><small>Chart journey · East waygate</small></button>
+      <button className="primary task-link" onClick={()=>{setBoardOpen(false);onOpenLedger?.();}}><TaskTitle done={missionDone} title="Sui Testnet Impact Ledger"/><small>{missionDone?"Verified contribution ready to claim →":"View testnet passport & demo pool →"}</small></button>
       {Object.entries(livingConfig.quests).map(([id,q])=><div className="board-entry" key={id}><TaskTitle done={village.quests[id]==="claimed"} title={q.title}/><small>{q.objective}</small></div>)}
       <div className="board-entry"><TaskTitle done={stamps.length===posts.length} title="Highland mail trail"/><small>{stamps.length} of {posts.length} posts visited · East road</small></div>
       <button className="board-close" onClick={()=>setBoardOpen(false)}>Close</button>

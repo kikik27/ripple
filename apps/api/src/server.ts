@@ -5,10 +5,14 @@ import { join } from "node:path";
 import { initDb } from "./db.ts";
 import { createChallenge, verifyChallenge } from "./auth.ts";
 import { verifyReplay } from "./verifier.ts";
+import { AuroraPipeline } from "./aurora.ts";
+import { ChainAdapter } from "./chain.ts";
 import { map, sha256 } from "../../../packages/game-core/src/content.ts";
 
 export function createApiServer(db = initDb()) {
   const mapHash = sha256(map);
+  const aurora = new AuroraPipeline(db);
+  const chain = new ChainAdapter();
 
   const server = createServer(async (req: IncomingMessage, res: ServerResponse) => {
     const requestId = "req_" + randomBytes(8).toString("hex");
@@ -194,6 +198,68 @@ export function createApiServer(db = initDb()) {
           unit: "DEMO_CREDIT",
           physical_outcome: "unverified_demo",
           verified_completions: 1,
+        });
+      }
+
+      // 9. POST /v1/aurora/draft
+      if (req.method === "POST" && pathname === "/v1/aurora/draft") {
+        const body = await readBody();
+        if (!body.excerpt) {
+          return sendError(400, "MISSING_EXCERPT", "Source excerpt is required");
+        }
+        const draft = aurora.generateDraft({
+          url: body.url || "https://example.org/demo-source",
+          retrieval_timestamp: body.retrieval_timestamp || Date.now(),
+          excerpt: body.excerpt,
+          is_historical: body.is_historical ?? true,
+          is_demo: body.is_demo ?? true,
+        });
+        return sendJson(200, draft);
+      }
+
+      // 10. POST /v1/admin/campaigns/approve
+      if (req.method === "POST" && pathname === "/v1/admin/campaigns/approve") {
+        const body = await readBody();
+        if (!body.draft_id || !body.config_hash) {
+          return sendError(400, "INVALID_APPROVAL", "draft_id and config_hash required");
+        }
+        const res = aurora.approveDraft(body.draft_id, body.config_hash);
+        if (!res.ok) {
+          return sendError(422, res.error || "APPROVAL_FAILED", "Failed to approve draft");
+        }
+        return sendJson(200, { ok: true, draft: res.draft });
+      }
+
+      // 11. POST /v1/admin/campaigns/publish
+      if (req.method === "POST" && pathname === "/v1/admin/campaigns/publish") {
+        const body = await readBody();
+        if (!body.draft_id) {
+          return sendError(400, "INVALID_PUBLISH", "draft_id required");
+        }
+        const res = aurora.publishCampaign(body.draft_id);
+        if (!res.ok) {
+          return sendError(422, res.error || "PUBLISH_FAILED", "Failed to publish draft");
+        }
+        return sendJson(200, { ok: true, draft: res.draft });
+      }
+
+      // 12. POST /v1/admin/release
+      if (req.method === "POST" && pathname === "/v1/admin/release") {
+        const body = await readBody();
+        const campaignId = body.campaign_id || "operation-komodo";
+        const poolId = body.pool_id || "pool_demo_01";
+        const receipt = chain.createReceipt("MilestoneReleased", {
+          campaign_id: campaignId,
+          pool_id: poolId,
+          amount: 25,
+          unit: "DEMO_CREDIT",
+          recipient: chain.getDemoRecipient(),
+          threshold_rp: 100,
+          current_rp: 100,
+        });
+        return sendJson(200, {
+          ok: true,
+          receipt,
         });
       }
 

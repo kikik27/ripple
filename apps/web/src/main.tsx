@@ -23,6 +23,7 @@ import { GroveView } from "./GroveView";
 import { hasSeenIntro } from "./haven";
 import { TouchJoystick } from "./TouchJoystick";
 import { unlockAchievement } from "./achievements";
+import { WalletModal } from "./WalletModal";
 import operation from "../../../fixtures/operation-komodo.json";
 import "./style.css";
 import "./shell.css";
@@ -56,6 +57,7 @@ function App() {
     }catch{return false}
   });
   const [badge,setBadge]=useState<{title:string;detail:string}|null>(null);
+  const [showLedger, setShowLedger] = useState(false);
   useEffect(()=>{
     if(!badge)return;
     const timer=window.setTimeout(()=>setBadge(null),6500);
@@ -348,8 +350,8 @@ function App() {
           </div>
         </section>
       )}
-      <HavenView onReady={()=>setHavenReady(true)} onError={()=>setLoadError(true)} onComplete={title=>setBadge({title,detail:"Himalayan Haven"})} missionDone={missionDone} preview={screen==="title"} ref={havenRef} visible={screen === "camp"} muted={muted} player={state} onBoard={() => setScreen("campaign")} onGrove={() => setScreen("grove")} onToggleMuted={() => setMuted(!muted)} />
-      {badge && (screen==="camp" || screen==="grove") && <aside className="mission-ribbon" role="status"><img src="/assets/branding/ripple_emblem_1024.png" alt=""/><div><small>Mission complete</small><strong>{badge.title}</strong><span>{badge.detail}</span></div><button onClick={()=>setBadge(null)} aria-label="Dismiss mission badge">×</button></aside>}
+      <HavenView onReady={()=>setHavenReady(true)} onError={()=>setLoadError(true)} onComplete={title=>setBadge({title,detail:"Himalayan Haven"})} missionDone={missionDone} preview={screen==="title"} ref={havenRef} visible={screen === "camp"} muted={muted} player={state} onBoard={() => setScreen("campaign")} onGrove={() => setScreen("grove")} onToggleMuted={() => setMuted(!muted)} onOpenLedger={() => setShowLedger(true)} />
+      {badge && (screen==="camp" || screen==="grove") && <aside className="mission-ribbon" role="status"><img src="/assets/branding/ripple_emblem_1024.png" alt=""/><div><small>Mission complete</small><strong>{badge.title}</strong><span>{badge.detail}</span></div><button onClick={()=>setShowLedger(true)} style={{ background: "#433224", color: "#f8f3e8", fontSize: 11, padding: "4px 8px", marginRight: 6 }}>Ledger</button><button onClick={()=>setBadge(null)} aria-label="Dismiss mission badge">×</button></aside>}
       {screen === "grove" && <GroveView onComplete={title=>setBadge({title,detail:"Komodo Grove"})} muted={muted} onMute={() => setMuted(!muted)} onReturn={() => { havenRef.current?.returnToBoard(); setScreen("camp"); }} onBoard={() => { havenRef.current?.returnToBoard(); setScreen("camp"); }} />}
       {(screen==="campaign" || screen==="game") && <div className="exp-map" id="game-canvas" aria-label="Operation Komodo map"/>}
       {screen==="campaign" && <section className="campaign-card embark" aria-label="Expedition briefing">
@@ -357,7 +359,7 @@ function App() {
           <small>Aurora · Expedition briefing</small><h1>{campaign.title}</h1>
           <p>Two homes across the river need water. Meet me at the depot. Our well kit needs two wood, two stone, and one metal.</p>
           <details><summary>Campaign record</summary><p>{campaign.notice}</p><p>{state.rp} / {campaign.target} virtual RP · {funding.released} / {funding.goal} DEMO_CREDIT · Physical outcome unverified.</p></details>
-          <button className="primary" onClick={start}>Enter the village</button><button onClick={()=>setScreen("camp")}>Back to Haven</button>
+          <button className="primary" onClick={start}>Enter the village</button><button onClick={()=>setScreen("camp")}>Back to Haven</button><button onClick={()=>setShowLedger(true)} style={{ marginLeft: 8 }}>Ledger & Impact</button>
         </div></div></section>}
       {screen==="exhausted" && <div className="modal-backdrop"><section className="journal" role="alertdialog" aria-label="Expedition failed">
         <h2>Expedition failed</h2><p>Lofi ran out of energy before finishing the mission.</p><button onClick={restart}>Try again</button><button onClick={()=>setScreen("camp")}>Return to Haven</button>
@@ -465,6 +467,7 @@ function App() {
           </div>
         </div>
       </dialog>}
+      {showLedger && <WalletModal onClose={()=>setShowLedger(false)} onClaimSuccess={(xp, rp) => setState(s => ({ ...s, xp: s.xp + xp, rp: s.rp + rp }))} />}
       {(!havenReady || loadError || ((screen==="game" || screen==="campaign") && !expReady)) && <LoadScreen place={screen==="game" || screen==="campaign"?"Entering Operation Komodo":"Arriving at Himalayan Haven"} error={loadError}/>}
       <span className="shell-testnet">Sui Testnet · offline fixture · no official affiliation</span>
     </main>

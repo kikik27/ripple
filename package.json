@@ -9,7 +9,8 @@
     "api:start": "node --experimental-strip-types apps/api/src/server.ts",
     "typecheck": "tsc -p packages/game-core/tsconfig.json && tsc -p apps/web/tsconfig.json && tsc -p apps/api/tsconfig.json",
     "lint": "pnpm typecheck",
-    "test": "pnpm --filter @ripple/core test && node --experimental-strip-types apps/web/src/haven.test.ts && node --experimental-strip-types apps/web/src/living.test.ts && node --experimental-strip-types apps/web/src/input.test.ts && node --experimental-strip-types apps/api/src/api.test.ts && node tools/test-living.cjs && python tools/test_opening_visual.py",
+    "test:move": "sui move test --skip-fetch-latest-git-deps -p contracts/ripple",
+    "test": "pnpm --filter @ripple/core test && node --experimental-strip-types apps/web/src/haven.test.ts && node --experimental-strip-types apps/web/src/living.test.ts && node --experimental-strip-types apps/web/src/input.test.ts && node --experimental-strip-types apps/api/src/api.test.ts && node --experimental-strip-types apps/api/src/aurora.test.ts && node tools/test-living.cjs && python tools/test_opening_visual.py && pnpm test:move",
     "validate:content": "pnpm --filter @ripple/core validate"
   },
   "devDependencies": {"typescript": "5.9.3"}
