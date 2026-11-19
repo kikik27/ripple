@@ -84,3 +84,17 @@ The broken and repaired bridge props span the river above its water layer. Draw 
    - Implemented an offline-first 8-feat progression registry (`achievements.ts`) spanning Haven exploration, Grove community life, and Operation Komodo expeditions.
    - Created `AchievementsList.tsx` rendered under a new "Feats" tab in the bag journal.
    - Connected unlock triggers across `HavenView.tsx`, `GroveView.tsx`, and `main.tsx` with instant global `ripple:achievement` event dispatch that displays the RPG mission-ribbon toast banner.
+
+9. **Dynamic Footsteps & Audio Polish**:
+   - Integrated terrain-aware footstep audio across all scenes (`HavenScene`, `GroveScene`, `ExpeditionScene`).
+   - Lofi's movement in Haven triggers `sfx_step_snow.ogg`, while ground/grass movement in Grove and Expedition triggers `sfx_step_grass.ogg`.
+   - Wired `sfx_success.ogg` to sound whenever an achievement/feat is unlocked.
+
+10. **Himalayan Haven Snowfall Atmosphere**:
+    - Created `createSnowfall` in `worldEffects.ts`, generating 30 gentle drifting snowflakes with diagonal wind and sinusoidal sway fixed to the camera viewport.
+    - Weather effects respect `prefers-reduced-motion` and are active only during exploration (`fitWorld(true)`), preserving the opening frame regression check at MAE 0.000000/255.
+
+11. **Contextual Signposts, Waypoint Compass, and Bag Item Cards**:
+    - Added contextual emoji badges to `BuildingPill.tsx` (`💧`, `🔥`, `🎣`, `🌱`, `💬`, `🐾`, `🌀`, `🔨`) distinguishing interaction types.
+    - Introduced a dynamic waypoint compass indicator in `GroveView.tsx` (`🧭 {landmark} {distance}t {arrow}`) pointing towards marked village landmarks.
+    - Refactored `BagGrid` in `GameUI.tsx` to render a detailed RPG item card with category tags, quantities, and expanded usage notes.

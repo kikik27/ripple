@@ -37,7 +37,7 @@ export class GroveScene extends Phaser.Scene {
     this.load.atlas("props", "/assets/atlases/props.png", "/assets/atlases/props.json");
     this.load.atlas("sprites", "/assets/atlases/sprites.png", "/assets/atlases/sprites.json");
     for (const id of new Set(grove.terrain.flat())) if (id !== "lw_tile_plaza") this.load.image(id, `/assets/tiles/${id}.png`);
-    for (const id of ["music_expedition", "ambience_river", "sfx_click", "sfx_success", "sfx_invalid", "sfx_water","handleCoins","cloth1","bookOpen"])
+    for (const id of ["music_expedition", "ambience_river", "sfx_click", "sfx_success", "sfx_invalid", "sfx_water","handleCoins","cloth1","bookOpen","sfx_step_grass"])
       this.load.audio(id, `/assets/audio/${id}.ogg`);
   }
   create() {

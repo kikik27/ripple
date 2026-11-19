@@ -21,6 +21,16 @@ const animals = livingConfig.animals as Record<string, { name: string; food: str
 const quests = livingConfig.quests as Record<string, { title: string; objective: string; reward:Record<string,number> }>;
 const directions = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0], w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0] } as Record<string, Tile>;
 
+const getCompassArrow = (from: Tile, to: Tile) => {
+  const dx = to[0] - from[0];
+  const dy = to[1] - from[1];
+  if (Math.abs(dx) <= 1 && Math.abs(dy) <= 1) return "📍 Here";
+  if (Math.abs(dx) > 2 * Math.abs(dy)) return dx > 0 ? "→ E" : "← W";
+  if (Math.abs(dy) > 2 * Math.abs(dx)) return dy > 0 ? "↓ S" : "↑ N";
+  if (dx > 0) return dy > 0 ? "↘ SE" : "↗ NE";
+  return dy > 0 ? "↙ SW" : "↖ NW";
+};
+
 const places = {market:"Market Lane",fishing_dock:"Fishing Dock",plot_0_0:"Farm plots",pump:"Water pump",camp:"Camp",world_board:"World Board",water_lab:"Piko’s water lab",nursery_gate:"Eastbank Nursery",orchard_rest:"Orchard overlook",home_1:"West cottage",home_2:"East cottage",workshop:"Workshop",recycling:"Recycling station",storage:"Seed store",barn:"Sanctuary barn",well:"Village well",fish_market:"Fish market",npc_elder:names.elder.name,npc_farmer:names.farmer.name,npc_engineer:names.engineer.name,npc_child:names.child.name,npc_recycler:names.recycler.name,npc_fisher:names.fisher.name,npc_merchant:names.merchant.name};
 
 const buildingMeta: Record<string, { name: string; func: string }> = {
@@ -270,7 +280,7 @@ export function GroveView({ onComplete,muted, onMute, onReturn, onBoard }: { onC
       </ul>
     </aside>}
     <BuildingPill info={pillInfo}/>
-    <PlayerHUD location="Grove" day={state.day}/><div className="grove-title"><div><p className="eyebrow">Living World · social hub</p><h1>{zone?.id==="nursery"?"Eastbank Nursery":"Komodo Grove"}</h1><p>Day {state.day} · {zone?.name ?? "Wilderness"} · Tile {state.position.join(",")}</p></div><button onClick={()=>{stopRoute();setPaused(true)}}>Pause</button></div>
+    <PlayerHUD location="Grove" day={state.day}/><div className="grove-title"><div><p className="eyebrow">Living World · social hub</p><h1>{zone?.id==="nursery"?"Eastbank Nursery":"Komodo Grove"}</h1><p>Day {state.day} · {zone?.name ?? "Wilderness"} · Tile {state.position.join(",")} · <span className="rpg-compass-badge" title={"Waypoint: " + places[destination]}>🧭 {places[destination]} {Math.round(Math.hypot((landmark.tile as Tile)[0] - state.position[0], (landmark.tile as Tile)[1] - state.position[1])) > 1 ? `${Math.round(Math.hypot((landmark.tile as Tile)[0] - state.position[0], (landmark.tile as Tile)[1] - state.position[1]))}t ${getCompassArrow(state.position, landmark.tile as Tile)}` : "📍"}</span></p></div><button onClick={()=>{stopRoute();setPaused(true)}}>Pause</button></div>
     <div className="grove-layout"><div className="grove-world"><div id="grove-canvas" />{!ready && <div className="grove-loading">Preparing Komodo Grove…</div>}{!locked && <div className="grove-controls"><TouchJoystick onMove={dir => { const step = directions[{N:"w",S:"s",E:"d",W:"a"}[dir]]; move(...step); }} disabled={locked} /><button className="touch-action" onClick={useNearby} disabled={locked}>Act</button></div>}</div>
     {!locked && <button className="grove-bag" onClick={()=>{stopRoute();setBag(true)}}>Bag</button>}
     {!!choices.length && <div className="modal-backdrop"><section className="journal" role="dialog" aria-label="Nearby"><h2>Within reach</h2>{choices.map(o=><button key={o.id} onClick={()=>meet(location(o))}>{label(o)}</button>)}<button onClick={()=>setChoices([])}>Close</button></section></div>}

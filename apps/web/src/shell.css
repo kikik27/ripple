@@ -165,7 +165,8 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 .quest-spark{pointer-events:none;position:fixed;width:38px;height:38px;z-index:88;image-rendering:pixelated}
 .building-hover-pill{position:fixed;z-index:40;transform:translate(-50%,-100%);display:flex;align-items:center;gap:8px;padding:5px 14px 6px 8px;background:#fbf1dd;border:2px solid #57432e;border-radius:6px;box-shadow:inset 0 0 0 1px #e8dcbf,inset 0 -2px #ceb791,0 4px 10px rgba(18,38,52,0.45);font-family:Georgia,serif;color:#203651;pointer-events:none;animation:pill-float 1.8s ease-in-out infinite alternate;white-space:nowrap}
 @keyframes pill-float{0%{transform:translate(-50%,-100%) translateY(0)}100%{transform:translate(-50%,-100%) translateY(-5px)}}
-.pill-sign-badge{display:flex;align-items:center;justify-content:center}
+.pill-sign-badge{display:flex;align-items:center;gap:4px;justify-content:center}
+.pill-emoji-badge{font-size:14px;line-height:1}
 .pill-key{display:inline-grid;place-items:center;width:22px;height:22px;background:#203c4f;color:#fbf1dd;font-family:Georgia,serif;font-weight:bold;font-size:11px;border:1.5px solid #82a3b8;border-radius:4px;box-shadow:inset 0 -2px #10212c,0 1px 3px rgba(0,0,0,0.35)}
 .pill-text{display:flex;flex-direction:column;line-height:1.2;text-align:left}
 .pill-name{font-family:Georgia,serif;font-size:13px;font-weight:bold;color:#203651;letter-spacing:0.01em}
@@ -214,4 +215,11 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 .fishing-pool[data-phase=bite] .float{animation:nibble .36s ease-in-out infinite alternate}
 @keyframes nibble{to{transform:translateY(6px) rotate(18deg)}}
 @keyframes water-ripple{0%{transform:scale(0.5);opacity:0.8}100%{transform:scale(2.2);opacity:0}}
+
+.rpg-compass-badge{display:inline-flex;align-items:center;gap:4px;background:#203c4f;color:#fbf1dd;font:bold 11px Georgia,serif;padding:2px 7px;border-radius:4px;border:1px solid #6c8a9e;margin-left:4px;box-shadow:0 1px 3px rgba(0,0,0,0.25)}
+.rpg-item-card{background:#ecdcb8;border:1px solid #c9bda5;border-radius:6px;padding:8px 10px;margin-top:8px;text-align:left}
+.item-card-header{display:flex;align-items:center;justify-content:space-between;gap:6px;border-bottom:1px solid #d4c5a9;padding-bottom:4px;margin-bottom:4px}
+.item-card-tag{font:bold 10px Georgia,serif;color:#3f655b;text-transform:uppercase;letter-spacing:0.05em;background:#dfd2b5;padding:1px 5px;border-radius:3px}
+.item-card-qty{font:bold 12px Georgia,serif;color:#203651}
+
 @media(prefers-reduced-motion:reduce){.fishing-pool[data-phase=bite] .float,.building-hover-pill{animation:none}}

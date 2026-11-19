@@ -1,4 +1,4 @@
-import {flame} from "./worldEffects";
+import {flame, createSnowfall, type WeatherEffect} from "./worldEffects";
 import {bindMix,volume} from "./Mixer";
 import { placeLofi } from "./placeLofi";
 import Phaser from "phaser";
@@ -7,6 +7,7 @@ import { highlands,trailTrees,posts,haven, type HavenPosition } from "./haven";
 export class HavenScene extends Phaser.Scene {
   private playLayers: Phaser.GameObjects.Image[] = [];
   private trailBirds: Phaser.GameObjects.Image[] = [];
+  private snowfall: WeatherEffect | null = null;
   private yeti?: Phaser.GameObjects.Sprite;
   private aurora?: Phaser.GameObjects.Sprite;
   private ready: () => void;
@@ -29,6 +30,7 @@ export class HavenScene extends Phaser.Scene {
     this.load.image("haven-aurora", "/assets/sprites/aurora_idle.png");
     this.load.audio("haven-music", "/assets/audio/music_hub.ogg");
     this.load.audio("haven-ambience", "/assets/audio/ambience_camp.ogg");
+    this.load.audio("step-snow", "/assets/audio/sfx_step_snow.ogg");
   }
   create() {
     bindMix(this,"haven-music","haven-ambience");
@@ -117,6 +119,9 @@ export class HavenScene extends Phaser.Scene {
     this.cameras.main.setBounds(0, 0, haven.width * haven.tileSize, haven.height * haven.tileSize);
     this.cameras.main.setScroll(haven.viewport.cameraX, haven.viewport.cameraY);
     this.setPosition(this.position, false);
+    this.snowfall = createSnowfall(this);
+    this.snowfall?.setVisible(false);
+    this.events.once("shutdown", () => this.snowfall?.destroy());
     this.game.events.once("postrender", this.ready);
   }
   setPosition(position: HavenPosition, animate = true) {
@@ -150,6 +155,7 @@ export class HavenScene extends Phaser.Scene {
   }
   fitWorld(playing: boolean) {
     if (!this.yeti) return;
+    this.snowfall?.setVisible(playing);
     this.playLayers.forEach(layer=>layer.setVisible(playing));
     if(this.aurora){
       if(playing && !matchMedia("(prefers-reduced-motion: reduce)").matches){

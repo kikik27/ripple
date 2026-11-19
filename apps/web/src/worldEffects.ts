@@ -162,3 +162,68 @@ export function restoreGlowAt(scene:Phaser.Scene, x:number, y:number){
   const glow = scene.add.sprite(x, y, "fx", "fx_restore_glow_00").setScale(0.85).setDepth(y + 10).play("restore-glow");
   glow.once("animationcomplete", function(this:Phaser.GameObjects.Sprite){this.destroy()});
 }
+
+export interface WeatherEffect {
+  setVisible(visible: boolean): void;
+  destroy(): void;
+}
+
+export function createSnowfall(scene: Phaser.Scene): WeatherEffect | null {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return null;
+  if (!scene.textures.exists("fx-snow")) {
+    const cvs = scene.textures.createCanvas("fx-snow", 6, 6);
+    if (cvs) {
+      const ctx = cvs.context;
+      ctx.beginPath();
+      ctx.arc(3, 3, 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(255, 255, 255, 0.85)";
+      ctx.fill();
+      cvs.refresh();
+    }
+  }
+  const flakes: Phaser.GameObjects.Image[] = [];
+  const container = scene.add.container(0, 0).setDepth(3500);
+
+  const count = 30;
+  for (let i = 0; i < count; i++) {
+    const flake = scene.add.image(
+      Math.random() * (scene.cameras.main.width + 120) - 60,
+      Math.random() * scene.cameras.main.height,
+      "fx-snow"
+    );
+    flake.setScale(0.4 + Math.random() * 0.7);
+    flake.setAlpha(0.25 + Math.random() * 0.55);
+    flake.setScrollFactor(0);
+    container.add(flake);
+    flakes.push(flake);
+  }
+
+  const timer = scene.time.addEvent({
+    delay: 35,
+    loop: true,
+    callback: () => {
+      const w = scene.cameras.main.width;
+      const h = scene.cameras.main.height;
+      for (const flake of flakes) {
+        flake.y += flake.scaleX * 0.8;
+        flake.x += Math.sin(flake.y * 0.04) * 0.4 - 0.2;
+        if (flake.y > h + 10) {
+          flake.y = -8;
+          flake.x = Math.random() * (w + 80) - 40;
+        }
+        if (flake.x < -20) flake.x = w + 10;
+      }
+    }
+  });
+
+  return {
+    setVisible(visible: boolean) {
+      container.setVisible(visible);
+      timer.paused = !visible;
+    },
+    destroy() {
+      timer.destroy();
+      container.destroy(true);
+    }
+  };
+}

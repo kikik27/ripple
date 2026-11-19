@@ -64,7 +64,14 @@ function App() {
   useEffect(() => {
     const onAch = (e: Event) => {
       const ach = (e as CustomEvent).detail;
-      if (ach?.title) setBadge({ title: `Feat: ${ach.title}`, detail: ach.desc });
+      if (ach?.title) {
+        setBadge({ title: `Feat: ${ach.title}`, detail: ach.desc });
+        try {
+          const audio = new Audio("/assets/audio/sfx_success.ogg");
+          audio.volume = 0.35;
+          audio.play().catch(() => {});
+        } catch {}
+      }
     };
     window.addEventListener("ripple:achievement", onAch);
     return () => window.removeEventListener("ripple:achievement", onAch);

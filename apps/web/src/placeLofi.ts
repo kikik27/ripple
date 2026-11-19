@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { volume } from "./Mixer";
 
 /** Presentation only. Call after the map accepts a step. */
 export function placeLofi(sprite: Phaser.GameObjects.Sprite, x: number, y: number, walk: boolean) {
@@ -13,6 +14,13 @@ export function placeLofi(sprite: Phaser.GameObjects.Sprite, x: number, y: numbe
     sprite.anims.stop();
     sprite.setPosition(x, y).setDepth(y).setTexture("sprites", "yeti_idle_down");
     return;
+  }
+  if (scene.sound && !scene.sound.mute) {
+    if (scene.cache?.audio?.has("step-snow")) {
+      scene.sound.play("step-snow", { volume: volume("sfx") * 0.32 });
+    } else if (scene.cache?.audio?.has("sfx_step_grass")) {
+      scene.sound.play("sfx_step_grass", { volume: volume("sfx") * 0.28 });
+    }
   }
   const facing = Math.abs(dx) >= Math.abs(dy) ? (dx > 0 ? "right" : "left") : (dy > 0 ? "down" : "up");
   sprite.setData("facing",facing);

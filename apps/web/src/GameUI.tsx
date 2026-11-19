@@ -16,7 +16,44 @@ export function PlayerHUD({energy,xp,location,day}:{energy?:number;xp?:number;lo
 export function BagGrid({items}:{items: {name:string;icon:string;quantity:number;info:string}[]}) {
   const [index,select]=useState(0);
   const item=items[index];
-  return <><div className="rpg-slots">{items.map((it,i)=><button key={it.name} aria-label={it.name+" × "+it.quantity} aria-pressed={i===index} onClick={()=>select(i)}>
-    <img src={it.icon} alt=""/><b>{it.quantity}</b></button>)}</div>
-    {item && <div className="item-caption"><strong>{item.name}</strong><p>{item.info}</p></div>}</>;
+  const category = (name: string) => {
+    switch(name) {
+      case "hay": case "kibble": return "Animal Feed";
+      case "seed": return "Farming Seed";
+      case "produce": return "Farm Crop";
+      case "water": return "Essential Resource";
+      case "fish": return "River Catch";
+      case "wood": case "stone": case "metal": return "Building Material";
+      case "kit": return "Crafted Mechanism";
+      default: return "Village Supply";
+    }
+  };
+
+  return (
+    <>
+      <div className="rpg-slots">
+        {items.map((it, i) => (
+          <button
+            key={it.name}
+            aria-label={`${it.name} × ${it.quantity}`}
+            aria-pressed={i === index}
+            onClick={() => select(i)}
+          >
+            <img src={it.icon} alt="" />
+            <b>{it.quantity}</b>
+          </button>
+        ))}
+      </div>
+      {item && (
+        <div className="item-caption rpg-item-card">
+          <div className="item-card-header">
+            <strong>{item.name}</strong>
+            <span className="item-card-tag">{category(item.name)}</span>
+            <span className="item-card-qty">×{item.quantity}</span>
+          </div>
+          <p>{item.info}</p>
+        </div>
+      )}
+    </>
+  );
 }
