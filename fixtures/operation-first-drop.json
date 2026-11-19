@@ -1,0 +1,34 @@
+{
+  "campaign_id": "operation-first-drop",
+  "version": 1,
+  "title": "Operation First Drop",
+  "summary": "A second fictional clean-water mission using the same supported template.",
+  "template_id": "clean_water_v1",
+  "map_id": "komodo_v1",
+  "map_hash": "4d2735fa99dfb42ee856d71d3447cab5fc1fe038f59279784f1593688fa51de4",
+  "source": {
+    "url": "https://www.lofifoundation.com/",
+    "status": "historical_demo",
+    "retrieved_at": "2026-11-18T00:00:00Z",
+    "excerpt": "Illustrative historical clean-water theme. This fixture is not evidence of an active campaign or completed project.",
+    "source_hash": "a085cbe7cdb02f4a93e436fef1d658d6961c12f3bcedc6c90413cb06f936a2cb"
+  },
+  "fiction_notice": "Historical inspiration; synthetic gameplay and demo funding only. Not an active fundraiser.",
+  "demo": true,
+  "generation_mode": "fixture",
+  "review_state": "needs_review",
+  "objectives": [
+    "scout",
+    "gather",
+    "craft",
+    "build",
+    "connect",
+    "return"
+  ],
+  "target_rp": 500,
+  "sponsor_policy": {
+    "asset": "DEMO_CREDIT",
+    "amount": 25,
+    "threshold_rp": 100
+  }
+}

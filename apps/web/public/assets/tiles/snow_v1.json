@@ -1,0 +1,41 @@
+{
+  "tilewidth": 32,
+  "tileheight": 32,
+  "columns": 8,
+  "tilecount": 8,
+  "image": "snow_v1.png",
+  "tiles": {
+    "tile_border_0": {
+      "frame": 0,
+      "gid": 1
+    },
+    "tile_snow_0": {
+      "frame": 1,
+      "gid": 2
+    },
+    "tile_snow_1": {
+      "frame": 2,
+      "gid": 3
+    },
+    "tile_snow_2": {
+      "frame": 3,
+      "gid": 4
+    },
+    "tile_ice_0": {
+      "frame": 4,
+      "gid": 5
+    },
+    "tile_snow_rock_0": {
+      "frame": 5,
+      "gid": 6
+    },
+    "tile_camp_path_0": {
+      "frame": 6,
+      "gid": 7
+    },
+    "tile_planks_0": {
+      "frame": 7,
+      "gid": 8
+    }
+  }
+}

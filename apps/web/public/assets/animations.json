@@ -1,0 +1,120 @@
+{
+  "walk_down": {
+    "frames": [
+      "yeti_walk_down_00",
+      "yeti_walk_down_01",
+      "yeti_walk_down_02",
+      "yeti_walk_down_03"
+    ],
+    "frameRate": 8,
+    "repeat": -1
+  },
+  "idle_down": {
+    "frames": [
+      "yeti_idle_down"
+    ],
+    "frameRate": 1,
+    "repeat": 0
+  },
+  "walk_up": {
+    "frames": [
+      "yeti_walk_up_00",
+      "yeti_walk_up_01",
+      "yeti_walk_up_02",
+      "yeti_walk_up_03"
+    ],
+    "frameRate": 8,
+    "repeat": -1
+  },
+  "idle_up": {
+    "frames": [
+      "yeti_idle_up"
+    ],
+    "frameRate": 1,
+    "repeat": 0
+  },
+  "walk_left": {
+    "frames": [
+      "yeti_walk_left_00",
+      "yeti_walk_left_01",
+      "yeti_walk_left_02",
+      "yeti_walk_left_03"
+    ],
+    "frameRate": 8,
+    "repeat": -1
+  },
+  "idle_left": {
+    "frames": [
+      "yeti_idle_left"
+    ],
+    "frameRate": 1,
+    "repeat": 0
+  },
+  "walk_right": {
+    "frames": [
+      "yeti_walk_right_00",
+      "yeti_walk_right_01",
+      "yeti_walk_right_02",
+      "yeti_walk_right_03"
+    ],
+    "frameRate": 8,
+    "repeat": -1
+  },
+  "idle_right": {
+    "frames": [
+      "yeti_idle_right"
+    ],
+    "frameRate": 1,
+    "repeat": 0
+  },
+  "aurora_pulse": {
+    "frames": [
+      "aurora_pulse_00",
+      "aurora_pulse_01",
+      "aurora_pulse_02",
+      "aurora_pulse_03"
+    ],
+    "frameRate": 5,
+    "repeat": -1
+  },
+  "fx_water_splash": {
+    "frames": [
+      "fx_water_splash_00",
+      "fx_water_splash_01",
+      "fx_water_splash_02",
+      "fx_water_splash_03"
+    ],
+    "frameRate": 10,
+    "repeat": 0
+  },
+  "fx_sparkle": {
+    "frames": [
+      "fx_sparkle_00",
+      "fx_sparkle_01",
+      "fx_sparkle_02",
+      "fx_sparkle_03"
+    ],
+    "frameRate": 10,
+    "repeat": 0
+  },
+  "fx_hammer_hit": {
+    "frames": [
+      "fx_hammer_hit_00",
+      "fx_hammer_hit_01",
+      "fx_hammer_hit_02",
+      "fx_hammer_hit_03"
+    ],
+    "frameRate": 10,
+    "repeat": 0
+  },
+  "fx_restore_glow": {
+    "frames": [
+      "fx_restore_glow_00",
+      "fx_restore_glow_01",
+      "fx_restore_glow_02",
+      "fx_restore_glow_03"
+    ],
+    "frameRate": 10,
+    "repeat": 0
+  }
+}

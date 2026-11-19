@@ -1,0 +1,17 @@
+{
+  "bridge": {
+    "actions": 67,
+    "energy_remaining": 35,
+    "xp": 100,
+    "rp": 100,
+    "bridge_repaired": true
+  },
+  "detour": {
+    "actions": 92,
+    "energy_remaining": 11,
+    "xp": 100,
+    "rp": 100,
+    "bridge_repaired": false
+  },
+  "note": "Reference route generation/accounting, not actual implemented reducer test."
+}

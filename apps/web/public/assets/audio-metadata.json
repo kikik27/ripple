@@ -1,0 +1,92 @@
+{
+  "sample_rate": 44100,
+  "channels": 2,
+  "codec": "Vorbis",
+  "tracks": [
+    {
+      "file": "music_hub.ogg",
+      "seconds": 50.526,
+      "peak_dbfs": -3.9
+    },
+    {
+      "file": "music_expedition.ogg",
+      "seconds": 41.739,
+      "peak_dbfs": -3.9
+    },
+    {
+      "file": "sfx_click.ogg",
+      "seconds": 0.2,
+      "peak_dbfs": -6.7
+    },
+    {
+      "file": "sfx_invalid.ogg",
+      "seconds": 0.42,
+      "peak_dbfs": -6.6
+    },
+    {
+      "file": "sfx_gather.ogg",
+      "seconds": 0.62,
+      "peak_dbfs": -4.3
+    },
+    {
+      "file": "sfx_build.ogg",
+      "seconds": 0.84,
+      "peak_dbfs": -3.0
+    },
+    {
+      "file": "sfx_craft.ogg",
+      "seconds": 0.94,
+      "peak_dbfs": -4.0
+    },
+    {
+      "file": "sfx_water.ogg",
+      "seconds": 1.18,
+      "peak_dbfs": -4.2
+    },
+    {
+      "file": "sfx_success.ogg",
+      "seconds": 2.1,
+      "peak_dbfs": -4.2
+    },
+    {
+      "file": "sfx_step_grass.ogg",
+      "seconds": 0.24,
+      "peak_dbfs": -7.1
+    },
+    {
+      "file": "sfx_step_snow.ogg",
+      "seconds": 0.32,
+      "peak_dbfs": -7.5
+    },
+    {
+      "file": "sfx_gather_stone.ogg",
+      "seconds": 0.55,
+      "peak_dbfs": -4.3
+    },
+    {
+      "file": "sfx_gather_metal.ogg",
+      "seconds": 0.66,
+      "peak_dbfs": -4.4
+    },
+    {
+      "file": "sfx_quest_open.ogg",
+      "seconds": 1.06,
+      "peak_dbfs": -5.7
+    },
+    {
+      "file": "sfx_aurora.ogg",
+      "seconds": 1.26,
+      "peak_dbfs": -6.7
+    },
+    {
+      "file": "ambience_river.ogg",
+      "seconds": 20.0,
+      "peak_dbfs": -9.1
+    },
+    {
+      "file": "ambience_camp.ogg",
+      "seconds": 20.0,
+      "peak_dbfs": -9.1
+    }
+  ]
+}

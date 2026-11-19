@@ -1,0 +1,22 @@
+{
+  "frameWidth": 48,
+  "frameHeight": 48,
+  "frames": {
+    "yeti_walk_down_00": 0,
+    "yeti_walk_down_01": 1,
+    "yeti_walk_down_02": 2,
+    "yeti_walk_down_03": 3,
+    "yeti_walk_up_00": 4,
+    "yeti_walk_up_01": 5,
+    "yeti_walk_up_02": 6,
+    "yeti_walk_up_03": 7,
+    "yeti_walk_left_00": 8,
+    "yeti_walk_left_01": 9,
+    "yeti_walk_left_02": 10,
+    "yeti_walk_left_03": 11,
+    "yeti_walk_right_00": 12,
+    "yeti_walk_right_01": 13,
+    "yeti_walk_right_02": 14,
+    "yeti_walk_right_03": 15
+  }
+}

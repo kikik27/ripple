@@ -1,0 +1,5 @@
+# Asset integration instructions
+Read docs/ASSET_HANDOFF.md first, then README.md and LICENSES.md. Preserve project AGENTS.md and handbook gameplay rules. Merge public/assets into the existing repo and use manifest IDs; do not load raw reference sheets. Start with offline map rendering + character movement, state-driven resource depletion, well/bridge/home state changes, then dynamic HUD. Run `python tools/validate_assets.py` (Pillow required) before copying assets. Use integration examples as code reference, not replacements for existing application state or reducer. Add actual project tests for loading, mobile layout and all fixture replays. Never use baked HUD, donation-to-XP multipliers, live donation details, or fake transactions. Record art licensing limitations and open polish tasks. Do not rename asset IDs without updating manifest and bindings.
+
+
+Ripple v1.1: use brand-config.json, wide logo for title screen, app icons for favicon/PWA, audio-config.json for all 17 audio IDs. Source board is visual inspiration only; preserve actual runtime sprite art and palette. Demo HUD uses 500 RP and 25 DEMO_CREDIT for Komodo; numbers are driven by state.

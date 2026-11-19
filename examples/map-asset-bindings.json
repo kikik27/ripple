@@ -1,0 +1,42 @@
+{
+  "map_id": "komodo_v1",
+  "tile_size": 32,
+  "floor": {
+    "default": "tile_grass_0",
+    "border": "tile_border_0",
+    "river": "tile_river_0",
+    "ford": "tile_ford_0",
+    "path": "tile_dirt_0",
+    "bridge_broken": "tile_bridge_broken",
+    "bridge_repaired": "tile_bridge_repaired"
+  },
+  "props": {
+    "spawn": "fx_mission_beacon",
+    "workshop": "workshop",
+    "well_site": {
+      "empty": "well_empty",
+      "built": "well_built",
+      "flowing": "well_flowing"
+    },
+    "homes": {
+      "dry": "home_dry",
+      "restored": "home_restored"
+    },
+    "node": {
+      "wood": {
+        "full": "node_wood_full",
+        "depleted": "node_wood_depleted"
+      },
+      "stone": {
+        "full": "node_stone_full",
+        "depleted": "node_stone_depleted"
+      },
+      "metal": {
+        "full": "node_metal_full",
+        "depleted": "node_metal_depleted"
+      }
+    }
+  },
+  "player": "yeti_idle_down",
+  "notes": "Decorations are cosmetic and must not change fixture collision or replay semantics."
+}

@@ -1,0 +1,393 @@
+{
+  "session_id": "fixture-detour",
+  "campaign_id": "operation-komodo",
+  "version": 1,
+  "map_id": "komodo_v1",
+  "actions": [
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "GATHER",
+      "node_id": "wood_1"
+    },
+    {
+      "type": "GATHER",
+      "node_id": "wood_1"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "GATHER",
+      "node_id": "stone_1"
+    },
+    {
+      "type": "GATHER",
+      "node_id": "stone_1"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "GATHER",
+      "node_id": "metal_1"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "CRAFT_WELL"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "MOVE",
+      "dir": "E"
+    },
+    {
+      "type": "BUILD_WELL"
+    },
+    {
+      "type": "PLACE_PIPE",
+      "cell": [
+        1,
+        2
+      ]
+    },
+    {
+      "type": "PLACE_PIPE",
+      "cell": [
+        2,
+        2
+      ]
+    },
+    {
+      "type": "PLACE_PIPE",
+      "cell": [
+        3,
+        2
+      ]
+    },
+    {
+      "type": "PLACE_PIPE",
+      "cell": [
+        4,
+        2
+      ]
+    },
+    {
+      "type": "PLACE_PIPE",
+      "cell": [
+        5,
+        2
+      ]
+    },
+    {
+      "type": "PLACE_PIPE",
+      "cell": [
+        5,
+        1
+      ]
+    },
+    {
+      "type": "PLACE_PIPE",
+      "cell": [
+        5,
+        3
+      ]
+    },
+    {
+      "type": "CONNECT_WATER"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "S"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "N"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "MOVE",
+      "dir": "W"
+    },
+    {
+      "type": "FINISH"
+    }
+  ]
+}

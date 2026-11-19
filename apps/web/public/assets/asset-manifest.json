@@ -1,0 +1,5459 @@
+{
+  "version": "1.1.0",
+  "basePath": "/assets/",
+  "tileSize": 32,
+  "assets": {
+    "yeti_idle_down": {
+      "path": "sprites/yeti_idle_down.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Foot anchor 24,40",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_idle_down"
+      }
+    },
+    "yeti_walk_down_00": {
+      "path": "sprites/yeti_walk_down_00.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_down_00"
+      }
+    },
+    "yeti_walk_down_01": {
+      "path": "sprites/yeti_walk_down_01.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_down_01"
+      }
+    },
+    "yeti_walk_down_02": {
+      "path": "sprites/yeti_walk_down_02.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_down_02"
+      }
+    },
+    "yeti_walk_down_03": {
+      "path": "sprites/yeti_walk_down_03.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_down_03"
+      }
+    },
+    "yeti_idle_up": {
+      "path": "sprites/yeti_idle_up.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Foot anchor 24,40",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_idle_up"
+      }
+    },
+    "yeti_walk_up_00": {
+      "path": "sprites/yeti_walk_up_00.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_up_00"
+      }
+    },
+    "yeti_walk_up_01": {
+      "path": "sprites/yeti_walk_up_01.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_up_01"
+      }
+    },
+    "yeti_walk_up_02": {
+      "path": "sprites/yeti_walk_up_02.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_up_02"
+      }
+    },
+    "yeti_walk_up_03": {
+      "path": "sprites/yeti_walk_up_03.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_up_03"
+      }
+    },
+    "yeti_idle_left": {
+      "path": "sprites/yeti_idle_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Foot anchor 24,40",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_idle_left"
+      }
+    },
+    "yeti_walk_left_00": {
+      "path": "sprites/yeti_walk_left_00.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_left_00"
+      }
+    },
+    "yeti_walk_left_01": {
+      "path": "sprites/yeti_walk_left_01.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_left_01"
+      }
+    },
+    "yeti_walk_left_02": {
+      "path": "sprites/yeti_walk_left_02.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_left_02"
+      }
+    },
+    "yeti_walk_left_03": {
+      "path": "sprites/yeti_walk_left_03.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_left_03"
+      }
+    },
+    "yeti_idle_right": {
+      "path": "sprites/yeti_idle_right.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Foot anchor 24,40",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_idle_right"
+      }
+    },
+    "yeti_walk_right_00": {
+      "path": "sprites/yeti_walk_right_00.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_right_00"
+      }
+    },
+    "yeti_walk_right_01": {
+      "path": "sprites/yeti_walk_right_01.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_right_01"
+      }
+    },
+    "yeti_walk_right_02": {
+      "path": "sprites/yeti_walk_right_02.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_right_02"
+      }
+    },
+    "yeti_walk_right_03": {
+      "path": "sprites/yeti_walk_right_03.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Starter 4-frame gait derived from two authored poses; not four unique drawn frames",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_walk_right_03"
+      }
+    },
+    "yeti_carry": {
+      "path": "sprites/yeti_carry.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.9
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_carry"
+      }
+    },
+    "yeti_build": {
+      "path": "sprites/yeti_build.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.9
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_build"
+      }
+    },
+    "yeti_celebrate": {
+      "path": "sprites/yeti_celebrate.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.9
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_celebrate"
+      }
+    },
+    "yeti_portrait": {
+      "path": "sprites/yeti_portrait.png",
+      "width": 128,
+      "height": 128,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "sprites",
+      "source": "sheet:yeti",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "yeti_portrait"
+      }
+    },
+    "npc_elder_front": {
+      "path": "sprites/npc_elder_front.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_elder_front"
+      }
+    },
+    "npc_elder_side": {
+      "path": "sprites/npc_elder_side.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_elder_side"
+      }
+    },
+    "npc_elder_happy": {
+      "path": "sprites/npc_elder_happy.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_elder_happy"
+      }
+    },
+    "npc_engineer_front": {
+      "path": "sprites/npc_engineer_front.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_engineer_front"
+      }
+    },
+    "npc_engineer_side": {
+      "path": "sprites/npc_engineer_side.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_engineer_side"
+      }
+    },
+    "npc_engineer_happy": {
+      "path": "sprites/npc_engineer_happy.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_engineer_happy"
+      }
+    },
+    "npc_child_front": {
+      "path": "sprites/npc_child_front.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_child_front"
+      }
+    },
+    "npc_child_side": {
+      "path": "sprites/npc_child_side.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_child_side"
+      }
+    },
+    "npc_child_happy": {
+      "path": "sprites/npc_child_happy.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_child_happy"
+      }
+    },
+    "npc_recycler_front": {
+      "path": "sprites/npc_recycler_front.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_recycler_front"
+      }
+    },
+    "npc_recycler_side": {
+      "path": "sprites/npc_recycler_side.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_recycler_side"
+      }
+    },
+    "npc_recycler_happy": {
+      "path": "sprites/npc_recycler_happy.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.8333333333333334
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "npc_recycler_happy"
+      }
+    },
+    "aurora_idle": {
+      "path": "sprites/aurora_idle.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "aurora_idle"
+      }
+    },
+    "aurora_side": {
+      "path": "sprites/aurora_side.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "aurora_side"
+      }
+    },
+    "aurora_happy": {
+      "path": "sprites/aurora_happy.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "aurora_happy"
+      }
+    },
+    "aurora_portrait": {
+      "path": "sprites/aurora_portrait.png",
+      "width": 128,
+      "height": 128,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "sprites",
+        "frame": "aurora_portrait"
+      }
+    },
+    "aurora_pulse_00": {
+      "path": "sprites/aurora_pulse_00.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Programmatic hover cycle",
+      "atlas": {
+        "key": "sprites",
+        "frame": "aurora_pulse_00"
+      }
+    },
+    "aurora_pulse_01": {
+      "path": "sprites/aurora_pulse_01.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Programmatic hover cycle",
+      "atlas": {
+        "key": "sprites",
+        "frame": "aurora_pulse_01"
+      }
+    },
+    "aurora_pulse_02": {
+      "path": "sprites/aurora_pulse_02.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Programmatic hover cycle",
+      "atlas": {
+        "key": "sprites",
+        "frame": "aurora_pulse_02"
+      }
+    },
+    "aurora_pulse_03": {
+      "path": "sprites/aurora_pulse_03.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "sprites",
+      "source": "sheet:npc",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Programmatic hover cycle",
+      "atlas": {
+        "key": "sprites",
+        "frame": "aurora_pulse_03"
+      }
+    },
+    "home_snow": {
+      "path": "props/home_snow.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "home_snow"
+      }
+    },
+    "workshop": {
+      "path": "props/workshop.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "workshop"
+      }
+    },
+    "supply_tent": {
+      "path": "props/supply_tent.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "supply_tent"
+      }
+    },
+    "storage_shed": {
+      "path": "props/storage_shed.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "storage_shed"
+      }
+    },
+    "notice_board": {
+      "path": "props/notice_board.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "notice_board"
+      }
+    },
+    "bridge_broken": {
+      "path": "props/bridge_broken.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "bridge_broken"
+      }
+    },
+    "bridge_cleared": {
+      "path": "props/bridge_cleared.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "bridge_cleared"
+      }
+    },
+    "bridge_building": {
+      "path": "props/bridge_building.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "bridge_building"
+      }
+    },
+    "bridge_almost": {
+      "path": "props/bridge_almost.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "bridge_almost"
+      }
+    },
+    "bridge_repaired": {
+      "path": "props/bridge_repaired.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "bridge_repaired"
+      }
+    },
+    "well_empty": {
+      "path": "props/well_empty.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "well_empty"
+      }
+    },
+    "well_wall": {
+      "path": "props/well_wall.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "well_wall"
+      }
+    },
+    "well_frame": {
+      "path": "props/well_frame.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "well_frame"
+      }
+    },
+    "well_built": {
+      "path": "props/well_built.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "well_built"
+      }
+    },
+    "well_flowing": {
+      "path": "props/well_flowing.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "well_flowing"
+      }
+    },
+    "water_tank": {
+      "path": "props/water_tank.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "water_tank"
+      }
+    },
+    "filter_station": {
+      "path": "props/filter_station.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "filter_station"
+      }
+    },
+    "solar_pump": {
+      "path": "props/solar_pump.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "solar_pump"
+      }
+    },
+    "solar_array": {
+      "path": "props/solar_array.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "solar_array"
+      }
+    },
+    "impact_monument": {
+      "path": "props/impact_monument.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "64px prop; collision remains grid-defined",
+      "atlas": {
+        "key": "props",
+        "frame": "impact_monument"
+      }
+    },
+    "home_restored": {
+      "path": "props/home_restored.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Warm-climate recolor of cottage; starter art",
+      "atlas": {
+        "key": "props",
+        "frame": "home_restored"
+      }
+    },
+    "home_dry": {
+      "path": "props/home_dry.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:structures",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Muted foliage; no simulated claim of actual impact",
+      "atlas": {
+        "key": "props",
+        "frame": "home_dry"
+      }
+    },
+    "pine": {
+      "path": "props/pine.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "pine"
+      }
+    },
+    "snow_bush": {
+      "path": "props/snow_bush.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "snow_bush"
+      }
+    },
+    "snow_boulder": {
+      "path": "props/snow_boulder.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "snow_boulder"
+      }
+    },
+    "signpost": {
+      "path": "props/signpost.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "signpost"
+      }
+    },
+    "rope_fence_snow": {
+      "path": "props/rope_fence_snow.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "rope_fence_snow"
+      }
+    },
+    "barrel": {
+      "path": "props/barrel.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "barrel"
+      }
+    },
+    "crate": {
+      "path": "props/crate.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "crate"
+      }
+    },
+    "campfire": {
+      "path": "props/campfire.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "campfire"
+      }
+    },
+    "camp_tent": {
+      "path": "props/camp_tent.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "camp_tent"
+      }
+    },
+    "workshop_tile": {
+      "path": "props/workshop_tile.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "workshop_tile"
+      }
+    },
+    "crafting_bench": {
+      "path": "props/crafting_bench.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "crafting_bench"
+      }
+    },
+    "lamp": {
+      "path": "props/lamp.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "lamp"
+      }
+    },
+    "flags": {
+      "path": "props/flags.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "flags"
+      }
+    },
+    "waypoint": {
+      "path": "props/waypoint.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:snow",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "waypoint"
+      }
+    },
+    "rock_large": {
+      "path": "props/rock_large.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "rock_large"
+      }
+    },
+    "rock_medium": {
+      "path": "props/rock_medium.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "rock_medium"
+      }
+    },
+    "rock_small": {
+      "path": "props/rock_small.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "rock_small"
+      }
+    },
+    "palm_coconut": {
+      "path": "props/palm_coconut.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "palm_coconut"
+      }
+    },
+    "palm": {
+      "path": "props/palm.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "palm"
+      }
+    },
+    "palm_sapling": {
+      "path": "props/palm_sapling.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "palm_sapling"
+      }
+    },
+    "bush_red": {
+      "path": "props/bush_red.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "bush_red"
+      }
+    },
+    "bush_white": {
+      "path": "props/bush_white.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "bush_white"
+      }
+    },
+    "bush_yellow": {
+      "path": "props/bush_yellow.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "bush_yellow"
+      }
+    },
+    "bush_green": {
+      "path": "props/bush_green.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "bush_green"
+      }
+    },
+    "bush_spiky": {
+      "path": "props/bush_spiky.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "bush_spiky"
+      }
+    },
+    "bush_pink": {
+      "path": "props/bush_pink.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "bush_pink"
+      }
+    },
+    "bush_lime": {
+      "path": "props/bush_lime.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "bush_lime"
+      }
+    },
+    "flower_red": {
+      "path": "props/flower_red.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "flower_red"
+      }
+    },
+    "flower_pink": {
+      "path": "props/flower_pink.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "flower_pink"
+      }
+    },
+    "flower_white": {
+      "path": "props/flower_white.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "flower_white"
+      }
+    },
+    "flower_yellow": {
+      "path": "props/flower_yellow.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "flower_yellow"
+      }
+    },
+    "flower_purple": {
+      "path": "props/flower_purple.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "flower_purple"
+      }
+    },
+    "stump": {
+      "path": "props/stump.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "stump"
+      }
+    },
+    "stump_moss": {
+      "path": "props/stump_moss.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "stump_moss"
+      }
+    },
+    "stump_hollow": {
+      "path": "props/stump_hollow.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "stump_hollow"
+      }
+    },
+    "log_moss": {
+      "path": "props/log_moss.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "log_moss"
+      }
+    },
+    "log": {
+      "path": "props/log.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "log"
+      }
+    },
+    "fence": {
+      "path": "props/fence.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "fence"
+      }
+    },
+    "fence_x": {
+      "path": "props/fence_x.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "fence_x"
+      }
+    },
+    "fence_rope": {
+      "path": "props/fence_rope.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "fence_rope"
+      }
+    },
+    "fence_bamboo": {
+      "path": "props/fence_bamboo.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "fence_bamboo"
+      }
+    },
+    "fence_lattice": {
+      "path": "props/fence_lattice.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "fence_lattice"
+      }
+    },
+    "crop_empty": {
+      "path": "props/crop_empty.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "crop_empty"
+      }
+    },
+    "crop_seed": {
+      "path": "props/crop_seed.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "crop_seed"
+      }
+    },
+    "crop_grown": {
+      "path": "props/crop_grown.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "crop_grown"
+      }
+    },
+    "crop_leafy": {
+      "path": "props/crop_leafy.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "crop_leafy"
+      }
+    },
+    "crop_fruit": {
+      "path": "props/crop_fruit.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "crop_fruit"
+      }
+    },
+    "reeds": {
+      "path": "props/reeds.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "reeds"
+      }
+    },
+    "lily_pad": {
+      "path": "props/lily_pad.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "lily_pad"
+      }
+    },
+    "lily_flower": {
+      "path": "props/lily_flower.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.96875
+      ],
+      "category": "props",
+      "source": "sheet:tropical",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Matte removed from source sheet",
+      "atlas": {
+        "key": "props",
+        "frame": "lily_flower"
+      }
+    },
+    "icon_wood": {
+      "path": "icons/icon_wood.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_wood"
+      }
+    },
+    "icon_stone": {
+      "path": "icons/icon_stone.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_stone"
+      }
+    },
+    "icon_metal": {
+      "path": "icons/icon_metal.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_metal"
+      }
+    },
+    "icon_rope_kit": {
+      "path": "icons/icon_rope_kit.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_rope_kit"
+      }
+    },
+    "icon_water_canister": {
+      "path": "icons/icon_water_canister.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_water_canister"
+      }
+    },
+    "icon_pipe": {
+      "path": "icons/icon_pipe.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_pipe"
+      }
+    },
+    "icon_water_filter": {
+      "path": "icons/icon_water_filter.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_water_filter"
+      }
+    },
+    "icon_drill": {
+      "path": "icons/icon_drill.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_drill"
+      }
+    },
+    "icon_hammer": {
+      "path": "icons/icon_hammer.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_hammer"
+      }
+    },
+    "icon_blueprint": {
+      "path": "icons/icon_blueprint.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_blueprint"
+      }
+    },
+    "icon_solar_panel": {
+      "path": "icons/icon_solar_panel.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_solar_panel"
+      }
+    },
+    "icon_battery": {
+      "path": "icons/icon_battery.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_battery"
+      }
+    },
+    "icon_scout_drone": {
+      "path": "icons/icon_scout_drone.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_scout_drone"
+      }
+    },
+    "icon_cargo_rover": {
+      "path": "icons/icon_cargo_rover.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_cargo_rover"
+      }
+    },
+    "icon_repair_kit": {
+      "path": "icons/icon_repair_kit.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_repair_kit"
+      }
+    },
+    "icon_seeds": {
+      "path": "icons/icon_seeds.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_seeds"
+      }
+    },
+    "icon_recycled_plastic": {
+      "path": "icons/icon_recycled_plastic.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_recycled_plastic"
+      }
+    },
+    "icon_restoration_crystal": {
+      "path": "icons/icon_restoration_crystal.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_restoration_crystal"
+      }
+    },
+    "node_wood_full": {
+      "path": "props/node_wood_full.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "category": "props",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "node_wood_full"
+      }
+    },
+    "node_wood_depleted": {
+      "path": "props/node_wood_depleted.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "category": "props",
+      "source": "procedural:depletion",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Smaller/muted resource remnant",
+      "atlas": {
+        "key": "props",
+        "frame": "node_wood_depleted"
+      }
+    },
+    "node_stone_full": {
+      "path": "props/node_stone_full.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "category": "props",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "node_stone_full"
+      }
+    },
+    "node_stone_depleted": {
+      "path": "props/node_stone_depleted.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "category": "props",
+      "source": "procedural:depletion",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Smaller/muted resource remnant",
+      "atlas": {
+        "key": "props",
+        "frame": "node_stone_depleted"
+      }
+    },
+    "node_metal_full": {
+      "path": "props/node_metal_full.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "category": "props",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "props",
+        "frame": "node_metal_full"
+      }
+    },
+    "node_metal_depleted": {
+      "path": "props/node_metal_depleted.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.9375
+      ],
+      "category": "props",
+      "source": "procedural:depletion",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Smaller/muted resource remnant",
+      "atlas": {
+        "key": "props",
+        "frame": "node_metal_depleted"
+      }
+    },
+    "icon_kit": {
+      "path": "icons/icon_kit.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:items",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Alias for crafted well kit",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_kit"
+      }
+    },
+    "button_primary_idle": {
+      "path": "ui/button_primary_idle.png",
+      "width": 192,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "button_primary_idle"
+      }
+    },
+    "button_primary_hover": {
+      "path": "ui/button_primary_hover.png",
+      "width": 192,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "button_primary_hover"
+      }
+    },
+    "button_primary_pressed": {
+      "path": "ui/button_primary_pressed.png",
+      "width": 192,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "button_primary_pressed"
+      }
+    },
+    "button_secondary_idle": {
+      "path": "ui/button_secondary_idle.png",
+      "width": 192,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "button_secondary_idle"
+      }
+    },
+    "button_secondary_hover": {
+      "path": "ui/button_secondary_hover.png",
+      "width": 192,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "button_secondary_hover"
+      }
+    },
+    "button_secondary_pressed": {
+      "path": "ui/button_secondary_pressed.png",
+      "width": 192,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "button_secondary_pressed"
+      }
+    },
+    "button_disabled_idle": {
+      "path": "ui/button_disabled_idle.png",
+      "width": 192,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "button_disabled_idle"
+      }
+    },
+    "button_disabled_hover": {
+      "path": "ui/button_disabled_hover.png",
+      "width": 192,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "button_disabled_hover"
+      }
+    },
+    "button_disabled_pressed": {
+      "path": "ui/button_disabled_pressed.png",
+      "width": 192,
+      "height": 72,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "button_disabled_pressed"
+      }
+    },
+    "slot_bag": {
+      "path": "ui/slot_bag.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "slot_bag"
+      }
+    },
+    "slot_empty": {
+      "path": "ui/slot_empty.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "slot_empty"
+      }
+    },
+    "panel_small": {
+      "path": "ui/panel_small.png",
+      "width": 256,
+      "height": 192,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "panel_small"
+      }
+    },
+    "panel_wide": {
+      "path": "ui/panel_wide.png",
+      "width": 384,
+      "height": 192,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "panel_wide"
+      }
+    },
+    "speech_bubble": {
+      "path": "ui/speech_bubble.png",
+      "width": 160,
+      "height": 96,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "speech_bubble"
+      }
+    },
+    "icon_energy": {
+      "path": "icons/icon_energy.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_energy"
+      }
+    },
+    "icon_heart": {
+      "path": "icons/icon_heart.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_heart"
+      }
+    },
+    "icon_xp": {
+      "path": "icons/icon_xp.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_xp"
+      }
+    },
+    "icon_rp": {
+      "path": "icons/icon_rp.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_rp"
+      }
+    },
+    "icon_impact": {
+      "path": "icons/icon_impact.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_impact"
+      }
+    },
+    "icon_coin": {
+      "path": "icons/icon_coin.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_coin"
+      }
+    },
+    "icon_quest": {
+      "path": "icons/icon_quest.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_quest"
+      }
+    },
+    "icon_check": {
+      "path": "icons/icon_check.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_check"
+      }
+    },
+    "icon_warning": {
+      "path": "icons/icon_warning.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_warning"
+      }
+    },
+    "icon_lock": {
+      "path": "icons/icon_lock.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_lock"
+      }
+    },
+    "icon_pin": {
+      "path": "icons/icon_pin.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_pin"
+      }
+    },
+    "icon_bag": {
+      "path": "icons/icon_bag.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_bag"
+      }
+    },
+    "icon_settings": {
+      "path": "icons/icon_settings.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "icons",
+      "source": "sheet:ui",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "icons",
+        "frame": "icon_settings"
+      }
+    },
+    "fx_water_splash": {
+      "path": "fx/fx_water_splash.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_water_splash"
+      }
+    },
+    "fx_water_flow": {
+      "path": "fx/fx_water_flow.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_water_flow"
+      }
+    },
+    "fx_sparkle": {
+      "path": "fx/fx_sparkle.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_sparkle"
+      }
+    },
+    "fx_restore_glow": {
+      "path": "fx/fx_restore_glow.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_restore_glow"
+      }
+    },
+    "fx_hammer_hit": {
+      "path": "fx/fx_hammer_hit.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_hammer_hit"
+      }
+    },
+    "fx_dust": {
+      "path": "fx/fx_dust.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_dust"
+      }
+    },
+    "fx_smoke": {
+      "path": "fx/fx_smoke.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_smoke"
+      }
+    },
+    "fx_footprints": {
+      "path": "fx/fx_footprints.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_footprints"
+      }
+    },
+    "fx_path_arrow": {
+      "path": "fx/fx_path_arrow.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_path_arrow"
+      }
+    },
+    "fx_interaction_ring": {
+      "path": "fx/fx_interaction_ring.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_interaction_ring"
+      }
+    },
+    "fx_build_zone": {
+      "path": "fx/fx_build_zone.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_build_zone"
+      }
+    },
+    "fx_mission_beacon": {
+      "path": "fx/fx_mission_beacon.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_mission_beacon"
+      }
+    },
+    "fx_donation_beacon": {
+      "path": "fx/fx_donation_beacon.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_donation_beacon"
+      }
+    },
+    "fx_region_locked": {
+      "path": "fx/fx_region_locked.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_region_locked"
+      }
+    },
+    "fx_region_restored": {
+      "path": "fx/fx_region_restored.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_region_restored"
+      }
+    },
+    "fx_campaign_node": {
+      "path": "fx/fx_campaign_node.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_campaign_node"
+      }
+    },
+    "fx_campaign_active": {
+      "path": "fx/fx_campaign_active.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_campaign_active"
+      }
+    },
+    "fx_campaign_selected": {
+      "path": "fx/fx_campaign_selected.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_campaign_selected"
+      }
+    },
+    "fx_campaign_complete": {
+      "path": "fx/fx_campaign_complete.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_campaign_complete"
+      }
+    },
+    "fx_campaign_star": {
+      "path": "fx/fx_campaign_star.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "sheet:fx",
+      "author": "OpenAI image generation / asset-pack processing",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_campaign_star"
+      }
+    },
+    "fx_water_splash_00": {
+      "path": "fx/fx_water_splash_00.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_water_splash_00"
+      }
+    },
+    "fx_water_splash_01": {
+      "path": "fx/fx_water_splash_01.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_water_splash_01"
+      }
+    },
+    "fx_water_splash_02": {
+      "path": "fx/fx_water_splash_02.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_water_splash_02"
+      }
+    },
+    "fx_water_splash_03": {
+      "path": "fx/fx_water_splash_03.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_water_splash_03"
+      }
+    },
+    "fx_sparkle_00": {
+      "path": "fx/fx_sparkle_00.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_sparkle_00"
+      }
+    },
+    "fx_sparkle_01": {
+      "path": "fx/fx_sparkle_01.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_sparkle_01"
+      }
+    },
+    "fx_sparkle_02": {
+      "path": "fx/fx_sparkle_02.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_sparkle_02"
+      }
+    },
+    "fx_sparkle_03": {
+      "path": "fx/fx_sparkle_03.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_sparkle_03"
+      }
+    },
+    "fx_hammer_hit_00": {
+      "path": "fx/fx_hammer_hit_00.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_hammer_hit_00"
+      }
+    },
+    "fx_hammer_hit_01": {
+      "path": "fx/fx_hammer_hit_01.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_hammer_hit_01"
+      }
+    },
+    "fx_hammer_hit_02": {
+      "path": "fx/fx_hammer_hit_02.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_hammer_hit_02"
+      }
+    },
+    "fx_hammer_hit_03": {
+      "path": "fx/fx_hammer_hit_03.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_hammer_hit_03"
+      }
+    },
+    "fx_restore_glow_00": {
+      "path": "fx/fx_restore_glow_00.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_restore_glow_00"
+      }
+    },
+    "fx_restore_glow_01": {
+      "path": "fx/fx_restore_glow_01.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_restore_glow_01"
+      }
+    },
+    "fx_restore_glow_02": {
+      "path": "fx/fx_restore_glow_02.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_restore_glow_02"
+      }
+    },
+    "fx_restore_glow_03": {
+      "path": "fx/fx_restore_glow_03.png",
+      "width": 64,
+      "height": 64,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "fx",
+      "source": "procedural:scale-opacity",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Derived effect tween frame",
+      "atlas": {
+        "key": "fx",
+        "frame": "fx_restore_glow_03"
+      }
+    },
+    "tile_grass_0": {
+      "path": "tiles/tile_grass_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_grass_1": {
+      "path": "tiles/tile_grass_1.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_grass_2": {
+      "path": "tiles/tile_grass_2.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_dry_grass_0": {
+      "path": "tiles/tile_dry_grass_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_dry_grass_1": {
+      "path": "tiles/tile_dry_grass_1.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_dry_grass_2": {
+      "path": "tiles/tile_dry_grass_2.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_dirt_0": {
+      "path": "tiles/tile_dirt_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_sand_0": {
+      "path": "tiles/tile_sand_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_river_0": {
+      "path": "tiles/tile_river_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_river_1": {
+      "path": "tiles/tile_river_1.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_river_2": {
+      "path": "tiles/tile_river_2.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_ford_0": {
+      "path": "tiles/tile_ford_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_border_0": {
+      "path": "tiles/tile_border_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_snow_0": {
+      "path": "tiles/tile_snow_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_snow_1": {
+      "path": "tiles/tile_snow_1.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_snow_2": {
+      "path": "tiles/tile_snow_2.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_ice_0": {
+      "path": "tiles/tile_ice_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_snow_rock_0": {
+      "path": "tiles/tile_snow_rock_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_camp_path_0": {
+      "path": "tiles/tile_camp_path_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_planks_0": {
+      "path": "tiles/tile_planks_0.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "32px edge-compatible floor"
+    },
+    "tile_river_bank_left": {
+      "path": "tiles/tile_river_bank_left.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": ""
+    },
+    "tile_river_bank_right": {
+      "path": "tiles/tile_river_bank_right.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:seamless-ground",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": ""
+    },
+    "tile_bridge_broken": {
+      "path": "tiles/tile_bridge_broken.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:grid-bridge",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": ""
+    },
+    "tile_bridge_repaired": {
+      "path": "tiles/tile_bridge_repaired.png",
+      "width": 32,
+      "height": 32,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "tiles",
+      "source": "procedural:grid-bridge",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": ""
+    },
+    "puzzle_source": {
+      "path": "puzzle/puzzle_source.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-ui",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_source"
+      }
+    },
+    "puzzle_home": {
+      "path": "puzzle/puzzle_home.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-ui",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_home"
+      }
+    },
+    "puzzle_blocked": {
+      "path": "puzzle/puzzle_blocked.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-ui",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_blocked"
+      }
+    },
+    "puzzle_empty": {
+      "path": "puzzle/puzzle_empty.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-ui",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_empty"
+      }
+    },
+    "puzzle_pipe_01_dry": {
+      "path": "puzzle/puzzle_pipe_01_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_01_dry"
+      }
+    },
+    "puzzle_pipe_01_wet": {
+      "path": "puzzle/puzzle_pipe_01_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_01_wet"
+      }
+    },
+    "puzzle_pipe_02_dry": {
+      "path": "puzzle/puzzle_pipe_02_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_02_dry"
+      }
+    },
+    "puzzle_pipe_02_wet": {
+      "path": "puzzle/puzzle_pipe_02_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_02_wet"
+      }
+    },
+    "puzzle_pipe_03_dry": {
+      "path": "puzzle/puzzle_pipe_03_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_03_dry"
+      }
+    },
+    "puzzle_pipe_03_wet": {
+      "path": "puzzle/puzzle_pipe_03_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_03_wet"
+      }
+    },
+    "puzzle_pipe_04_dry": {
+      "path": "puzzle/puzzle_pipe_04_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_04_dry"
+      }
+    },
+    "puzzle_pipe_04_wet": {
+      "path": "puzzle/puzzle_pipe_04_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_04_wet"
+      }
+    },
+    "puzzle_pipe_05_dry": {
+      "path": "puzzle/puzzle_pipe_05_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_05_dry"
+      }
+    },
+    "puzzle_pipe_05_wet": {
+      "path": "puzzle/puzzle_pipe_05_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_05_wet"
+      }
+    },
+    "puzzle_pipe_06_dry": {
+      "path": "puzzle/puzzle_pipe_06_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_06_dry"
+      }
+    },
+    "puzzle_pipe_06_wet": {
+      "path": "puzzle/puzzle_pipe_06_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_06_wet"
+      }
+    },
+    "puzzle_pipe_07_dry": {
+      "path": "puzzle/puzzle_pipe_07_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_07_dry"
+      }
+    },
+    "puzzle_pipe_07_wet": {
+      "path": "puzzle/puzzle_pipe_07_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_07_wet"
+      }
+    },
+    "puzzle_pipe_08_dry": {
+      "path": "puzzle/puzzle_pipe_08_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_08_dry"
+      }
+    },
+    "puzzle_pipe_08_wet": {
+      "path": "puzzle/puzzle_pipe_08_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_08_wet"
+      }
+    },
+    "puzzle_pipe_09_dry": {
+      "path": "puzzle/puzzle_pipe_09_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_09_dry"
+      }
+    },
+    "puzzle_pipe_09_wet": {
+      "path": "puzzle/puzzle_pipe_09_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_09_wet"
+      }
+    },
+    "puzzle_pipe_10_dry": {
+      "path": "puzzle/puzzle_pipe_10_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_10_dry"
+      }
+    },
+    "puzzle_pipe_10_wet": {
+      "path": "puzzle/puzzle_pipe_10_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_10_wet"
+      }
+    },
+    "puzzle_pipe_11_dry": {
+      "path": "puzzle/puzzle_pipe_11_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_11_dry"
+      }
+    },
+    "puzzle_pipe_11_wet": {
+      "path": "puzzle/puzzle_pipe_11_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_11_wet"
+      }
+    },
+    "puzzle_pipe_12_dry": {
+      "path": "puzzle/puzzle_pipe_12_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_12_dry"
+      }
+    },
+    "puzzle_pipe_12_wet": {
+      "path": "puzzle/puzzle_pipe_12_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_12_wet"
+      }
+    },
+    "puzzle_pipe_13_dry": {
+      "path": "puzzle/puzzle_pipe_13_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_13_dry"
+      }
+    },
+    "puzzle_pipe_13_wet": {
+      "path": "puzzle/puzzle_pipe_13_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_13_wet"
+      }
+    },
+    "puzzle_pipe_14_dry": {
+      "path": "puzzle/puzzle_pipe_14_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_14_dry"
+      }
+    },
+    "puzzle_pipe_14_wet": {
+      "path": "puzzle/puzzle_pipe_14_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_14_wet"
+      }
+    },
+    "puzzle_pipe_15_dry": {
+      "path": "puzzle/puzzle_pipe_15_dry.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_15_dry"
+      }
+    },
+    "puzzle_pipe_15_wet": {
+      "path": "puzzle/puzzle_pipe_15_wet.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "puzzle",
+      "source": "procedural:puzzle-pipe",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "N=1 E=2 S=4 W=8; overlay above empty cell",
+      "atlas": {
+        "key": "puzzle",
+        "frame": "puzzle_pipe_15_wet"
+      }
+    },
+    "bar_track_empty": {
+      "path": "ui/bar_track_empty.png",
+      "width": 240,
+      "height": 24,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:dynamic-hud",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "bar_track_empty"
+      }
+    },
+    "bar_fill_energy": {
+      "path": "ui/bar_fill_energy.png",
+      "width": 232,
+      "height": 16,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:dynamic-hud",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Clip this texture to current/max; never use full texture as fixed value",
+      "atlas": {
+        "key": "ui",
+        "frame": "bar_fill_energy"
+      }
+    },
+    "bar_fill_xp": {
+      "path": "ui/bar_fill_xp.png",
+      "width": 232,
+      "height": 16,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:dynamic-hud",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Clip this texture to current/max; never use full texture as fixed value",
+      "atlas": {
+        "key": "ui",
+        "frame": "bar_fill_xp"
+      }
+    },
+    "bar_fill_rp": {
+      "path": "ui/bar_fill_rp.png",
+      "width": 232,
+      "height": 16,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:dynamic-hud",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Clip this texture to current/max; never use full texture as fixed value",
+      "atlas": {
+        "key": "ui",
+        "frame": "bar_fill_rp"
+      }
+    },
+    "bar_fill_funding": {
+      "path": "ui/bar_fill_funding.png",
+      "width": 232,
+      "height": 16,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:dynamic-hud",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Clip this texture to current/max; never use full texture as fixed value",
+      "atlas": {
+        "key": "ui",
+        "frame": "bar_fill_funding"
+      }
+    },
+    "bar_fill_health": {
+      "path": "ui/bar_fill_health.png",
+      "width": 232,
+      "height": 16,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:dynamic-hud",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Clip this texture to current/max; never use full texture as fixed value",
+      "atlas": {
+        "key": "ui",
+        "frame": "bar_fill_health"
+      }
+    },
+    "minimap_frame_empty": {
+      "path": "ui/minimap_frame_empty.png",
+      "width": 160,
+      "height": 160,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:dynamic-hud",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "minimap_frame_empty"
+      }
+    },
+    "hud_profile_frame_empty": {
+      "path": "ui/hud_profile_frame_empty.png",
+      "width": 384,
+      "height": 144,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:dynamic-hud",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "Blank plate only; portrait, username, level and bars are independent runtime components",
+      "atlas": {
+        "key": "ui",
+        "frame": "hud_profile_frame_empty"
+      }
+    },
+    "dpad_up": {
+      "path": "ui/dpad_up.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:touch-controls",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "dpad_up"
+      }
+    },
+    "dpad_down": {
+      "path": "ui/dpad_down.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:touch-controls",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "dpad_down"
+      }
+    },
+    "dpad_left": {
+      "path": "ui/dpad_left.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:touch-controls",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "dpad_left"
+      }
+    },
+    "dpad_right": {
+      "path": "ui/dpad_right.png",
+      "width": 48,
+      "height": 48,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "category": "ui",
+      "source": "procedural:touch-controls",
+      "author": "Asset-pack procedural generation",
+      "version": "1.0.0",
+      "license": "See LICENSES.md; provisional demo art, not official Lofi IP",
+      "replacement_status": "starter",
+      "notes": "",
+      "atlas": {
+        "key": "ui",
+        "frame": "dpad_right"
+      }
+    }
+  },
+  "atlases": {
+    "sprites": {
+      "texture": "atlases/sprites.png",
+      "data": "atlases/sprites.json"
+    },
+    "props": {
+      "texture": "atlases/props.png",
+      "data": "atlases/props.json"
+    },
+    "icons": {
+      "texture": "atlases/icons.png",
+      "data": "atlases/icons.json"
+    },
+    "ui": {
+      "texture": "atlases/ui.png",
+      "data": "atlases/ui.json"
+    },
+    "fx": {
+      "texture": "atlases/fx.png",
+      "data": "atlases/fx.json"
+    },
+    "puzzle": {
+      "texture": "atlases/puzzle.png",
+      "data": "atlases/puzzle.json"
+    }
+  },
+  "animations": "animations.json",
+  "tilesets": {
+    "terrain": "tiles/terrain_32.json",
+    "tropical": "tiles/tropical_v1.json",
+    "snow": "tiles/snow_v1.json"
+  },
+  "branding": {
+    "logo": "branding/logo_1024.png",
+    "komodo": "branding/campaign_komodo_1280x720.png",
+    "logo_wide": "branding/ripple_logo.png",
+    "logo_compact": "branding/ripple_logo_768.png",
+    "emblem": "branding/ripple_emblem_1024.png",
+    "app_icon_192": "branding/app_icon_192.png",
+    "app_icon_512": "branding/app_icon_512.png",
+    "app_icon_maskable": "branding/app_icon_maskable_512.png",
+    "favicon_16": "branding/icon_16.png",
+    "favicon_32": "branding/icon_32.png",
+    "favicon_48": "branding/icon_48.png",
+    "apple_touch_icon": "branding/icon_180.png"
+  },
+  "audio": {
+    "music_hub": "audio/music_hub.ogg",
+    "music_expedition": "audio/music_expedition.ogg",
+    "sfx_click": "audio/sfx_click.ogg",
+    "sfx_invalid": "audio/sfx_invalid.ogg",
+    "sfx_gather": "audio/sfx_gather.ogg",
+    "sfx_build": "audio/sfx_build.ogg",
+    "sfx_craft": "audio/sfx_craft.ogg",
+    "sfx_water": "audio/sfx_water.ogg",
+    "sfx_success": "audio/sfx_success.ogg",
+    "sfx_step_grass": "audio/sfx_step_grass.ogg",
+    "sfx_step_snow": "audio/sfx_step_snow.ogg",
+    "sfx_gather_stone": "audio/sfx_gather_stone.ogg",
+    "sfx_gather_metal": "audio/sfx_gather_metal.ogg",
+    "sfx_quest_open": "audio/sfx_quest_open.ogg",
+    "sfx_aurora": "audio/sfx_aurora.ogg",
+    "ambience_river": "audio/ambience_river.ogg",
+    "ambience_camp": "audio/ambience_camp.ogg"
+  },
+  "gameTitle": "Ripple",
+  "audioConfig": "audio-config.json",
+  "brandConfig": "brand-config.json"
+}

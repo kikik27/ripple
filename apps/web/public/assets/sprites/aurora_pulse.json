@@ -1,0 +1,10 @@
+{
+  "frameWidth": 32,
+  "frameHeight": 32,
+  "frames": {
+    "aurora_pulse_00": 0,
+    "aurora_pulse_01": 1,
+    "aurora_pulse_02": 2,
+    "aurora_pulse_03": 3
+  }
+}

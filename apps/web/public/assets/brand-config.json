@@ -1,0 +1,39 @@
+{
+  "title": "Ripple",
+  "displayTitle": "Ripple",
+  "tagline": "Small Actions. Big Impact.",
+  "slug": "ripple",
+  "description": "A cozy Play-to-Impact adventure featuring Lofi the Yeti and Aurora.",
+  "hero": "Lofi the Yeti",
+  "companion": "Aurora",
+  "campaign": "Operation Komodo",
+  "organization": "Yeti Restoration Corps",
+  "baseCamp": "Himalayan Haven",
+  "colors": {
+    "navy": "#142C40",
+    "glacier": "#70C9EA",
+    "snow": "#F1F8FA",
+    "teal": "#259D8C",
+    "leaf": "#73B56B",
+    "earth": "#C69A63",
+    "parchment": "#F3EADC",
+    "alert": "#C65D43"
+  },
+  "fontStack": "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+  "network": "Sui Testnet",
+  "brandAssets": {
+    "logo": "branding/logo_1024.png",
+    "komodo": "branding/campaign_komodo_1280x720.png",
+    "logo_wide": "branding/ripple_logo.png",
+    "logo_compact": "branding/ripple_logo_768.png",
+    "emblem": "branding/ripple_emblem_1024.png",
+    "app_icon_192": "branding/app_icon_192.png",
+    "app_icon_512": "branding/app_icon_512.png",
+    "app_icon_maskable": "branding/app_icon_maskable_512.png",
+    "favicon_16": "branding/icon_16.png",
+    "favicon_32": "branding/icon_32.png",
+    "favicon_48": "branding/icon_48.png",
+    "apple_touch_icon": "branding/icon_180.png"
+  },
+  "releaseNotice": "Working title; trademark and Lofi IP permission pending. Demo only, no official affiliation."
+}

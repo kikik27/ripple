@@ -1,0 +1,275 @@
+{
+  "version": "1.0",
+  "priority_rule": "B01–B18 P0; B19 P1; B20 P2",
+  "tickets": [
+    {
+      "id": "B01",
+      "milestone": "M0",
+      "priority": "P0",
+      "title": "Workspace, CI and docs",
+      "depends_on": [],
+      "implementation": "pnpm workspace; web/API/core/contracts/chain; lockfile; CI lint/typecheck/test; README, STATUS, DECISIONS",
+      "acceptance": "Clean clone installs, dev:offline starts placeholder; no secrets",
+      "tests": "T19",
+      "status": "todo"
+    },
+    {
+      "id": "B02",
+      "milestone": "M0",
+      "priority": "P0",
+      "title": "Content schemas and map validator",
+      "depends_on": [
+        "B01"
+      ],
+      "implementation": "Copy schemas and fixtures; validate IDs, map bounds, collision, stocks, hash; fixtures tested",
+      "acceptance": "Both route fixtures accepted by schema; malformed input rejected",
+      "tests": "T02,T05",
+      "status": "todo"
+    },
+    {
+      "id": "B03",
+      "milestone": "M1",
+      "priority": "P0",
+      "title": "Pure reducer and replay rules",
+      "depends_on": [
+        "B02"
+      ],
+      "implementation": "Implement movement, gather, energy, bag, bridge, craft/build/finish; immutable actions",
+      "acceptance": "Unit tests match bridge/detour golden results and all invalid actions preserve state",
+      "tests": "T02,T03,T04,T06,T07",
+      "status": "todo"
+    },
+    {
+      "id": "B04",
+      "milestone": "M1",
+      "priority": "P0",
+      "title": "Pipe connectivity puzzle",
+      "depends_on": [
+        "B03"
+      ],
+      "implementation": "Grid UI + shared BFS, obstacle and budget checks",
+      "acceptance": "Both homes required; valid fixture accepted; invalid connection rejected",
+      "tests": "T05",
+      "status": "todo"
+    },
+    {
+      "id": "B05",
+      "milestone": "M1",
+      "priority": "P0",
+      "title": "Phaser expedition and camera",
+      "depends_on": [
+        "B03"
+      ],
+      "implementation": "Map layers, avatar, interpolation, interaction, collision, fallback art",
+      "acceptance": "Full game controlled using keyboard, visual state matches reducer",
+      "tests": "T01,T02,T06",
+      "status": "todo"
+    },
+    {
+      "id": "B06",
+      "milestone": "M1",
+      "priority": "P0",
+      "title": "Camp, campaign screen and result",
+      "depends_on": [
+        "B04",
+        "B05"
+      ],
+      "implementation": "React HUD, objectives, inventory, puzzle modal, result, restart, replay log",
+      "acceptance": "Guest can finish full loop; no wallet or network required",
+      "tests": "T01,T06,T17",
+      "status": "todo"
+    },
+    {
+      "id": "B07",
+      "milestone": "M2",
+      "priority": "P0",
+      "title": "API, DB, session and auth",
+      "depends_on": [
+        "B02",
+        "B01"
+      ],
+      "implementation": "Fastify routes, SQLite migrations, nonce signature auth, expiry, rate limits",
+      "acceptance": "Session pinned to map version; replay cannot be rebound after issuance",
+      "tests": "T08,T09",
+      "status": "todo"
+    },
+    {
+      "id": "B08",
+      "milestone": "M2",
+      "priority": "P0",
+      "title": "Replay verification and issuance adapter",
+      "depends_on": [
+        "B03",
+        "B04",
+        "B07"
+      ],
+      "implementation": "Validate/reduce server-side; wallet binding, hash, uniqueness, chain mock",
+      "acceptance": "Tampered/unfinished replay rejected; valid replay result fixed and idempotent",
+      "tests": "T08,T09",
+      "status": "todo"
+    },
+    {
+      "id": "B09",
+      "milestone": "M3",
+      "priority": "P0",
+      "title": "Move access/passport/campaign modules",
+      "depends_on": [
+        "B02"
+      ],
+      "implementation": "Capabilities, registry, passport and shared campaign; events; tests",
+      "acceptance": "Wrong role rejected, registration unique, publish version pinned",
+      "tests": "T10,T15",
+      "status": "todo"
+    },
+    {
+      "id": "B10",
+      "milestone": "M3",
+      "priority": "P0",
+      "title": "Move ticket and claim",
+      "depends_on": [
+        "B09"
+      ],
+      "implementation": "Verifier cap, expiry, consumed ticket, issued/claimed guard, atomically award",
+      "acceptance": "Negative scenarios and positive claim pass; duplicate impossible",
+      "tests": "T09,T10,T11",
+      "status": "todo"
+    },
+    {
+      "id": "B11",
+      "milestone": "M3",
+      "priority": "P0",
+      "title": "Move demo credit and pool",
+      "depends_on": [
+        "B09",
+        "B10"
+      ],
+      "implementation": "Mint test token, pre-fund pool, threshold, explicit release/refund, immutable recipient",
+      "acceptance": "Release tests and receiver delta exactly 25 units; no double spend",
+      "tests": "T12,T13",
+      "status": "todo"
+    },
+    {
+      "id": "B12",
+      "milestone": "M3",
+      "priority": "P0",
+      "title": "Testnet deployment and chain adapter",
+      "depends_on": [
+        "B11",
+        "B08"
+      ],
+      "implementation": "CLI publish, verified IDs, tx builder, event decoding, issuance reconciliation",
+      "acceptance": "Real successful testnet publish and ticket; config guarded",
+      "tests": "T11,T16",
+      "status": "todo"
+    },
+    {
+      "id": "B13",
+      "milestone": "M4",
+      "priority": "P0",
+      "title": "Wallet claim and read model",
+      "depends_on": [
+        "B12",
+        "B06"
+      ],
+      "implementation": "Optional wallet connect, auth, verify, register/claim, pending/reload UI",
+      "acceptance": "Real Testnet claim and reload; wallet rejection safe",
+      "tests": "T08,T09,T11,T16",
+      "status": "todo"
+    },
+    {
+      "id": "B14",
+      "milestone": "M4",
+      "priority": "P0",
+      "title": "Impact board and manual release",
+      "depends_on": [
+        "B13"
+      ],
+      "implementation": "Escrow/eligibility/receipt, admin release, three independent statuses",
+      "acceptance": "Actual demo release digest, amount and recipient correct",
+      "tests": "T12,T13,T18",
+      "status": "todo"
+    },
+    {
+      "id": "B15",
+      "milestone": "M5",
+      "priority": "P0",
+      "title": "Aurora draft and validation",
+      "depends_on": [
+        "B02",
+        "B07"
+      ],
+      "implementation": "Fixture/model adapter, allowlist, structured output, hash, unsupported rejection",
+      "acceptance": "Two drafts from supported template; source injection cannot publish",
+      "tests": "T14",
+      "status": "todo"
+    },
+    {
+      "id": "B16",
+      "milestone": "M5",
+      "priority": "P0",
+      "title": "Admin review/publish campaign",
+      "depends_on": [
+        "B15",
+        "B12"
+      ],
+      "implementation": "Review source, approve exact hash, publish chain, audit, reconciliation",
+      "acceptance": "Map appears after approval and confirmed publish; no duplicate",
+      "tests": "T15,T16",
+      "status": "todo"
+    },
+    {
+      "id": "B17",
+      "milestone": "M6",
+      "priority": "P0",
+      "title": "Asset polish and mobile/accessibility",
+      "depends_on": [
+        "B06"
+      ],
+      "implementation": "Original placeholders or licensed art, touch D-pad, mute/reduced motion, license register",
+      "acceptance": "360px play; asset rights documented; no clipping",
+      "tests": "T17,T20",
+      "status": "todo"
+    },
+    {
+      "id": "B18",
+      "milestone": "M6",
+      "priority": "P0",
+      "title": "Release QA and submission",
+      "depends_on": [
+        "B14",
+        "B16",
+        "B17"
+      ],
+      "implementation": "E2E, clean install, smoke, video, logo, README, known limitations",
+      "acceptance": "Critical tests pass; reproducible demo and evidence",
+      "tests": "T01–T20",
+      "status": "todo"
+    },
+    {
+      "id": "B19",
+      "milestone": "P1",
+      "priority": "P1",
+      "title": "Optional additional systems",
+      "depends_on": [
+        "B18"
+      ],
+      "implementation": "Walrus, more biomes/gear, zkLogin, sponsored gas",
+      "acceptance": "Owner approval and independent tests; no scope creep",
+      "tests": "new tests",
+      "status": "todo"
+    },
+    {
+      "id": "B20",
+      "milestone": "P2",
+      "priority": "P2",
+      "title": "Production partnership and security",
+      "depends_on": [
+        "B18"
+      ],
+      "implementation": "Licensing, fundraising agreement, anti-abuse, audit, compliance",
+      "acceptance": "All mainnet gates approved; no live funds until then",
+      "tests": "independent audit",
+      "status": "todo"
+    }
+  ]
+}

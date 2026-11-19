@@ -1,0 +1,157 @@
+{
+  "tilewidth": 32,
+  "tileheight": 32,
+  "columns": 8,
+  "image": "terrain_32.png",
+  "imagewidth": 256,
+  "imageheight": 96,
+  "tilecount": 24,
+  "margin": 0,
+  "spacing": 0,
+  "tiles": {
+    "tile_grass_0": {
+      "frame": 0,
+      "gid": 1,
+      "x": 0,
+      "y": 0
+    },
+    "tile_grass_1": {
+      "frame": 1,
+      "gid": 2,
+      "x": 32,
+      "y": 0
+    },
+    "tile_grass_2": {
+      "frame": 2,
+      "gid": 3,
+      "x": 64,
+      "y": 0
+    },
+    "tile_dry_grass_0": {
+      "frame": 3,
+      "gid": 4,
+      "x": 96,
+      "y": 0
+    },
+    "tile_dry_grass_1": {
+      "frame": 4,
+      "gid": 5,
+      "x": 128,
+      "y": 0
+    },
+    "tile_dry_grass_2": {
+      "frame": 5,
+      "gid": 6,
+      "x": 160,
+      "y": 0
+    },
+    "tile_dirt_0": {
+      "frame": 6,
+      "gid": 7,
+      "x": 192,
+      "y": 0
+    },
+    "tile_sand_0": {
+      "frame": 7,
+      "gid": 8,
+      "x": 224,
+      "y": 0
+    },
+    "tile_river_0": {
+      "frame": 8,
+      "gid": 9,
+      "x": 0,
+      "y": 32
+    },
+    "tile_river_1": {
+      "frame": 9,
+      "gid": 10,
+      "x": 32,
+      "y": 32
+    },
+    "tile_river_2": {
+      "frame": 10,
+      "gid": 11,
+      "x": 64,
+      "y": 32
+    },
+    "tile_ford_0": {
+      "frame": 11,
+      "gid": 12,
+      "x": 96,
+      "y": 32
+    },
+    "tile_border_0": {
+      "frame": 12,
+      "gid": 13,
+      "x": 128,
+      "y": 32
+    },
+    "tile_snow_0": {
+      "frame": 13,
+      "gid": 14,
+      "x": 160,
+      "y": 32
+    },
+    "tile_snow_1": {
+      "frame": 14,
+      "gid": 15,
+      "x": 192,
+      "y": 32
+    },
+    "tile_snow_2": {
+      "frame": 15,
+      "gid": 16,
+      "x": 224,
+      "y": 32
+    },
+    "tile_ice_0": {
+      "frame": 16,
+      "gid": 17,
+      "x": 0,
+      "y": 64
+    },
+    "tile_snow_rock_0": {
+      "frame": 17,
+      "gid": 18,
+      "x": 32,
+      "y": 64
+    },
+    "tile_camp_path_0": {
+      "frame": 18,
+      "gid": 19,
+      "x": 64,
+      "y": 64
+    },
+    "tile_planks_0": {
+      "frame": 19,
+      "gid": 20,
+      "x": 96,
+      "y": 64
+    },
+    "tile_river_bank_left": {
+      "frame": 20,
+      "gid": 21,
+      "x": 128,
+      "y": 64
+    },
+    "tile_river_bank_right": {
+      "frame": 21,
+      "gid": 22,
+      "x": 160,
+      "y": 64
+    },
+    "tile_bridge_broken": {
+      "frame": 22,
+      "gid": 23,
+      "x": 192,
+      "y": 64
+    },
+    "tile_bridge_repaired": {
+      "frame": 23,
+      "gid": 24,
+      "x": 224,
+      "y": 64
+    }
+  }
+}

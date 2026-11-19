@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ripple P0 campaign config",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "campaign_id",
+    "version",
+    "title",
+    "summary",
+    "template_id",
+    "map_id",
+    "map_hash",
+    "source",
+    "fiction_notice",
+    "demo",
+    "generation_mode",
+    "review_state",
+    "objectives",
+    "target_rp",
+    "sponsor_policy"
+  ],
+  "properties": {
+    "campaign_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]{1,64}$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "template_id": {
+      "const": "clean_water_v1"
+    },
+    "map_id": {
+      "const": "komodo_v1"
+    },
+    "map_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "status",
+        "retrieved_at",
+        "excerpt",
+        "source_hash"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "status": {
+          "enum": [
+            "historical_demo",
+            "synthetic_demo"
+          ]
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "source_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "fiction_notice": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "demo": {
+      "const": true
+    },
+    "generation_mode": {
+      "enum": [
+        "fixture",
+        "model"
+      ]
+    },
+    "review_state": {
+      "enum": [
+        "needs_review",
+        "approved",
+        "rejected"
+      ]
+    },
+    "objectives": {
+      "const": [
+        "scout",
+        "gather",
+        "craft",
+        "build",
+        "connect",
+        "return"
+      ]
+    },
+    "target_rp": {
+      "const": 500
+    },
+    "sponsor_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset",
+        "amount",
+        "threshold_rp"
+      ],
+      "properties": {
+        "asset": {
+          "const": "DEMO_CREDIT"
+        },
+        "amount": {
+          "const": 25
+        },
+        "threshold_rp": {
+          "const": 100
+        }
+      }
+    }
+  }
+}

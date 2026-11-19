@@ -1,0 +1,77 @@
+{
+  "tilewidth": 32,
+  "tileheight": 32,
+  "columns": 8,
+  "tilecount": 17,
+  "image": "tropical_v1.png",
+  "tiles": {
+    "tile_grass_0": {
+      "frame": 0,
+      "gid": 1
+    },
+    "tile_grass_1": {
+      "frame": 1,
+      "gid": 2
+    },
+    "tile_grass_2": {
+      "frame": 2,
+      "gid": 3
+    },
+    "tile_dry_grass_0": {
+      "frame": 3,
+      "gid": 4
+    },
+    "tile_dry_grass_1": {
+      "frame": 4,
+      "gid": 5
+    },
+    "tile_dry_grass_2": {
+      "frame": 5,
+      "gid": 6
+    },
+    "tile_dirt_0": {
+      "frame": 6,
+      "gid": 7
+    },
+    "tile_sand_0": {
+      "frame": 7,
+      "gid": 8
+    },
+    "tile_river_0": {
+      "frame": 8,
+      "gid": 9
+    },
+    "tile_river_1": {
+      "frame": 9,
+      "gid": 10
+    },
+    "tile_river_2": {
+      "frame": 10,
+      "gid": 11
+    },
+    "tile_ford_0": {
+      "frame": 11,
+      "gid": 12
+    },
+    "tile_border_0": {
+      "frame": 12,
+      "gid": 13
+    },
+    "tile_river_bank_left": {
+      "frame": 13,
+      "gid": 14
+    },
+    "tile_river_bank_right": {
+      "frame": 14,
+      "gid": 15
+    },
+    "tile_bridge_broken": {
+      "frame": 15,
+      "gid": 16
+    },
+    "tile_bridge_repaired": {
+      "frame": 16,
+      "gid": 17
+    }
+  }
+}

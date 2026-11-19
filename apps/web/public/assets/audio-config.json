@@ -1,0 +1,104 @@
+{
+  "music_hub": {
+    "path": "audio/music_hub.ogg",
+    "loop": true,
+    "bus": "music",
+    "volume": 0.32
+  },
+  "music_expedition": {
+    "path": "audio/music_expedition.ogg",
+    "loop": true,
+    "bus": "music",
+    "volume": 0.32
+  },
+  "sfx_click": {
+    "path": "audio/sfx_click.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_invalid": {
+    "path": "audio/sfx_invalid.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_gather": {
+    "path": "audio/sfx_gather.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_build": {
+    "path": "audio/sfx_build.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.48
+  },
+  "sfx_craft": {
+    "path": "audio/sfx_craft.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_water": {
+    "path": "audio/sfx_water.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_success": {
+    "path": "audio/sfx_success.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.48
+  },
+  "sfx_step_grass": {
+    "path": "audio/sfx_step_grass.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_step_snow": {
+    "path": "audio/sfx_step_snow.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_gather_stone": {
+    "path": "audio/sfx_gather_stone.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_gather_metal": {
+    "path": "audio/sfx_gather_metal.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_quest_open": {
+    "path": "audio/sfx_quest_open.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "sfx_aurora": {
+    "path": "audio/sfx_aurora.ogg",
+    "loop": false,
+    "bus": "sfx",
+    "volume": 0.32
+  },
+  "ambience_river": {
+    "path": "audio/ambience_river.ogg",
+    "loop": true,
+    "bus": "ambience",
+    "volume": 0.16
+  },
+  "ambience_camp": {
+    "path": "audio/ambience_camp.ogg",
+    "loop": true,
+    "bus": "ambience",
+    "volume": 0.16
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "map_id": "komodo_v1",
+  "width": 24,
+  "height": 20,
+  "tile_size": 32,
+  "blocked_border": true,
+  "river_x": 11,
+  "bridge": [
+    11,
+    10
+  ],
+  "ford": [
+    11,
+    17
+  ],
+  "spawn": [
+    2,
+    10
+  ],
+  "extraction": [
+    2,
+    10
+  ],
+  "workshop": [
+    4,
+    10
+  ],
+  "well_site": [
+    19,
+    10
+  ],
+  "homes": [
+    [
+      21,
+      8
+    ],
+    [
+      21,
+      12
+    ]
+  ],
+  "nodes": [
+    {
+      "id": "wood_1",
+      "material": "wood",
+      "position": [
+        5,
+        8
+      ],
+      "stock": 6
+    },
+    {
+      "id": "stone_1",
+      "material": "stone",
+      "position": [
+        7,
+        12
+      ],
+      "stock": 4
+    },
+    {
+      "id": "metal_1",
+      "material": "metal",
+      "position": [
+        8,
+        8
+      ],
+      "stock": 2
+    }
+  ],
+  "puzzle": {
+    "width": 6,
+    "height": 5,
+    "source": [
+      0,
+      2
+    ],
+    "homes": [
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "blocked": [
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "pipe_budget": 9
+  },
+  "rules": {
+    "starting_energy": 100,
+    "bag_capacity": 8,
+    "move_cost": 1,
+    "gather_cost": 1,
+    "repair_cost": {
+      "wood": 2,
+      "energy": 2
+    },
+    "craft_cost": {
+      "wood": 2,
+      "stone": 2,
+      "metal": 1,
+      "energy": 3
+    },
+    "kit_slots": 4,
+    "build_cost": 3,
+    "connect_cost": 2,
+    "completion_xp": 100,
+    "completion_rp": 100,
+    "max_actions": 500
+  }
+}
