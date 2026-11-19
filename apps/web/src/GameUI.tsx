@@ -1,6 +1,6 @@
 import {useState} from "react";
 export function TaskTitle({done,title}:{done:boolean;title:string}){
-  return <span className="task-title" data-done={done}><span className="task-check" aria-label={done?"Completed":"Open"}>{done?"✓":""}</span><span>{title}</span></span>;
+  return <span className="task-title" data-done={done}><span className="task-check" aria-label={done?"Completed":"Open"}>{done ? <img src="/assets/icons/icon_check.png" alt="" aria-hidden="true" /> : null}</span><span>{title}</span></span>;
 }
 
 export function PlayerHUD({energy,xp,location,day}:{energy?:number;xp?:number;location:string;day?:number}) {

@@ -139,7 +139,7 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 .quest-board header{display:flex;justify-content:flex-start;gap:12px;align-items:center;background:transparent;color:#254452;padding:0 0 10px;border-bottom:2px solid #ab9879}
 .quest-board header img{width:48px;height:48px;object-fit:contain;image-rendering:pixelated}.quest-board header small,.mission-ribbon small{font:small-caps bold 13px Georgia,serif;color:#41655b}
 .game-shell .quest-board .task-link:not(.rpg-slots button),.quest-board .board-entry{display:block;width:100%;text-align:left;margin:0;padding:8px 4px;background:transparent;color:#253e4c;border:0;border-image:none;border-bottom:1px solid #b5a78d;text-shadow:none;border-radius:0}
-.game-shell .quest-board .task-link:hover{background:#dddbc6}.task-title{display:flex;align-items:center;gap:9px;font:bold 16px Georgia,serif}.task-check{display:inline-grid;place-items:center;width:17px;height:17px;border:1.5px solid #677869;border-radius:3px;color:#305849;flex:none}
+.game-shell .quest-board .task-link:hover{background:#dddbc6}.task-title{display:flex;align-items:center;gap:9px;font:bold 16px Georgia,serif}.task-check{display:inline-grid;place-items:center;width:17px;height:17px;border:1.5px solid #677869;border-radius:3px;color:#305849;flex:none}.task-check img{width:12px;height:12px;object-fit:contain;image-rendering:pixelated}
 .task-title[data-done=true]>span:last-child{text-decoration:line-through;color:#546955}
 .quest-board .board-entry small,.quest-board .task-link small{display:block;margin:4px 0 0 26px;font:13px Georgia,serif;color:#475d60}.quest-board .board-close{display:block;margin:10px 0 0 auto}
 .mission-ribbon{position:absolute;z-index:5;top:max(75px,12dvh);left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;width:max-content;max-width:94vw;padding:8px 10px;border:3px double #6c775e;border-radius:10px;background:#fbf1dd;color:#203d48;font-family:Georgia,serif;box-shadow:0 3px 0 #263a4855}
@@ -165,8 +165,8 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 .quest-spark{pointer-events:none;position:fixed;width:38px;height:38px;z-index:88;image-rendering:pixelated}
 .building-hover-pill{position:fixed;z-index:40;transform:translate(-50%,-100%);display:flex;align-items:center;gap:8px;padding:5px 14px 6px 8px;background:#fbf1dd;border:2px solid #57432e;border-radius:6px;box-shadow:inset 0 0 0 1px #e8dcbf,inset 0 -2px #ceb791,0 4px 10px rgba(18,38,52,0.45);font-family:Georgia,serif;color:#203651;pointer-events:none;animation:pill-float 1.8s ease-in-out infinite alternate;white-space:nowrap}
 @keyframes pill-float{0%{transform:translate(-50%,-100%) translateY(0)}100%{transform:translate(-50%,-100%) translateY(-5px)}}
-.pill-sign-badge{display:flex;align-items:center;gap:4px;justify-content:center}
-.pill-emoji-badge{font-size:14px;line-height:1}
+.pill-sign-badge{display:flex;align-items:center;gap:5px;justify-content:center}
+.pill-asset-icon{width:18px;height:18px;object-fit:contain;image-rendering:pixelated}
 .pill-key{display:inline-grid;place-items:center;width:22px;height:22px;background:#203c4f;color:#fbf1dd;font-family:Georgia,serif;font-weight:bold;font-size:11px;border:1.5px solid #82a3b8;border-radius:4px;box-shadow:inset 0 -2px #10212c,0 1px 3px rgba(0,0,0,0.35)}
 .pill-text{display:flex;flex-direction:column;line-height:1.2;text-align:left}
 .pill-name{font-family:Georgia,serif;font-size:13px;font-weight:bold;color:#203651;letter-spacing:0.01em}
@@ -187,7 +187,8 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 .quest-board-item:hover{background:#ecdcb8}
 .quest-board-item.is-ready{border-color:#bb9133;background:#f9edd0;box-shadow:0 0 6px rgba(212,169,76,0.35)}
 .quest-task-detail{display:block;margin:2px 0 0 24px;font:11px Georgia,serif;color:#475d60}
-.quest-ready-badge{display:block;margin:3px 0 0 24px;font:bold 10px Georgia,serif;color:#b26f1c;animation:pulse-claim 1.2s infinite alternate ease-in-out}
+.quest-ready-badge{display:flex;align-items:center;gap:4px;margin:3px 0 0 24px;font:bold 10px Georgia,serif;color:#b26f1c;animation:pulse-claim 1.2s infinite alternate ease-in-out}
+.quest-star-icon{width:12px;height:12px;object-fit:contain;image-rendering:pixelated}
 @keyframes pulse-claim{from{opacity:.75}to{opacity:1}}
 .grove-quest-hud small{display:block;margin:0;font:11px Georgia,serif;color:#355364}
 
@@ -203,7 +204,8 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 .achievement-body{flex:1;min-width:0}
 .achievement-title-row{display:flex;justify-content:space-between;align-items:center}
 .achievement-title{font:bold 13px Georgia,serif;color:#203651}
-.achievement-status{font:bold 11px Georgia,serif;color:#2e6b5a}
+.achievement-status{display:inline-flex;align-items:center;gap:3px;font:bold 11px Georgia,serif;color:#2e6b5a}
+.status-badge-icon{width:12px;height:12px;object-fit:contain;image-rendering:pixelated}
 .achievement-card.is-locked .achievement-status{color:#7a6d59}
 .achievement-desc{margin:2px 0 0;font:11px Georgia,serif;color:#50646c;line-height:1.25}
 
@@ -216,7 +218,8 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 @keyframes nibble{to{transform:translateY(6px) rotate(18deg)}}
 @keyframes water-ripple{0%{transform:scale(0.5);opacity:0.8}100%{transform:scale(2.2);opacity:0}}
 
-.rpg-compass-badge{display:inline-flex;align-items:center;gap:4px;background:#203c4f;color:#fbf1dd;font:bold 11px Georgia,serif;padding:2px 7px;border-radius:4px;border:1px solid #6c8a9e;margin-left:4px;box-shadow:0 1px 3px rgba(0,0,0,0.25)}
+.rpg-compass-badge{display:inline-flex;align-items:center;gap:5px;background:#203c4f;color:#fbf1dd;font:bold 11px Georgia,serif;padding:2px 7px;border-radius:4px;border:1px solid #6c8a9e;margin-left:4px;box-shadow:0 1px 3px rgba(0,0,0,0.25)}
+.compass-icon-img{width:12px;height:12px;object-fit:contain;image-rendering:pixelated}
 .rpg-item-card{background:#ecdcb8;border:1px solid #c9bda5;border-radius:6px;padding:8px 10px;margin-top:8px;text-align:left}
 .item-card-header{display:flex;align-items:center;justify-content:space-between;gap:6px;border-bottom:1px solid #d4c5a9;padding-bottom:4px;margin-bottom:4px}
 .item-card-tag{font:bold 10px Georgia,serif;color:#3f655b;text-transform:uppercase;letter-spacing:0.05em;background:#dfd2b5;padding:1px 5px;border-radius:3px}

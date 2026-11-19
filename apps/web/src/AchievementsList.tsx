@@ -18,7 +18,19 @@ export function AchievementsList() {
               <div className="achievement-body">
                 <div className="achievement-title-row">
                   <strong className="achievement-title">{a.title}</strong>
-                  <span className="achievement-status">{isDone ? "✓ Complete" : "🔒 In progress"}</span>
+                  <span className="achievement-status">
+                    {isDone ? (
+                      <>
+                        <img className="status-badge-icon" src="/assets/icons/icon_check.png" alt="" aria-hidden="true" />
+                        <span>Complete</span>
+                      </>
+                    ) : (
+                      <>
+                        <img className="status-badge-icon" src="/assets/icons/icon_lock.png" alt="" aria-hidden="true" />
+                        <span>Locked</span>
+                      </>
+                    )}
+                  </span>
                 </div>
                 <p className="achievement-desc">{a.desc}</p>
               </div>

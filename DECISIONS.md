@@ -94,7 +94,11 @@ The broken and repaired bridge props span the river above its water layer. Draw 
     - Created `createSnowfall` in `worldEffects.ts`, generating 30 gentle drifting snowflakes with diagonal wind and sinusoidal sway fixed to the camera viewport.
     - Weather effects respect `prefers-reduced-motion` and are active only during exploration (`fitWorld(true)`), preserving the opening frame regression check at MAE 0.000000/255.
 
-11. **Contextual Signposts, Waypoint Compass, and Bag Item Cards**:
-    - Added contextual emoji badges to `BuildingPill.tsx` (`💧`, `🔥`, `🎣`, `🌱`, `💬`, `🐾`, `🌀`, `🔨`) distinguishing interaction types.
-    - Introduced a dynamic waypoint compass indicator in `GroveView.tsx` (`🧭 {landmark} {distance}t {arrow}`) pointing towards marked village landmarks.
+11. **Native Pixel-Art Asset Icons, Waypoint Compass, and Bag Item Cards**:
+    - Replaced all Unicode emojis with native repository pixel-art image assets:
+      - `BuildingPill.tsx` maps interaction categories directly to bundled icons (`/assets/icons/icon_water_canister.png`, `/assets/icons/icon_bag.png`, `/assets/fx/fx_interaction_ring.png`, `/assets/props/campfire.png`, `/assets/living/icons/lw_icon_fish.png`, `/assets/living/icons/lw_icon_produce.png`, `/assets/icons/icon_hammer.png`, `/assets/living/icons/lw_icon_seed_bag.png`, `/assets/icons/icon_quest.png`, `/assets/icons/icon_pin.png`, `/assets/ui/speech_bubble.png`, `/assets/icons/icon_heart.png`).
+      - Compass waypoint in `GroveView.tsx` displays `/assets/icons/icon_pin.png`.
+      - Quest ready-to-turn-in badges in `QuestHUD.tsx` and `GroveView.tsx` use the gold star sprite `/assets/fx/fx_campaign_star.png`.
+      - Feat statuses in `AchievementsList.tsx` and checkboxes in `TaskTitle` use pixel icons `/assets/icons/icon_check.png` and `/assets/icons/icon_lock.png`.
+    - Introduced a dynamic waypoint compass indicator in `GroveView.tsx` pointing towards marked village landmarks.
     - Refactored `BagGrid` in `GameUI.tsx` to render a detailed RPG item card with category tags, quantities, and expanded usage notes.

@@ -39,7 +39,7 @@ export function QuestHUD({
           onClick={() => setCollapsed(!collapsed)}
           aria-label={collapsed ? "Expand quest list" : "Collapse quest list"}
         >
-          {collapsed ? "＋" : "－"}
+          {collapsed ? "+" : "−"}
         </button>
       </header>
 
@@ -65,7 +65,7 @@ export function QuestHUD({
                 {q.objective} {q.total !== undefined ? `· ${q.current ?? 0}/${q.total}` : ""}
               </small>
               {q.ready && !q.done && (
-                <span className="quest-ready-badge">★ Ready to turn in!</span>
+                <span className="quest-ready-badge"><img className="quest-star-icon" src="/assets/fx/fx_campaign_star.png" alt="" aria-hidden="true" /> Ready to turn in!</span>
               )}
             </li>
           ))}
