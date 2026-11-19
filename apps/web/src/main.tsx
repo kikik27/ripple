@@ -24,6 +24,7 @@ import { hasSeenIntro } from "./haven";
 import { TouchJoystick } from "./TouchJoystick";
 import { unlockAchievement } from "./achievements";
 import { WalletModal } from "./WalletModal";
+import { suiWallet } from "./suiWallet";
 import operation from "../../../fixtures/operation-komodo.json";
 import "./style.css";
 import "./shell.css";
@@ -58,6 +59,11 @@ function App() {
   });
   const [badge,setBadge]=useState<{title:string;detail:string}|null>(null);
   const [showLedger, setShowLedger] = useState(false);
+  const [walletAddress, setWalletAddress] = useState<string | null>(suiWallet.getActiveAddress());
+  const [showStartingWalletModal, setShowStartingWalletModal] = useState(false);
+  useEffect(() => {
+    return suiWallet.subscribe(state => setWalletAddress(state.address));
+  }, []);
   useEffect(()=>{
     if(!badge)return;
     const timer=window.setTimeout(()=>setBadge(null),6500);
@@ -342,11 +348,38 @@ function App() {
       {screen === "title" && (
         <section className="hero">
           <span className="title-weather" aria-hidden="true"/>
+          <div
+            className={`title-wallet-badge ${walletAddress ? "is-connected" : "is-guest"}`}
+            onClick={() => setShowStartingWalletModal(true)}
+            role="button"
+            tabIndex={0}
+            aria-label={walletAddress ? `Connected as ${walletAddress}` : "Connect Sui Wallet"}
+          >
+            <img src="/assets/icons/icon_water_canister.png" alt="" />
+            <span>{walletAddress ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : "Connect Wallet"}</span>
+            <small>{walletAddress ? "Sui Testnet" : "Optional"}</small>
+          </div>
 
           <div>
             <h1><img className="title-logo" src={A + "branding/ripple_logo.png"} alt="Ripple" /></h1>
-            <div className="title-actions"><button className="primary" onClick={() => hasSeenIntro() ? setConfirmNewGame(true) : beginNewGame()}>New Game</button>
-            {hasSeenIntro() && <button onClick={() => { havenRef.current?.continueGame(); setScreen("camp"); }}>Continue</button>}<button onClick={() => setMuted(!muted)}>{muted ? "Sound off" : "Sound on"}</button></div>
+            <div className="title-actions">
+              <button
+                className="primary"
+                onClick={() => {
+                  if (!walletAddress) {
+                    setShowStartingWalletModal(true);
+                  } else if (hasSeenIntro()) {
+                    setConfirmNewGame(true);
+                  } else {
+                    beginNewGame();
+                  }
+                }}
+              >
+                New Game
+              </button>
+              {hasSeenIntro() && <button onClick={() => { havenRef.current?.continueGame(); setScreen("camp"); }}>Continue</button>}
+              <button onClick={() => setMuted(!muted)}>{muted ? "Sound off" : "Sound on"}</button>
+            </div>
           </div>
         </section>
       )}
@@ -467,6 +500,41 @@ function App() {
           </div>
         </div>
       </dialog>}
+      {screen !== "title" && (
+        <div
+          className={`wallet-pill ${walletAddress ? "is-connected" : "is-guest"}`}
+          onClick={() => setShowLedger(true)}
+          role="button"
+          tabIndex={0}
+          title={walletAddress ? `Sui Testnet: ${walletAddress}` : "Guest Mode · Click to link Sui wallet"}
+        >
+          <img src="/assets/icons/icon_water_canister.png" alt="" />
+          <span>{walletAddress ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : "Guest"}</span>
+          <small>{walletAddress ? "Testnet" : "Ledger"}</small>
+        </div>
+      )}
+      {showStartingWalletModal && (
+        <WalletModal
+          isStartingFlow={true}
+          onClose={() => setShowStartingWalletModal(false)}
+          onStartAsGuest={() => {
+            setShowStartingWalletModal(false);
+            if (hasSeenIntro()) {
+              setConfirmNewGame(true);
+            } else {
+              beginNewGame();
+            }
+          }}
+          onStartWithWallet={() => {
+            setShowStartingWalletModal(false);
+            if (hasSeenIntro()) {
+              setConfirmNewGame(true);
+            } else {
+              beginNewGame();
+            }
+          }}
+        />
+      )}
       {showLedger && <WalletModal onClose={()=>setShowLedger(false)} onClaimSuccess={(xp, rp) => setState(s => ({ ...s, xp: s.xp + xp, rp: s.rp + rp }))} />}
       {(!havenReady || loadError || ((screen==="game" || screen==="campaign") && !expReady)) && <LoadScreen place={screen==="game" || screen==="campaign"?"Entering Operation Komodo":"Arriving at Himalayan Haven"} error={loadError}/>}
       <span className="shell-testnet">Sui Testnet · offline fixture · no official affiliation</span>

@@ -226,3 +226,18 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 .item-card-qty{font:bold 12px Georgia,serif;color:#203651}
 
 @media(prefers-reduced-motion:reduce){.fishing-pool[data-phase=bite] .float,.building-hover-pill{animation:none}}
+
+/* Real Sui Wallet Standard & Navigation Badge */
+.title-wallet-badge{position:absolute;top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right));display:inline-flex;align-items:center;gap:6px;background:#fbf1dd;border:2px solid #57432e;border-radius:6px;padding:6px 12px;font:bold 13px Georgia,serif;color:#243949;box-shadow:inset 0 -2px #ceb791,0 2px 4px rgba(0,0,0,0.3);cursor:pointer;z-index:10;transition:transform 0.15s,background 0.15s}
+.title-wallet-badge:hover{background:#f3e4c7;transform:translateY(-1px)}
+.title-wallet-badge img{width:16px;height:16px;object-fit:contain;image-rendering:pixelated}
+.title-wallet-badge small{font:bold 10px system-ui;background:#396b5e;color:white;padding:1px 5px;border-radius:3px;margin-left:4px}
+.title-wallet-badge.is-guest small{background:#7a6d59}
+
+.wallet-pill{position:absolute;top:max(8px,env(safe-area-inset-top));right:max(120px,env(safe-area-inset-right));display:inline-flex;align-items:center;gap:5px;background:#fbf1dd url('/assets/ui/hud_profile_frame_empty.png') center/100% 100%;border:1px solid #785f40;border-radius:4px;padding:4px 9px;font:bold 12px Georgia,serif;color:#203651;box-shadow:0 2px 4px rgba(0,0,0,0.25);cursor:pointer;z-index:9;transition:background 0.15s}
+.wallet-pill:hover{background-color:#ecdcb8}
+.wallet-pill img{width:14px;height:14px;object-fit:contain;image-rendering:pixelated}
+.wallet-pill small{font:bold 10px system-ui;background:#315f53;color:white;padding:1px 4px;border-radius:2px}
+.wallet-pill.is-guest small{background:#8a765c}
+@media(max-width:600px){.wallet-pill{right:85px;padding:3px 6px;font-size:11px}}
+
