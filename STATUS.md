@@ -118,3 +118,8 @@ Production build, core replay tests, content/asset validators, living state and 
 - Updated `GroveScene.ts` to preload, generate animations, and animate animal movement across cardinal directions, returning cleanly to idle poses.
 - `pnpm test`, `python tools/validate-living.py`, and `pnpm build` passed without warnings or errors.
 - Production Chromium QA walkthrough (`node tools/qa-rpg.mjs atlas`) verified route pathing, animal locomotion, and destination interactions across 1280×720, 1920×1080, 390×844, and 844×390 viewports.
+
+## Eastbank exploration and domestic animal review
+Reviewed c8fda3a and replaced five seamed domestic walk strips with four distinct connected poses per species. Grove now spans 64×28 tiles, with 1,355 reachable tiles and 49 reachable interaction objects. The east exit from Market Lane leads to a new orchard circuit. The journal offers routes to all village buildings. Water for Eastbank starts by reading the survey at the water lab and finishes at the nursery valves. Completion persists and changes the nursery beds. Houses, seed store, barn, recycling station and well have individual inspection text.
+
+pnpm test, build, the repository lint/typecheck script, content validation and both asset validators passed. The social tests cover old save defaults, range checks, incorrect water distribution, correct completion, repeat prevention and reachable building approaches. The Chromium atlas walkthrough visits the lab, travels to the nursery, solves the gate and verifies persisted completion at the four reference viewport sizes. Evidence is generated in docs/qa/rpg/current. Mobile viewport runs use browser emulation.

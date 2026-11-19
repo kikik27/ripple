@@ -8,13 +8,14 @@ import { GroveScene } from "./GroveScene";
 import { applyLiving, claimLiving, createLiving, grove, livingConfig, loadLiving, moveLiving, nearby, objectFor, pathToApproach, pathToTile, saveLiving, type LivingAction, type LivingObject, type LivingStateV1, type Tile } from "./living";
 import { browserStorage } from "./haven";
 import { TouchJoystick } from "./TouchJoystick";
+import {NurseryGate} from "./NurseryGate";
 
 const names = livingConfig.npcs as Record<string, { name: string; role: string; dialogue: string[]; quest?: string }>;
 const animals = livingConfig.animals as Record<string, { name: string; food: string | null }>;
 const quests = livingConfig.quests as Record<string, { title: string; objective: string; reward:Record<string,number> }>;
 const directions = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0], w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0] } as Record<string, Tile>;
 
-const places = {market:"Market Lane",fishing_dock:"Fishing Dock",plot_0_0:"Farm plots",pump:"Water pump",camp:"Camp",world_board:"World Board"};
+const places = {market:"Market Lane",fishing_dock:"Fishing Dock",plot_0_0:"Farm plots",pump:"Water pump",camp:"Camp",world_board:"World Board",water_lab:"Piko’s water lab",nursery_gate:"Eastbank Nursery",orchard_rest:"Orchard overlook",home_1:"West cottage",home_2:"East cottage",workshop:"Workshop",recycling:"Recycling station",storage:"Seed store",barn:"Sanctuary barn",well:"Village well",fish_market:"Fish market"};
 export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean; onMute: () => void; onReturn: () => void; onBoard: () => void }) {
   const storage = useRef(browserStorage()).current;
   const initial = useRef<LivingStateV1 | null>(null);
@@ -66,9 +67,10 @@ export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean
     else { setMessage(result.message); }
   };
   useHeldMovement(ready && !locked,dir=>move(...directions[{N:"w",S:"s",E:"d",W:"a"}[dir]]));
+  const openTarget=(id:string)=>{setMessage("");setSelected(id)};
   const travel = (path: Tile[], id?: string) => {
     stopRoute();
-    if (!path.length) { if (id && nearby(location(objectFor(id)!),current.current.position)) setSelected(id); else setMessage("There is no path to that tile."); return; }
+    if (!path.length) { if (id && nearby(location(objectFor(id)!),current.current.position)) openTarget(id); else setMessage("There is no path to that tile."); return; }
     let index = 0;
     route.current = window.setInterval(() => {
       if(lockRef.current){stopRoute();return}
@@ -81,7 +83,7 @@ export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean
         stopRoute();
         if(id){
           const target=location(objectFor(id)!);
-          if(nearby(target,result.state.position))setSelected(id);
+          if(nearby(target,result.state.position))openTarget(id);
           else travel(pathToApproach(result.state.position,target),id);
         }
       }
@@ -95,7 +97,7 @@ export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean
     const result = applyLiving(current.current, o.id, action, arg, o.tile as Tile);
     setMessage(result.message);
     if (!result.ok) { scene.current?.cue(false); return; }
-    commit(result.state); scene.current?.cue(true, action);
+    commit(result.state); scene.current?.cue(true, o.id==="nursery_gate" ? "water" : action);
     if (["feed", "play", "talk", "harvest", "water", "fish"].includes(action)) scene.current?.react(o, action as "feed" | "play" | "talk" | "harvest" | "water" | "fish");
     if (action === "talk") {
       scene.current?.face(o.id,current.current.position[0]-o.tile[0],current.current.position[1]-o.tile[1]);
@@ -129,10 +131,10 @@ export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean
     if (result.ok) { commit(result.state); scene.current?.cue(true,"play"); } else scene.current?.cue(false);
     if(dialogue)setDialogue({...dialogue,page:0,lines:[result.ok?"Here you go. "+Object.entries(quests[id].reward).map(([item,n])=>n+" "+item).join(", ")+" for your village bag.":result.message]});
   };
-  const label = (o: LivingObject) => o.kind === "npc" ? names[o.npcId!]?.name : o.kind === "animal" ? animals[o.animalId!]?.name : o.id.replaceAll("_", " ");
+  const label = (o: LivingObject) => o.kind === "npc" ? names[o.npcId!]?.name : o.kind === "animal" ? animals[o.animalId!]?.name : places[o.id as keyof typeof places] ?? o.id.replaceAll("_", " ");
   const nearest = grove.objects.filter(o => o.actions.length && nearby(o, state.position)).sort((a, b) => (a.kind === "npc" ? -1 : 0) - (b.kind === "npc" ? -1 : 0))[0];
   const meet = (object:LivingObject) => {
-    setChoices([]);setSelected(object.id);
+    setChoices([]);openTarget(object.id);
     if(object.kind==="npc")interact(object,"talk");
     else if(object.kind==="animal")interact(object,"observe");
     else setMessage("Choose an activity.");
@@ -148,7 +150,7 @@ export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean
   useEffect(() => {
     const hub = new GroveScene(current.current, () => setReady(true), (id, tile) => {
       if (lockRef.current) return;
-      if (id) { const o=location(objectFor(id)!); if(nearby(o,current.current.position))setSelected(id);else travel(pathToApproach(current.current.position,o),id); }
+      if (id) { const o=location(objectFor(id)!); if(nearby(o,current.current.position))openTarget(id);else travel(pathToApproach(current.current.position,o),id); }
       else if (tile[0] >= 0 && tile[1] >= 0 && tile[0] < grove.width && tile[1] < grove.height) travel(pathToTile(current.current.position, tile));
     });
     scene.current = hub;
@@ -171,20 +173,20 @@ export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean
 
   const giverQuest=dialogue ? names[dialogue.npc].quest : undefined;
   return <section className="grove-shell" aria-label="Komodo Grove social hub">
-    <PlayerHUD location="Grove" day={state.day}/><div className="grove-title"><div><p className="eyebrow">Living World · social hub</p><h1>Komodo Grove</h1><p>Day {state.day} · {zone?.name ?? "Wilderness"} · Tile {state.position.join(",")}</p></div><button onClick={()=>{stopRoute();setPaused(true)}}>Pause</button></div>
+    <PlayerHUD location="Grove" day={state.day}/><div className="grove-title"><div><p className="eyebrow">Living World · social hub</p><h1>{zone?.id==="nursery"?"Eastbank Nursery":"Komodo Grove"}</h1><p>Day {state.day} · {zone?.name ?? "Wilderness"} · Tile {state.position.join(",")}</p></div><button onClick={()=>{stopRoute();setPaused(true)}}>Pause</button></div>
     <div className="grove-layout"><div className="grove-world"><div id="grove-canvas" />{!ready && <div className="grove-loading">Preparing Komodo Grove…</div>}{!locked && <div className="grove-controls"><TouchJoystick onMove={dir => { const step = directions[{N:"w",S:"s",E:"d",W:"a"}[dir]]; move(...step); }} disabled={locked} /><button className="touch-action" onClick={useNearby} disabled={locked}>Act</button></div>}</div>
     {!locked && <button className="grove-bag" onClick={()=>{stopRoute();setBag(true)}}>Bag</button>}
     {!!choices.length && <div className="modal-backdrop"><section className="journal" role="dialog" aria-label="Nearby"><h2>Within reach</h2>{choices.map(o=><button key={o.id} onClick={()=>meet(location(o))}>{label(o)}</button>)}<button onClick={()=>setChoices([])}>Close</button></section></div>}
     {paused && <div className="modal-backdrop"><section className="journal" role="dialog" aria-label="Paused"><h2>Paused</h2><Mixer/><button onClick={()=>setPaused(false)}>Resume</button><button onClick={onMute}>{muted ? "Enable sound" : "Mute sound"}</button><button onClick={onReturn}>Return to Haven</button></section></div>}
-    {(bag || selectedObject) && !dialogue && !confirmRest && <div className="modal-backdrop"><section className="journal" role="dialog" aria-label={bag ? "Village bag" : "Interaction"}>{!bag && <button onClick={()=>setSelected(null)}>Close</button>}{!bag && <p className="grove-message" role="status">{message}</p>}{saveWarning && <p role="alert">Your browser blocked saving. This session remains playable.</p>}
+    {(bag || selectedObject) && !dialogue && !confirmRest && <div className="modal-backdrop"><section className="journal" role="dialog" aria-label={bag ? "Village bag" : "Interaction"}>{!bag && <button onClick={()=>setSelected(null)}>Close</button>}{!bag && message && <p className="grove-message" role="status">{message}</p>}{saveWarning && <p role="alert">Your browser blocked saving. This session remains playable.</p>}
       {bag && <><div className="book-tabs"><button aria-pressed={journalPage==="items"} onClick={()=>setJournalPage("items")}>Items</button><button aria-pressed={journalPage==="quests"} onClick={()=>setJournalPage("quests")}>Quests</button><button aria-pressed={journalPage==="map"} onClick={()=>setJournalPage("map")}>Map</button></div>{journalPage==="items" ? <div className="grove-inventory"><h2>Village bag</h2><BagGrid items={Object.entries(state.inventory).map(([id,quantity])=>({name:id,quantity,icon:id==="water"?"/assets/icons/icon_water_canister.png":"/assets/living/icons/lw_icon_"+id+".png",info:({hay:"For Mochi and Cloud.",seed:"For Sunny and Puddle.",kibble:"For Biscuit and Miso.",water:"Refill the watering can at the pump.",produce:"Trade at the market for seeds or animal food.",fish:"Caught at the village dock."} as Record<string,string>)[id]}))}/></div>
       : journalPage==="map" ? <div className="village-atlas"><h2>Komodo Grove</h2>
         <canvas ref={mapCanvas} aria-label={"Walking route from Lofi to "+places[destination]}/>
         <label>Destination <select value={destination} onChange={e=>setDestination(e.target.value as keyof typeof places)}>{Object.entries(places).map(([id,name])=><option value={id} key={id}>{name}</option>)}</select></label>
         <button onClick={()=>{setBag(false);travel(path(),destination)}}>Walk to {places[destination]}</button></div>
-      : <div className="grove-quests"><h2>Neighbor quests</h2>{Object.entries(quests).map(([id, q]) => <div key={id}><strong>{q.title}</strong><small>{q.objective} · {state.quests[id]==="claimed"?"Completed":state.quests[id]==="active"?questProgress(id,state).count+"/"+questProgress(id,state).goal:"Meet "+(id==="greet_three"?"Elder Toma in the plaza":"Ari near the garden")}</small>{state.quests[id] === "active" && <button disabled={!questProgress(id,state).ready} onClick={() => claim(id)}>Claim reward</button>}</div>)}</div>
+      : <div className="grove-quests"><h2>Neighbor quests</h2><div><strong>Water for Eastbank</strong><small>{state.nursery==="dry"?"Read the survey at the water lab.":state.nursery==="surveyed"?"Cross the orchard bridge and balance the nursery gate.":"Complete · Water reaches all three beds."}</small></div>{Object.entries(quests).map(([id, q]) => <div key={id}><strong>{q.title}</strong><small>{q.objective} · {state.quests[id]==="claimed"?"Completed":state.quests[id]==="active"?questProgress(id,state).count+"/"+questProgress(id,state).goal:"Meet "+(id==="greet_three"?"Elder Toma in the plaza":"Ari near the garden")}</small>{state.quests[id] === "active" && <button disabled={!questProgress(id,state).ready} onClick={() => claim(id)}>Claim reward</button>}</div>)}</div>
       }</>}{selectedObject && <div className="grove-target"><h2>{selectedObject ? label(selectedObject) : "Nearby"}</h2>{selectedObject?.kind === "npc" && <p>{names[selectedObject.npcId!]?.role}</p>}{selectedObject?.kind === "animal" && <><p>Friendship {state.animals[selectedObject.animalId!]?.friendship ?? 0}/100 · {animals[selectedObject.animalId!]?.food ? `Favorite food: ${animals[selectedObject.animalId!]?.food}` : "Observe from a distance"}</p><div className="track" role="progressbar" aria-label={`${label(selectedObject)} friendship`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={state.animals[selectedObject.animalId!]?.friendship ?? 0}><span style={{ width: `${state.animals[selectedObject.animalId!]?.friendship ?? 0}%`, background: "#c65d43" }} /></div></>}{selectedObject?.kind === "crop" && <p>Growth: {livingConfig.rules.cropStages[state.crops[selectedObject.id]?.stage ?? 0]}</p>}{!selectedObject && <p>{nearest ? `${label(nearest)} is within reach.` : "Tap a character or place to walk there."}</p>}
-      {selectedObject && <div className="grove-actions">{selectedObject.actions.map(action => action === "trade" ? <div key={action}>Trade 1 produce for {(["hay", "seed", "kibble"] as const).map(item => <button key={item} onClick={() => interact(selectedObject, "trade", item)}>{item} ×2</button>)}</div> : <button key={action} onClick={() => interact(selectedObject, action as LivingAction)}>{action.replaceAll("_", " ")}</button>)}</div>}</div>
+      {selectedObject?.id==="nursery_gate" && state.nursery==="surveyed" ? <NurseryGate onRelease={levels=>interact(selectedObject,"inspect",levels)}/> : selectedObject?.id==="nursery_gate" && state.nursery==="flowing" ? <p>All three beds have water.</p> : selectedObject && <div className="grove-actions">{selectedObject.actions.map(action => action === "trade" ? <div key={action}>Trade 1 produce for {(["hay", "seed", "kibble"] as const).map(item => <button key={item} onClick={() => interact(selectedObject, "trade", item)}>{item} ×2</button>)}</div> : <button key={action} onClick={() => interact(selectedObject, action as LivingAction)}>{selectedObject.id==="water_lab"?"Read the survey":selectedObject.id==="nursery_gate"?"Examine the gate":action.replaceAll("_", " ")}</button>)}</div>}</div>
       }
     {bag && <button onClick={()=>setBag(false)}>Close</button>}</section></div>}</div>
     {dialogue && <Dialogue muted={muted} onSound={onMute} extra={giverQuest && dialogue.page===dialogue.lines.length-1 && state.quests[giverQuest]==="active" && <div className="quest-slip"><strong>{quests[giverQuest].title}</strong><small>{quests[giverQuest].objective} · {questProgress(giverQuest,state).count}/{questProgress(giverQuest,state).goal}</small>{questProgress(giverQuest,state).ready && <button onClick={()=>claim(giverQuest)}>Collect reward</button>}</div>} key={dialogue.npc + dialogue.page} name={names[dialogue.npc].name}

@@ -183,19 +183,31 @@ try{
    await until("document.querySelector('.village-atlas canvas')?.width>0");
    await shot(width+"-village-map");
    await evaluate("document.querySelector('.village-atlas button').click()");
-   await until("document.querySelector('.grove-target h2')?.textContent==='market'");
+   await until("document.querySelector('.grove-target h2')?.textContent==='Market Lane'");
    assert(await evaluate("!!document.querySelector('.grove-actions button')"));
-   if(width===1280){
-     for(const destination of ["fishing_dock","plot_0_0","pump","camp","world_board"]){
+   const stops=width===1280?["fishing_dock","plot_0_0","pump","camp","world_board","water_lab","nursery_gate"]:["water_lab","nursery_gate"];
+     for(const destination of stops){
        await evaluate("document.querySelector('.journal>button').click()");
        await evaluate("document.querySelector('.grove-bag').click()");
        await until("document.querySelector('.village-atlas select')");
        await evaluate("(()=>{const select=document.querySelector('.village-atlas select');select.value="+JSON.stringify(destination)+";select.dispatchEvent(new Event('change',{bubbles:true}))})()");
+       const destinationName=await evaluate("document.querySelector('.village-atlas select').selectedOptions[0].textContent");
        await evaluate("document.querySelector('.village-atlas button').click()");
-       await until("document.querySelector('.grove-target h2')?.textContent==="+JSON.stringify(destination.replaceAll("_"," ")));
+       await until("document.querySelector('.grove-target h2')?.textContent==="+JSON.stringify(destinationName));
+       if(destination==="water_lab")await evaluate("document.querySelector('.grove-actions button').click()");
      }
-     console.log("PASS all six village destinations");
+   await until("document.querySelector('.nursery-gate')");
+   for(const bed of ["Seed trays","Young trees","Young trees","Reed bed","Reed bed","Reed bed"]){
+     const selector='[aria-label="Increase '+bed+'"]';
+     await evaluate("document.querySelector("+JSON.stringify(selector)+").click()");
    }
+   await shot(width+"-nursery-valves");
+   await evaluate("document.querySelector('.nursery-gate>button').click()");
+   await until("document.querySelector('.grove-target')?.textContent.includes('All three beds have water')");
+   assert.equal(JSON.parse(await evaluate("localStorage.getItem("+JSON.stringify(socialKey)+")")).nursery,"flowing");
+   await evaluate("document.querySelector('.journal>button').click()");
+   await shot(width+"-eastbank");
+   console.log("PASS water lab, nursery puzzle and persisted restoration",width,height);
    console.log("PASS mapped route to market",width,height);continue;
  }
  if(label==="after"){

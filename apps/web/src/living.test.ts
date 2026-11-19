@@ -52,7 +52,7 @@ test("invalid actions are atomic, collision and approach path use the map", () =
   assert.deepEqual(path[0], [5, 13]);
   assert.ok(path.every(isWalkable));
   assert.ok(target.approaches!.some(p => p[0] === path.at(-1)![0] && p[1] === path.at(-1)![1]));
-  assert.equal(grove.width, 40); assert.equal(grove.height, 28);
+  assert.equal(grove.width, 64); assert.equal(grove.height, 28);
 });
 
 test("save validation clamps data and ignores scored or unknown fields", () => {
@@ -77,4 +77,23 @@ test("social save and Haven board return leave expedition progress alone", () =>
   entries.set(SOCIAL_SAVE_KEY, "{invalid");
   assert.deepEqual(loadLiving(storage), createLiving());
   assert.equal(atBoard(haven.interactions[0].approach as [number, number]), true);
+});
+
+test("Eastbank requires a survey, correct valve levels and physical access",()=>{
+  const fresh=createLiving();
+  assert.equal(restoreLiving({version:1}).nursery,"dry");
+  assert(!act(fresh,"nursery_gate","inspect","1,2,3").ok);
+  const survey=act(fresh,"water_lab","inspect").state;
+  assert.equal(restoreLiving(survey).nursery,"surveyed");
+  assert(!applyLiving(survey,"nursery_gate","inspect","1,2,3").ok);
+  const onsite=at(survey,"nursery_gate");
+  assert.equal(applyLiving(onsite,"nursery_gate","inspect","2,2,2").state,onsite);
+  const result=applyLiving(onsite,"nursery_gate","inspect","1,2,3");
+  assert(result.ok);
+  assert.deepEqual(result.state,{...onsite,nursery:"flowing"});
+  assert.equal(restoreLiving(result.state).nursery,"flowing");
+  assert(!act(result.state,"nursery_gate","inspect","1,2,3").ok);
+  for(const building of grove.objects.filter(o=>o.kind==="building")){
+    assert(building.actions.length && pathToApproach(fresh.position,building).length,building.id);
+  }
 });

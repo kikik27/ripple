@@ -7,6 +7,7 @@ export type LivingObject = (typeof grove.objects)[number];
 export type LivingAction = "talk" | "observe" | "feed" | "play" | "water" | "harvest" | "trade" | "refill" | "fish" | "rest" | "return_haven" | "board" | "sit" | "workshop" | "inspect";
 export type LivingStateV1 = {
   version: 1;
+  nursery: "dry" | "surveyed" | "flowing";
   day: number;
   position: Tile;
   inventory: Record<"hay" | "kibble" | "seed" | "produce" | "fish" | "water", number>;
@@ -34,7 +35,7 @@ export const nearby = (o: LivingObject, p: Tile) => o.approaches?.some(a => same
 
 export function createLiving(): LivingStateV1 {
   return {
-    version: 1, day: 1, position: [...grove.spawn] as Tile,
+      version: 1, nursery:"dry", day: 1, position: [...grove.spawn] as Tile,
     inventory: { ...config.initialInventory },
     animals: Object.fromEntries(Object.keys(config.animals).map(id => [id, { friendship: 0, fedDay: 0, playedDay: 0 }])),
     crops: Object.fromEntries(grove.objects.filter(o => o.kind === "crop").map(o => [o.id, { stage: o.initialStage ?? 0, wateredDay: 0 }])),
@@ -56,6 +57,29 @@ export function applyLiving(state: LivingStateV1, id: string, action: LivingActi
   const inRange = o && actorTile && (o.kind==="animal" || o.kind==="npc") && isWalkable(actorTile) ? Math.abs(actorTile[0]-state.position[0])+Math.abs(actorTile[1]-state.position[1])<=1 : o && nearby(o,state.position);
   if (!o || !(o.actions as string[]).includes(action) || !inRange) return no(state, "Move closer to interact.");
   const s = structuredClone(state);
+  if(id==="water_lab" && action==="inspect"){
+    if(s.nursery==="flowing")return yes(s,"Piko's gauge is steady. Water is reaching every nursery bed.");
+    s.nursery="surveyed";
+    return yes(s,"Piko pencils three marks on your chart. At Eastbank Nursery, send one measure to each seed tray. The young trees need twice that, and the reeds need three.");
+  }
+  if(id==="nursery_gate" && action==="inspect"){
+    if(s.nursery==="dry")return no(state,"The gate has three unmarked channels. Read Piko's calibration notes at the village water lab.");
+    if(s.nursery==="flowing")return no(state,"The irrigation channels are already flowing.");
+    if(arg!=="1,2,3")return no(state,"The float marks do not line up. Check the three outlet levels.");
+    s.nursery="flowing";
+    return yes(s,"Water reaches the last bed. The Eastbank nursery is irrigated!");
+  }
+  if(action==="inspect"){
+    const notes:Record<string,string>={
+      storage:"Seed sacks hang above the damp floor. The pump beside the barn fills your watering can.",
+      home_1:"A pencilled map on the door marks a walk from Market Lane across two orchard bridges.",
+      home_2:"Ari left a basket by the step. A note reads: Ripe produce can be traded for hay at the market.",
+      recycling:"Rumi has sorted the worn pipe fittings by size. The repaired valves went to Eastbank Nursery.",
+      barn:"A feed chart hangs on the gate. Hay for the sheep and goat, seed for the birds, kibble for the cat and dog.",
+      well:"Cool water beads on the stone. A small pipe carries a sample west to Piko's water lab."
+    };
+    if(notes[id])return yes(s,notes[id]);
+  }
   const inv = s.inventory;
   const add = (key: keyof typeof inv, n: number) => { inv[key] = Math.min(itemCap, inv[key] + n); };
   const take = (key: keyof typeof inv) => { if (inv[key] <= 0) return false; inv[key]--; return true; };
@@ -165,6 +189,7 @@ export function restoreLiving(raw: unknown): LivingStateV1 {
   const base = createLiving();
   if (!raw || typeof raw !== "object" || (raw as { version?: unknown }).version !== 1) return base;
   const input = raw as Record<string, unknown>;
+  if(input.nursery==="surveyed" || input.nursery==="flowing")base.nursery=input.nursery;
   base.day = clamp(input.day, 1, 1000000, 1);
   if (Array.isArray(input.position) && input.position.length === 2 && isWalkable(input.position as Tile)) base.position = [...input.position] as Tile;
   const inventory = input.inventory as Record<string, unknown> | undefined;

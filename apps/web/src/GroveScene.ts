@@ -47,8 +47,9 @@ export class GroveScene extends Phaser.Scene {
     this.baseAssets = this.cache.json.get("base-manifest").assets;
     const terrainExtension = this.cache.json.get("living-terrain-extension");
     if (!terrainExtension.lw_tile_plaza || !this.cache.json.get("living-config")) throw new Error("Living content unavailable");
-    for (let y = 0; y < runtime.height; y++) for (let x = 0; x < runtime.width; x++)
+    for (let y = 0; y < runtime.height; y++) for (let x = 0; x < 40; x++)
       this.add.image(x * 32, y * 32, runtime.terrain[y][x]).setOrigin(0).setDepth(-100);
+    this.drawEastbank();
     const animalScale:Record<string,number> = {dog:.76,cat:.65,goat:.9,sheep:.88,chicken:.6,duck:.63,chick:.46,duckling:.46,bird:.5,butterfly:.42,fish:.63};
     const propScale:Record<string,number> = {campfire:.52,lw_prop_berry_bush:.6,lw_prop_flower_box:.7,lw_prop_stone_planter:.75};
     for (const o of runtime.objects) {
@@ -86,6 +87,35 @@ export class GroveScene extends Phaser.Scene {
     this.game.events.once("postrender", this.ready);
   }
   private routes = new Map<string,{tile:Tile; goal:Tile; returning:boolean; next:number}>();
+  private drawEastbank(){
+    const start=40,tile=grove.tileSize;
+    const sheet=this.textures.createCanvas("eastbank-ground",(grove.width-start)*tile,grove.height*tile)!;
+    const ctx=sheet.context;
+    const pattern=(id:string)=>ctx.createPattern(this.textures.get(id).getSourceImage() as HTMLImageElement,"repeat")!;
+    for(let y=0;y<grove.height;y++)for(let x=start;x<grove.width;x++){
+      const id=grove.terrain[y][x];
+      const ground=id==="tile_border_0"?id:"tile_grass_"+((x*y+y)%3);
+      ctx.drawImage(this.textures.get(ground).getSourceImage() as HTMLImageElement,(x-start)*tile,y*tile);
+    }
+    ctx.save();ctx.scale(tile,tile);ctx.beginPath();ctx.moveTo(9,0);
+    for(let y=.25;y<=grove.height;y+=.25)ctx.lineTo(9+2*Math.sin((y-.5)/4),y);
+    ctx.restore();ctx.lineWidth=2*tile+6;ctx.strokeStyle="#c8cf9f";ctx.stroke();
+    ctx.lineWidth=2*tile;ctx.strokeStyle=pattern("tile_river_1");ctx.stroke();
+    ctx.save();ctx.scale(tile,tile);ctx.beginPath();ctx.moveTo(0,13);
+    ctx.bezierCurveTo(4,13,5,12.7,9,13);ctx.bezierCurveTo(13,13.4,17,13,20,13);
+    ctx.bezierCurveTo(22,13,22,19.8,19,20.4);ctx.bezierCurveTo(13,21,9,20.3,6,20.3);
+    ctx.bezierCurveTo(3.6,20.3,5,15,5,13);ctx.moveTo(13.5,13);
+    ctx.bezierCurveTo(13,8.5,14.5,8,17.4,10.6);ctx.restore();
+    ctx.lineCap="round";ctx.lineWidth=31;ctx.strokeStyle="#cabe94";ctx.stroke();
+    ctx.lineWidth=27;ctx.strokeStyle=pattern("tile_dirt_0");ctx.stroke();
+    for(const [y,h] of [[12,2],[20,1]]){
+      const bank=8+Math.round(2*Math.sin(y/4));
+      const left=(bank-.35)*tile,top=y*tile,w=2.75*tile;
+      ctx.fillStyle=pattern("tile_planks_0");ctx.fillRect(left,top,w,h*tile);
+      ctx.fillStyle="#84654b";for(const edge of [top,top+h*tile-2])ctx.fillRect(left,edge,w,2);
+    }
+    sheet.refresh();this.add.image(start*tile,0,"eastbank-ground").setOrigin(0).setDepth(-100);
+  }
   locked = false;
   location(o: LivingObject): LivingObject {
     const sprite = this.placed.get(o.id);
@@ -179,6 +209,10 @@ export class GroveScene extends Phaser.Scene {
   renderLiving(state: LivingStateV1, animate = true) {
     this.state = state;
     this.setPosition(state.position, animate);
+    for(const o of grove.objects.filter(o=>o.id.startsWith("nursery_bed_"))){
+      const frame=state.nursery==="flowing" ? "lw_crop_tomato_growing" : o.asset;
+      this.placed.get(o.id)?.setTexture("living",frame);
+    }
     for (const o of grove.objects.filter(o => o.kind === "crop")) {
       const crop = state.crops[o.id];
       const prefix = o.asset.split("_").slice(0, 3).join("_");

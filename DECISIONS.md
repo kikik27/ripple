@@ -37,3 +37,6 @@ The Grove journal draws terrain and landmark frames from the loaded scene and pr
 
 ## Complete Grove animal locomotion cycles
 Added 4-frame lateral walk strips for all five remaining Grove domestic animals: Miso (cat), Mochi (goat), Cloud (sheep), Sunny (chicken), and Puddle (duck). All strips match the 192×48 layout (48×48 cells), stable foot baseline Y=46, and pass tools/validate-living.py. GroveScene loads and animates them during both horizontal and vertical locomotion, restoring idle textures on step completion.
+
+## Eastbank Nursery
+The social map extends eastward from Market Lane with an orchard, a stream, two crossings and a nursery. Original village placements and spawn coordinates are retained. Physical interaction approaches and existing cardinal pathfinding govern access to all buildings. Piko’s optional irrigation survey and gate puzzle persist in the local social save, and only change the nursery’s visual state. New and older saves start with a dry nursery.

@@ -18,3 +18,4 @@ The backpack journal uses the Lucide stamp icon from https://github.com/lucide-i
 ## Grove character animation and foley
 - Eight four-frame side walk sheets under apps/web/public/assets/living/sprites were generated from supplied Ripple character references and fitted to the original 48×48 sprite cells. The existing provisional character rights apply.
 - Kenney Vleugels, 50 RPG sound effects. handleCoins.ogg, bookOpen.ogg and cloth1.ogg are unmodified files from RPGsounds_Kenney.zip, distributed under CC0 1.0. Source https://opengameart.org/content/50-rpg-sound-effects · https://creativecommons.org/publicdomain/zero/1.0/
+- The revised cat, chicken, goat, sheep and duck walk strips were generated from the existing Ripple domestic animal sprites. Each occupies four 48×48 cells aligned to the supplied species foot anchor.

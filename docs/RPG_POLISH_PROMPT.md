@@ -14,3 +14,6 @@ For browser QA, build with pnpm build, serve apps/web/dist on loopback port 4186
 
 ### Implemented Grove presentation
 The backpack map previews a walk to the market, dock, plots, pump, camp or board. The seven villagers and Biscuit use four-frame lateral strides. The left stride mirrors the right. North/south gait and work-cycle art remain listed in the animation coverage file. Walking uses the same held-key cadence in Haven and Grove.
+
+### Eastbank
+In the optional social hub the nursery can be visited before accepting its water survey. The route from Market Lane is always open. A correct distribution of six water measures changes the beds and completes the local survey. The Grove journal provides walking routes to the buildings and tracks this restoration.

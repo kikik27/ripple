@@ -2,7 +2,7 @@
 
 ## Implementation in progress (2026-11-19)
 
-The offline Operation Komodo source is in `apps/web` and the deterministic rules are in `packages/game-core`. New Game plays the Opening Kit cinematic over a preloaded Phaser Himalayan Haven scene. After Aurora's tutorial, the world board offers Operation Komodo and the new Komodo Grove social hub. Grove uses the supplied 40×28 map, NPCs, animals, garden and daily activities, with a separate local social save. A headless title screenshot was captured, but interactive Phaser and mobile QA remain open; see `STATUS.md` for exact results. No onchain action, live funding, or AI publication is connected. Demo credit has no monetary value.
+The offline Operation Komodo source is in `apps/web` and the deterministic rules are in `packages/game-core`. New Game plays the Opening Kit cinematic over a preloaded Phaser Himalayan Haven scene. After Aurora's tutorial, the world board offers Operation Komodo and the new Komodo Grove social hub. Grove spans 64×28 tiles including Eastbank Nursery. Visit the water lab and follow Market Lane east to restore its irrigation. The optional activity persists in the local social save. See `STATUS.md` for browser walkthroughs and test coverage. No onchain action, live funding, or AI publication is connected. Demo credit has no monetary value.
 
 The v1.2 player route now uses a fixed viewport game shell and requests fullscreen when New Game is clicked. This is an FS01 increment, not a completed v1.2 release; see `STATUS.md` for the current tests and remaining browser and input work. The bundled kit is in `Ripple_Complete_Development_Kit_v1.2/`.
 
