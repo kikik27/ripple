@@ -17,3 +17,6 @@ The backpack map previews a walk to the market, dock, plots, pump, camp or board
 
 ### Eastbank
 In the optional social hub the nursery can be visited before accepting its water survey. The route from Market Lane is always open. A correct distribution of six water measures changes the beds and completes the local survey. The Grove journal provides walking routes to the buildings and tracks this restoration.
+
+### Community task board
+At the original Haven board approach, E or Act opens a task list. A square at the left and a struck-through title mark completed tasks. Expedition extraction returns the player to Haven with a temporary completion ribbon. Completed expeditions can be replayed from the board. Grove activities display the ribbon in place. After the opening hands over control, the highland road is accessible by stepping south of the spawn and going east.

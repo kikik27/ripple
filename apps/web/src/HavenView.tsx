@@ -1,5 +1,6 @@
+import {loadLiving,livingConfig} from "./living";
 import {useHeldMovement} from './useHeldMovement';
-import {PlayerHUD,BagGrid} from "./GameUI";
+import {PlayerHUD,BagGrid,TaskTitle} from "./GameUI";
 import {Mixer} from "./Mixer";
 import { Dialogue } from "./Dialogue";
 import React, { forwardRef, useEffect, useRef, useState } from "react";
@@ -10,12 +11,12 @@ import { nearbyPost,atBoard, atWorkshop, browserStorage, haven, havenSpawn, HAVE
 import { TouchJoystick } from "./TouchJoystick";
 import { posts } from "./haven";
 
-export type HavenHandle = { newGame: () => void; continueGame: () => void; replay: () => void; returnToBoard: () => void };
+export type HavenHandle = { newGame: () => void; continueGame: () => void; replay: () => void; returnToBoard: (open?:boolean) => void };
 type Direction = "N" | "S" | "E" | "W";
 
 const trailKey="ripple.havenTrail.v1";
 
-export const HavenView = forwardRef<HavenHandle, { preview:boolean; visible: boolean; muted: boolean; player: State; onBoard: () => void; onGrove: () => void; onToggleMuted: () => void }>(function HavenView({ preview,visible, muted, player, onBoard, onGrove, onToggleMuted }, ref) {
+export const HavenView = forwardRef<HavenHandle, { onComplete:(title:string)=>void;missionDone:boolean; preview:boolean; visible: boolean; muted: boolean; player: State; onBoard: () => void; onGrove: () => void; onToggleMuted: () => void }>(function HavenView({ onComplete,missionDone,preview,visible, muted, player, onBoard, onGrove, onToggleMuted }, ref) {
   const storage = useRef(browserStorage()).current;
   const initial = useRef<HavenPosition>(readHavenPosition(storage));
   const position = useRef<HavenPosition>(initial.current);
@@ -46,6 +47,7 @@ export const HavenView = forwardRef<HavenHandle, { preview:boolean; visible: boo
     } catch {return []}
   });
   const [reading,setReading]=useState(false);
+  const village=React.useMemo(()=>boardOpen ? loadLiving(storage) : null,[boardOpen,visible,storage]);
   const locked = reading || !!panel || line!==null || boardOpen;
   useEffect(()=>{
     const resize=()=>scene.current?.fitWorld(preview || (visible && hud && !playing));
@@ -121,13 +123,13 @@ export const HavenView = forwardRef<HavenHandle, { preview:boolean; visible: boo
   React.useImperativeHandle(ref, () => ({
     newGame: () => play("new"),
     replay: () => play("replay"),
-    returnToBoard: () => {
+    returnToBoard: (open=true) => {
       const approach = haven.interactions[0].approach as HavenPosition;
       position.current = atBoard(approach) ? [...approach] : havenSpawn();
       setTile(position.current);
       scene.current?.setPosition(position.current, false);
       try { storage.setItem(HAVEN_POSITION_KEY, JSON.stringify(position.current)); } catch { /* Continue without local persistence. */ }
-      controls.current = true; setEntered(true); setHud(true); setBoardOpen(true);
+      controls.current = true; setEntered(true); setHud(true); setBoardOpen(open);
       setMessage("Aurora: Welcome back. Choose where to go next.");
     },
     continueGame: () => {
@@ -159,6 +161,7 @@ export const HavenView = forwardRef<HavenHandle, { preview:boolean; visible: boo
       if(!stamps.includes(landmark.name)){
         const next=[...stamps,landmark.name];
         setStamps(next);
+        if(next.length===posts.length)onComplete("Highland mail trail");
         try {storage.setItem(trailKey,JSON.stringify(next))} catch { /* Local play continues. */ }
       }
       setReading(true);
@@ -201,6 +204,13 @@ export const HavenView = forwardRef<HavenHandle, { preview:boolean; visible: boo
     {panel && <div className="modal-backdrop"><section className="journal" role="dialog"><h2>{panel==="bag"?"Backpack":"Paused"}</h2>
     {panel==="bag"?<><p>{bagUsed(player)} / {map.rules.bag_capacity} spaces used</p><h3>Highland trail journal</h3><p>{stamps.length===posts.length?"Circuit complete. All four stops are in your journal.":"Inspect the four posts beyond the east gate."}</p><ul className="trail-stamps">{posts.map(p=><li key={p.name} data-stamped={stamps.includes(p.name)}><strong>{p.name}</strong><small>{stamps.includes(p.name)?"Stamped":"Unvisited"}</small></li>)}</ul></>:<><Mixer/><button onClick={()=>{setPanel(null);play("replay")}}>Replay opening</button><button onClick={onToggleMuted}>{muted?"Enable sound":"Mute sound"}</button></>}
     <button onClick={()=>setPanel(null)}>Resume</button></section></div>}
-    {boardOpen && visible && hud && !playing && <div className="haven-board" role="dialog" aria-label="World board"><p className="eyebrow">Aurora's world board</p><h2>Where shall we go?</h2><button className="primary" onClick={() => { setBoardOpen(false); onBoard(); }}>Operation Komodo expedition</button><button className="primary" onClick={() => { setBoardOpen(false); onGrove(); }}>Visit Komodo Grove</button><button onClick={() => setBoardOpen(false)}>Close</button></div>}
+    {boardOpen && visible && hud && !playing && village && <section className="haven-board quest-board" role="dialog" aria-label="World board">
+      <header><img src="/assets/props/notice_board.png" alt=""/><div><small>Himalayan Haven</small><h2>Community task board</h2></div></header>
+      <button className="primary task-link" onClick={()=>{setBoardOpen(false);onBoard()}}><TaskTitle done={missionDone} title="Operation Komodo"/><small>{missionDone?"Replay expedition →":"Restore water to both homes →"}</small></button>
+      <button className="primary task-link" onClick={()=>{setBoardOpen(false);onGrove()}}><TaskTitle done={village.nursery==="flowing"} title="Water for Eastbank"/><small>Visit Komodo Grove →</small></button>
+      {Object.entries(livingConfig.quests).map(([id,q])=><div className="board-entry" key={id}><TaskTitle done={village.quests[id]==="claimed"} title={q.title}/><small>{q.objective}</small></div>)}
+      <div className="board-entry"><TaskTitle done={stamps.length===posts.length} title="Highland mail trail"/><small>{stamps.length} of {posts.length} posts visited · East road</small></div>
+      <button className="board-close" onClick={()=>setBoardOpen(false)}>Close</button>
+    </section>}
   </section>;
 });

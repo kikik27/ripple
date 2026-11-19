@@ -40,8 +40,6 @@ export class ExpeditionScene extends Phaser.Scene {
       "tile_river_bank_right",
       "tile_ford_0",
       "tile_border_0",
-      "tile_bridge_broken",
-      "tile_bridge_repaired",
     ])
       this.load.image(id, `${root}tiles/${id}.png`);
     for (const id of [
@@ -69,10 +67,9 @@ export class ExpeditionScene extends Phaser.Scene {
           : x === map.river_x
             ? y === map.ford[1]
               ? "tile_ford_0"
-              : y === map.bridge[1]
-                ? "tile_bridge_broken"
-                : `tile_river_${y % 3}`
-            : (x + y) % 9 === 0
+              : `tile_river_${y % 3}`
+            : (y===map.bridge[1] && x>=map.spawn[0] && x<=map.well_site[0]) ||
+              (Math.abs(x-map.river_x)===1 && y>map.bridge[1] && y<=map.ford[1])
               ? "tile_dirt_0"
               : x > 13 && (x * 3 + y) % 6 === 0
                 ? "tile_dry_grass_0"
@@ -83,15 +80,17 @@ export class ExpeditionScene extends Phaser.Scene {
           .setDepth(-10);
         if (x === map.river_x - 1 && !border)
           this.add
-            .image(x * 32, y * 32, "tile_river_bank_left")
+            .image(x * 32 + 22, y * 32, "tile_river_bank_left").setDisplaySize(10,32)
             .setOrigin(0)
             .setDepth(-9);
         if (x === map.river_x + 1 && !border)
           this.add
-            .image(x * 32, y * 32, "tile_river_bank_right")
+            .image(x * 32, y * 32, "tile_river_bank_right").setDisplaySize(10,32)
             .setOrigin(0)
             .setDepth(-9);
       }
+    const crossing=this.sprite("bridge_broken",map.bridge).setScale(1.24).setDepth(-5);
+    this.props.set("crossing",crossing);
     this.prop("workshop", "workshop", map.workshop);
     this.prop("well", "well_empty", map.well_site);
     map.nodes.forEach((n) =>
@@ -122,7 +121,9 @@ export class ExpeditionScene extends Phaser.Scene {
       .setDepth(1001);
     this.cameras.main.setBounds(0, 0, 768, 640);
     const fit=()=>{const h=innerWidth<innerHeight?448:360;this.scale.setGameSize(Math.min(768,Math.round(h*innerWidth/innerHeight)),h)};
-    fit();window.addEventListener("resize",fit);this.events.once("shutdown",()=>window.removeEventListener("resize",fit));
+    fit();window.addEventListener("resize",fit);
+    const removeResize=()=>window.removeEventListener("resize",fit);
+    this.events.once("shutdown",removeResize);this.events.once("destroy",removeResize);
     this.cameras.main.startFollow(this.avatar,true,0.16,0.16);
     this.renderState(this.state, false);
     this.setMuted(this.muted);
@@ -169,16 +170,9 @@ export class ExpeditionScene extends Phaser.Scene {
     map.homes.forEach((_, i) =>
       frame(`home${i}`, state.waterConnected ? "home_restored" : "home_dry"),
     );
-    const bridge = this.children.list.find(
-      (o) =>
-        o instanceof Phaser.GameObjects.Image &&
-        o.x === map.bridge[0] * 32 &&
-        o.y === map.bridge[1] * 32,
-    ) as Phaser.GameObjects.Image | undefined;
-    if (bridge)
-      bridge.setTexture(
-        state.bridgeRepaired ? "tile_bridge_repaired" : "tile_bridge_broken",
-      );
+    frame("crossing",state.bridgeRepaired ? "bridge_repaired" : "bridge_broken");
+    // The atlas pivot marks the stone base. Anchor the deck to the travel row.
+    this.props.get("crossing")?.setOrigin(.5,.60);
   }
   showAction(command:Action) {
     const action=command.type;

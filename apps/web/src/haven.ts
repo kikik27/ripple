@@ -27,8 +27,9 @@ export function highlandIce(x:number,y:number) {
   return ((x-38)/6)**2+((y-13)/3.5)**2<1;
 }
 export const trailTrees = [[23,2],[24,3],[28,2],[29,3],[31,6],[32,7],[34,2],[41,3],[42,4],[45,6],[47,5],[51,6],[52,7],[48,16],[49,17],[44,20],[43,21],[30,17],[29,18],[25,14],[24,15],[22,19],[23,20]];
+export const eastLane=(x:number,y:number)=>x>=9 && x<=19 && (y===8 || y===9);
 export function havenWalkable(x:number,y:number) {
-  if(x===19 && y===8)return true;
+  if(eastLane(x,y))return true;
   if(x<20)return x>=0 && y>=0 && y<12 && !blocked.has(x+","+y);
   return x<55 && y>0 && y<23 && !highlandIce(x,y) && !posts.some(p=>p.x===x && p.y===y) && !trailTrees.some(([tx,ty])=>tx===x && ty===y);
 }

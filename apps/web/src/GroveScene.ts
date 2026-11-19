@@ -72,7 +72,9 @@ export class GroveScene extends Phaser.Scene {
       if(goal) this.routes.set(id,{tile,goal,returning:false,next:this.time.now+1500+190*this.routes.size});
     }
     const resize=()=>{const ratio=innerWidth/innerHeight,h=ratio<1?448:360;this.scale.setGameSize(Math.min(1280,Math.round(h*ratio)),h)};
-    resize();window.addEventListener("resize",resize);this.events.once("shutdown",()=>window.removeEventListener("resize",resize));
+    resize();window.addEventListener("resize",resize);
+    const removeResize=()=>window.removeEventListener("resize",resize);
+    this.events.once("shutdown",removeResize);this.events.once("destroy",removeResize);
     const yeti = this.baseAssets.yeti_idle_down;
     this.player = this.add.sprite(0, 0, yeti.atlas.key, yeti.atlas.frame).setOrigin(yeti.origin[0], yeti.origin[1]);
     this.setPosition(this.state.position, false);

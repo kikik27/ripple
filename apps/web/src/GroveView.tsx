@@ -1,5 +1,5 @@
 import {useHeldMovement} from './useHeldMovement';
-import {PlayerHUD,BagGrid} from "./GameUI";
+import {PlayerHUD,BagGrid,TaskTitle} from "./GameUI";
 import {Mixer} from "./Mixer";
 import { Dialogue } from "./Dialogue";
 import { useEffect, useRef, useState } from "react";
@@ -16,7 +16,7 @@ const quests = livingConfig.quests as Record<string, { title: string; objective:
 const directions = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0], w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0] } as Record<string, Tile>;
 
 const places = {market:"Market Lane",fishing_dock:"Fishing Dock",plot_0_0:"Farm plots",pump:"Water pump",camp:"Camp",world_board:"World Board",water_lab:"Piko’s water lab",nursery_gate:"Eastbank Nursery",orchard_rest:"Orchard overlook",home_1:"West cottage",home_2:"East cottage",workshop:"Workshop",recycling:"Recycling station",storage:"Seed store",barn:"Sanctuary barn",well:"Village well",fish_market:"Fish market"};
-export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean; onMute: () => void; onReturn: () => void; onBoard: () => void }) {
+export function GroveView({ onComplete,muted, onMute, onReturn, onBoard }: { onComplete:(title:string)=>void; muted: boolean; onMute: () => void; onReturn: () => void; onBoard: () => void }) {
   const storage = useRef(browserStorage()).current;
   const initial = useRef<LivingStateV1 | null>(null);
   if (!initial.current) initial.current = loadLiving(storage);
@@ -116,6 +116,7 @@ export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean
       }
       setDialogue({npc,page:0,lines});
     }
+    if(before.nursery!=="flowing" && result.state.nursery==="flowing")onComplete("Water for Eastbank");
     if (action === "feed" || action === "play") setSelected(null);
     if (action === "rest") setConfirmRest(false);
     if (action === "return_haven") onReturn();
@@ -128,7 +129,7 @@ export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean
   };
   const claim = (id: string) => {
     const result = claimLiving(current.current, id); setMessage(result.message);
-    if (result.ok) { commit(result.state); scene.current?.cue(true,"play"); } else scene.current?.cue(false);
+    if (result.ok) { commit(result.state); onComplete(quests[id].title);scene.current?.cue(true,"play"); } else scene.current?.cue(false);
     if(dialogue)setDialogue({...dialogue,page:0,lines:[result.ok?"Here you go. "+Object.entries(quests[id].reward).map(([item,n])=>n+" "+item).join(", ")+" for your village bag.":result.message]});
   };
   const label = (o: LivingObject) => o.kind === "npc" ? names[o.npcId!]?.name : o.kind === "animal" ? animals[o.animalId!]?.name : places[o.id as keyof typeof places] ?? o.id.replaceAll("_", " ");
@@ -184,7 +185,7 @@ export function GroveView({ muted, onMute, onReturn, onBoard }: { muted: boolean
         <canvas ref={mapCanvas} aria-label={"Walking route from Lofi to "+places[destination]}/>
         <label>Destination <select value={destination} onChange={e=>setDestination(e.target.value as keyof typeof places)}>{Object.entries(places).map(([id,name])=><option value={id} key={id}>{name}</option>)}</select></label>
         <button onClick={()=>{setBag(false);travel(path(),destination)}}>Walk to {places[destination]}</button></div>
-      : <div className="grove-quests"><h2>Neighbor quests</h2><div><strong>Water for Eastbank</strong><small>{state.nursery==="dry"?"Read the survey at the water lab.":state.nursery==="surveyed"?"Cross the orchard bridge and balance the nursery gate.":"Complete · Water reaches all three beds."}</small></div>{Object.entries(quests).map(([id, q]) => <div key={id}><strong>{q.title}</strong><small>{q.objective} · {state.quests[id]==="claimed"?"Completed":state.quests[id]==="active"?questProgress(id,state).count+"/"+questProgress(id,state).goal:"Meet "+(id==="greet_three"?"Elder Toma in the plaza":"Ari near the garden")}</small>{state.quests[id] === "active" && <button disabled={!questProgress(id,state).ready} onClick={() => claim(id)}>Claim reward</button>}</div>)}</div>
+      : <div className="grove-quests"><h2>Neighbor quests</h2><div><TaskTitle done={state.nursery==="flowing"} title="Water for Eastbank"/><small>{state.nursery==="dry"?"Read the survey at the water lab.":state.nursery==="surveyed"?"Cross the orchard bridge and balance the nursery gate.":"Complete · Water reaches all three beds."}</small></div>{Object.entries(quests).map(([id, q]) => <div key={id}><TaskTitle done={state.quests[id]==="claimed"} title={q.title}/><small>{q.objective} · {state.quests[id]==="claimed"?"Completed":state.quests[id]==="active"?questProgress(id,state).count+"/"+questProgress(id,state).goal:"Meet "+(id==="greet_three"?"Elder Toma in the plaza":"Ari near the garden")}</small>{state.quests[id] === "active" && <button disabled={!questProgress(id,state).ready} onClick={() => claim(id)}>Claim reward</button>}</div>)}</div>
       }</>}{selectedObject && <div className="grove-target"><h2>{selectedObject ? label(selectedObject) : "Nearby"}</h2>{selectedObject?.kind === "npc" && <p>{names[selectedObject.npcId!]?.role}</p>}{selectedObject?.kind === "animal" && <><p>Friendship {state.animals[selectedObject.animalId!]?.friendship ?? 0}/100 · {animals[selectedObject.animalId!]?.food ? `Favorite food: ${animals[selectedObject.animalId!]?.food}` : "Observe from a distance"}</p><div className="track" role="progressbar" aria-label={`${label(selectedObject)} friendship`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={state.animals[selectedObject.animalId!]?.friendship ?? 0}><span style={{ width: `${state.animals[selectedObject.animalId!]?.friendship ?? 0}%`, background: "#c65d43" }} /></div></>}{selectedObject?.kind === "crop" && <p>Growth: {livingConfig.rules.cropStages[state.crops[selectedObject.id]?.stage ?? 0]}</p>}{!selectedObject && <p>{nearest ? `${label(nearest)} is within reach.` : "Tap a character or place to walk there."}</p>}
       {selectedObject?.id==="nursery_gate" && state.nursery==="surveyed" ? <NurseryGate onRelease={levels=>interact(selectedObject,"inspect",levels)}/> : selectedObject?.id==="nursery_gate" && state.nursery==="flowing" ? <p>All three beds have water.</p> : selectedObject && <div className="grove-actions">{selectedObject.actions.map(action => action === "trade" ? <div key={action}>Trade 1 produce for {(["hay", "seed", "kibble"] as const).map(item => <button key={item} onClick={() => interact(selectedObject, "trade", item)}>{item} ×2</button>)}</div> : <button key={action} onClick={() => interact(selectedObject, action as LivingAction)}>{selectedObject.id==="water_lab"?"Read the survey":selectedObject.id==="nursery_gate"?"Examine the gate":action.replaceAll("_", " ")}</button>)}</div>}</div>
       }

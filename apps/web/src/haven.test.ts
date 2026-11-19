@@ -12,6 +12,13 @@ test("hub spawn, collision, and world board route use the opening fixture", () =
   assert.deepEqual(east, [10, 7]);
   assert.equal(atBoard(walkHaven(east, "E")), true);
 });
+test("two lanes connect camp directly to the Highlands",()=>{
+  for(const y of [8,9]){
+    let tile=walkHaven(havenSpawn(),"S");
+    if(y===9)tile=walkHaven(tile,"S");
+    for(let x=10;x<=21;x++){tile=walkHaven(tile,"E");assert.deepEqual(tile,[x,y]);}
+  }
+});
 
 test("introSeen uses its own key and saved hub position is restored", () => {
   const data = new Map([["ripple.playerProgress.v1", "important-save"], [HAVEN_POSITION_KEY, "[11,7]"]]);

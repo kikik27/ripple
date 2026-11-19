@@ -135,3 +135,12 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 .nursery-gate legend{font-weight:bold}.valve-row{display:grid;grid-template-columns:1fr auto 2ch auto;gap:6px;align-items:center;text-align:left;margin:4px auto;max-width:320px}
 .valve-row output{text-align:center}.game-shell .journal .valve-row button{min-width:44px;padding:4px 8px}
 .valve-row meter{display:block;width:min(90%,100px);height:9px;accent-color:#408d9a}
+.game-shell .quest-board{display:block;width:min(420px,94vw);padding:14px 20px;text-align:left;max-height:85dvh}
+.quest-board header{display:flex;justify-content:flex-start;gap:12px;align-items:center;background:transparent;color:#254452;padding:0 0 10px;border-bottom:2px solid #ab9879}
+.quest-board header img{width:48px;height:48px;object-fit:contain;image-rendering:pixelated}.quest-board header small,.mission-ribbon small{font:small-caps bold 13px Georgia,serif;color:#41655b}
+.game-shell .quest-board .task-link:not(.rpg-slots button),.quest-board .board-entry{display:block;width:100%;text-align:left;margin:0;padding:8px 4px;background:transparent;color:#253e4c;border:0;border-image:none;border-bottom:1px solid #b5a78d;text-shadow:none;border-radius:0}
+.game-shell .quest-board .task-link:hover{background:#dddbc6}.task-title{display:flex;align-items:center;gap:9px;font:bold 16px Georgia,serif}.task-check{display:inline-grid;place-items:center;width:17px;height:17px;border:1.5px solid #677869;border-radius:3px;color:#305849;flex:none}
+.task-title[data-done=true]>span:last-child{text-decoration:line-through;color:#546955}
+.quest-board .board-entry small,.quest-board .task-link small{display:block;margin:4px 0 0 26px;font:13px Georgia,serif;color:#475d60}.quest-board .board-close{display:block;margin:10px 0 0 auto}
+.mission-ribbon{position:absolute;z-index:5;top:max(75px,12dvh);left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;width:max-content;max-width:94vw;padding:8px 10px;border:3px double #6c775e;border-radius:10px;background:#fbf1dd;color:#203d48;font-family:Georgia,serif;box-shadow:0 3px 0 #263a4855}
+.mission-ribbon img{width:48px;height:48px;object-fit:contain}.mission-ribbon strong,.mission-ribbon span{display:block}.mission-ribbon span{font-size:12px;margin-top:3px}.mission-ribbon button{border:0;background:transparent;color:#405d60;font-size:20px}.game-shell:has(.quest-board) .mission-ribbon{display:none}

@@ -31,16 +31,19 @@ export class HavenScene extends Phaser.Scene {
     // The background already includes every prop in the fixture. Drawing them again changes the handoff frame.
     this.add.image(0, 0, "haven-background").setOrigin(0).setDepth(0);
     this.playLayers.push(this.add.image(0,0,"terrain").setOrigin(0).setDepth(0).setVisible(false));
-    const sizes: Record<string,number> = {campfire:.52,crate:.55,barrel:.58,snow_bush:.7};
+    const sizes: Record<string,number> = {campfire:.52,crate:.55,barrel:.58,snow_bush:.7,signpost:.6,lamp:.8};
+    const eastRoadProps:Record<string,[number,number]>={"496,272":[493,218],"336,304":[606,252],"624,304":[703,144]};
     for(const prop of haven.props){
-      this.playLayers.push(this.add.image(prop.position[0],prop.position[1],"props",prop.asset)
+      // After handoff, move the barrel beside the shed and the sign to the road shoulder.
+      const [px,py]=eastRoadProps[prop.position.join(",")] ?? prop.position;
+      this.playLayers.push(this.add.image(px,py,"props",prop.asset)
         .setOrigin(prop.origin[0],prop.origin[1]).setScale(sizes[prop.asset] ?? 1)
-        .setDepth(prop.position[1]).setVisible(false));
+        .setDepth(py).setVisible(false));
     }
     const sheet=this.textures.createCanvas("highland-ground",highlands.width*32,highlands.height*32)!;
     for(let y=0;y<highlands.height;y++)for(let x=0;x<highlands.width;x++){
-      if(x<20 && y<12 && !(x===19 && y===8))continue;
-      const key=(x<20 && y>=12) || y===0 || y===23 || x===55?"snow_rock_0":"snow_"+((x*7+y*3+x*y)%3);
+      if(x<18 && y<12)continue;
+      const key="snow_"+((x*7+y*3+x*y)%3);
       sheet.context.drawImage(this.textures.get("trail-"+key).getSourceImage() as HTMLImageElement,x*32,y*32);
     }
     const ground=sheet.context;
@@ -60,7 +63,9 @@ export class HavenScene extends Phaser.Scene {
     ground.scale(32,32);
     ground.translate(.5,.5);
     ground.beginPath();
-    ground.moveTo(18.5,8);
+    ground.moveTo(9,7.7);
+    ground.bezierCurveTo(10,9.1,11.5,8.55,13,8.55);
+    ground.bezierCurveTo(16,8.55,18,8.55,20,8.4);
     ground.bezierCurveTo(24,8,24,8.5,26,7.5);
     ground.bezierCurveTo(32,4,40,5.8,44,8);
     ground.bezierCurveTo(52,12,51,16,45,18.5);
@@ -73,6 +78,8 @@ export class HavenScene extends Phaser.Scene {
     ground.lineWidth=20;
     ground.strokeStyle=pattern("camp_path_0");
     ground.stroke();
+    ground.beginPath();ground.moveTo(308,267);ground.bezierCurveTo(359,294,550,296,652,283);
+    ground.lineCap="round";ground.lineWidth=42;ground.strokeStyle=pattern("camp_path_0");ground.stroke();
     sheet.refresh();
     this.playLayers.push(this.add.image(0,0,"highland-ground").setOrigin(0).setDepth(.1).setVisible(false));
     const propAt=(x:number,y:number,asset:string,scale:number)=>{
@@ -80,6 +87,10 @@ export class HavenScene extends Phaser.Scene {
       this.playLayers.push(this.add.image(x*32+16,foot,"props",asset).setOrigin(.5,.97).setScale(scale).setDepth(foot).setVisible(false));
     };
     for(const [x,y] of trailTrees)propAt(x,y,"pine",1);
+    for(const [x,y] of [[11,13],[13,12],[14,14],[16,13],[18,14],[19,13],[18,3]])propAt(x,y,"pine",.9);
+    propAt(19,10,"flags",.72);
+    propAt(21,10,"snow_bush",.68);
+    propAt(22,10,"snow_boulder",.42);
     for(const post of posts)propAt(post.x,post.y,post.asset,1);
     for(const [x,y] of [[21,7],[28,5],[42,6],[48,12],[34,18]])propAt(x,y,"lamp",.55);
     for(const [x,y] of [[21,8],[35,6],[39,18]]){

@@ -7,10 +7,12 @@ const label=process.argv[2] || "after";
 const browser=spawn(process.env.CHROME_PATH || "C:/Program Files/Google/Chrome/Application/chrome.exe",["--headless","--disable-gpu","--remote-debugging-pipe","--user-data-dir="+mkdtempSync(join(tmpdir(),"ripple-qa-"))],{stdio:["ignore","ignore","ignore","pipe","pipe"]});
 let id=0, buffer="",session;
 const pending=new Map();
+const exceptions=[];
 browser.stdio[4].on("data",chunk=>{
  buffer+=chunk;
  while(buffer.includes("\0")){
   const end=buffer.indexOf("\0"), event=JSON.parse(buffer.slice(0,end));buffer=buffer.slice(end+1);
+  if(event.method==="Runtime.exceptionThrown")exceptions.push(event.params.exceptionDetails.exception?.description ?? event.params.exceptionDetails.text);
   if(pending.has(event.id)){pending.get(event.id)(event);pending.delete(event.id);}
  }
 });
@@ -29,6 +31,7 @@ async function shot(name){const {data}=await call("Page.captureScreenshot");writ
 try{
  const {targetId}=await call("Target.createTarget",{url:"about:blank"});
  session=(await call("Target.attachToTarget",{targetId,flatten:true})).sessionId;
+ await call("Runtime.enable");
  for(const [width,height] of [[1280,720],[1920,1080],[390,844],[844,390]]){
  await call("Emulation.setDeviceMetricsOverride",{width,height,mobile:width<900,deviceScaleFactor:1});
  await call("Emulation.setTouchEmulationEnabled",{enabled:width<900});
@@ -77,6 +80,10 @@ try{
    assert.equal(await position(),"[9,6]");await press("Escape");await delay(350);
    assert.equal(await position(),"[9,6]");
    await call("Input.dispatchKeyEvent",{type:"keyUp",key:"w"});await press("s");
+   await press("s");
+   for(let x=10;x<=20;x++){await press("d");await delay(150)}
+   pos=[20,8];assert.equal(await position(),JSON.stringify(pos));
+   await delay(250);await shot(width+"-east-road");
    for(const post of posts){
      const queue=[[pos,[]]],seen=new Set();let route;
      for(let i=0;i<queue.length;i++){
@@ -95,6 +102,7 @@ try{
      await press("Escape");
    }
    await press("i");await until("document.querySelector('.journal')?.textContent.includes('Circuit complete')");
+   assert(await evaluate("document.querySelector('.mission-ribbon')?.textContent.includes('Highland mail trail')"));
    await shot(width+"-trail-journal");
    console.log("PASS held movement, dialogue cancellation and four trail stamps",width,height);continue;
  }
@@ -146,14 +154,20 @@ try{
        assert(await evaluate("!document.querySelector('.puzzle .primary').disabled"));
        await evaluate("document.querySelector('.puzzle .primary').click()");
      } else {
+       if(width===1280 && action.type==="REPAIR_BRIDGE")await shot(width+"-broken-crossing");
        await press("e");
        if(width===1280 && ["REPAIR_BRIDGE","BUILD_WELL"].includes(action.type)) await shot(width+"-"+action.type.toLowerCase());
      }
    }
-   await until("document.querySelector('.result pre')");
-   assert.deepEqual(JSON.parse(await evaluate("document.querySelector('.result pre').textContent")),route);
-   const summary=await evaluate("document.querySelector('.result-stats').innerText");
-   assert(summary.includes((bridge?35:11)+" energy left"));await shot(width+"-result");console.log("PASS",width,height,route.length,"accepted actions");continue;
+   await until("document.querySelector('.screen-camp .mission-ribbon')");
+   assert.deepEqual(JSON.parse(await evaluate("localStorage.getItem('ripple.komodo.completedReplay.v1')")),route);
+   assert.equal(await evaluate("document.querySelector('.energy-track').getAttribute('aria-valuenow')"),String(bridge?35:11));
+   await shot(width+"-result");
+   await call("Page.reload");await until("document.querySelector('.hero .primary') && !document.querySelector('.haven-loading')");
+   await evaluate("Array.from(document.querySelectorAll('.title-actions button')).find(b=>b.textContent==='Continue').click()");
+   await call("Input.dispatchKeyEvent",{type:"keyDown",key:"e"});await call("Input.dispatchKeyEvent",{type:"keyUp",key:"e"});
+   await until("document.querySelector('.quest-board .task-link .task-title[data-done=true]')");
+   await shot(width+"-completed-board");console.log("PASS",width,height,route.length,"accepted actions, Haven return and restored board");continue;
  }
  const issuer=width<900?"farmer":"elder";
  const socialKey="social.komodoGrove.v1:guest";
@@ -205,8 +219,12 @@ try{
    await evaluate("document.querySelector('.nursery-gate>button').click()");
    await until("document.querySelector('.grove-target')?.textContent.includes('All three beds have water')");
    assert.equal(JSON.parse(await evaluate("localStorage.getItem("+JSON.stringify(socialKey)+")")).nursery,"flowing");
+   assert(await evaluate("document.querySelector('.mission-ribbon')?.textContent.includes('Water for Eastbank')"));
    await evaluate("document.querySelector('.journal>button').click()");
    await shot(width+"-eastbank");
+   await evaluate("document.querySelector('.grove-title button').click()");
+   await evaluate("Array.from(document.querySelectorAll('.journal button')).find(b=>b.textContent==='Return to Haven').click()");
+   await until("document.querySelectorAll('.quest-board .task-link')[1]?.querySelector('[data-done=true]')");
    console.log("PASS water lab, nursery puzzle and persisted restoration",width,height);
    console.log("PASS mapped route to market",width,height);continue;
  }
@@ -215,6 +233,7 @@ try{
    await shot(width+"-bag");await call("Input.dispatchKeyEvent",{type:"keyDown",key:"Escape"});await call("Input.dispatchKeyEvent",{type:"keyUp",key:"Escape"});
  }console.log("PASS",width,height);
  }
+ assert.deepEqual(exceptions,[],"Browser walkthrough raised an exception: "+exceptions.join("\n"));
 }finally{browser.kill()}
 
 

@@ -40,3 +40,9 @@ Added 4-frame lateral walk strips for all five remaining Grove domestic animals:
 
 ## Eastbank Nursery
 The social map extends eastward from Market Lane with an orchard, a stream, two crossings and a nursery. Original village placements and spawn coordinates are retained. Physical interaction approaches and existing cardinal pathfinding govern access to all buildings. Piko’s optional irrigation survey and gate puzzle persist in the local social save, and only change the nursery’s visual state. New and older saves start with a dry nursery.
+
+## Quest completion and crossing presentation
+
+Successful expedition extraction returns Lofi to the World Board approach and shows a dismissible badge for 6.5 seconds. Store the accepted actions from the last successful Operation Komodo run locally and validate them through the reducer when restoring its board checkmark. This marker is local gameplay history. Social checkmarks read the Grove save and the highland journal. Optional village activities keep the player at their current location.
+
+The broken and repaired bridge props span the river above its water layer. Draw the riverbank edges narrowly enough that the walkable approach tiles have dry ground. Use the deck as the visual anchor. The cinematic fixture still controls the opening frame. After handoff the east road uses two adjacent walkable rows with its props moved to the shoulders.

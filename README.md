@@ -31,3 +31,5 @@ Game mechanics and fixture IDs unchanged. No real donation, mainnet, production 
 ## Prompt for coding agent
 Read AGENTS.md and the entire handbook. Implement P0 in backlog dependency order using the bundled assets/manifest and brand-config. Preserve fixtures, separate virtual RP and demo funding, no fabricated transaction IDs. First deliver an offline playable Operation Komodo; run real tests after each milestone.
 # ripple
+
+After Operation Komodo, Lofi returns to the Himalayan Haven board. Press E or Act to see completed and available tasks. To explore the Highlands, step south from the starting spot and follow the wide road east past the sign. Local task history is tied to this browser.

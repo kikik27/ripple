@@ -1,4 +1,7 @@
 import {useState} from "react";
+export function TaskTitle({done,title}:{done:boolean;title:string}){
+  return <span className="task-title" data-done={done}><span className="task-check" aria-label={done?"Completed":"Open"}>{done?"✓":""}</span><span>{title}</span></span>;
+}
 
 export function PlayerHUD({energy,xp,location,day}:{energy?:number;xp?:number;location:string;day?:number}) {
   return <div className="rpg-profile" aria-label="Player status">

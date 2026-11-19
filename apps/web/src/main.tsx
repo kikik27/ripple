@@ -24,7 +24,7 @@ import operation from "../../../fixtures/operation-komodo.json";
 import "./style.css";
 import "./shell.css";
 
-type Screen = "title" | "camp" | "campaign" | "game" | "result" | "exhausted" | "grove";
+type Screen = "title" | "camp" | "campaign" | "game" | "exhausted" | "grove";
 const A = "/assets/";
 const campaign = {title:operation.title,notice:operation.fiction_notice,target:operation.target_rp,credit:operation.sponsor_policy.amount};
 function App() {
@@ -37,7 +37,7 @@ function App() {
   };
   const [screen, setScreen] = useState<Screen>("title"),
     [state, setState] = useState<State>(initialState),
-    [log, setLog] = useState<Action[]>([]),
+
     [message, setMessage] = useState(
       "Aurora: The village needs water. Gather materials at the depot.",
     ),
@@ -45,10 +45,22 @@ function App() {
     [confirmNewGame, setConfirmNewGame] = useState(false),
     [muted, setMuted] = useState(true),
     [funding] = useState({ released: 0, goal: campaign.credit });
+  const [missionDone,setMissionDone]=useState(()=>{
+    try {
+      const saved:Action[]=JSON.parse(localStorage.getItem("ripple.komodo.completedReplay.v1") ?? "[]");
+      return Array.isArray(saved) && saved.length<=map.rules.max_actions && saved.reduce((s,a)=>reduce(s,a),initialState()).finished;
+    }catch{return false}
+  });
+  const [badge,setBadge]=useState<{title:string;detail:string}|null>(null);
+  useEffect(()=>{
+    if(!badge)return;
+    const timer=window.setTimeout(()=>setBadge(null),6500);
+    return ()=>window.clearTimeout(timer);
+  },[badge]);
   const sceneRef = useRef<ExpeditionScene | null>(null),
     havenRef = useRef<HavenHandle | null>(null),
     stateRef = useRef(state),
-    logRef = useRef(log);
+    logRef = useRef<Action[]>([]);
   const movement = useRef<{key:string; timer:number} | null>(null);
   const step = useRef<(dir:Direction)=>void>(()=>{});
   const stopMoving = () => {
@@ -77,7 +89,7 @@ function App() {
       setState(next);
       const actions = [...logRef.current, action];
       logRef.current = actions;
-      setLog(actions);
+
       sceneRef.current?.renderState(next, action.type === "MOVE");
       if (action.type !== "MOVE") sceneRef.current?.showAction(action);
       const cue: Record<string, string> = {
@@ -92,7 +104,11 @@ function App() {
       if (cue[action.type]) sceneRef.current?.cue(cue[action.type]);
       
       if (action.type === "CONNECT_WATER") setPuzzle(false);
-      if (action.type === "FINISH") setScreen("result");
+      if (action.type === "FINISH") {
+        try {localStorage.setItem("ripple.komodo.completedReplay.v1",JSON.stringify(actions))}catch{ /* Keep completion for the session. */ }
+        stopMoving();setPuzzle(false);setMenu(null);setMissionDone(true);setBadge({title:"Water reaches both homes",detail:`Operation Komodo · ${next.xp} XP · ${next.rp} virtual RP`});
+        havenRef.current?.returnToBoard(false);setScreen("camp");
+      }
       else if (next.energy === 0) {
         stopMoving(); setMenu(null); setPuzzle(false); setScreen("exhausted");
       }
@@ -198,7 +214,7 @@ function App() {
     stateRef.current = s;
     logRef.current = [];
     setState(s);
-    setLog([]);
+
     setPuzzle(false);
     setMessage("Aurora: A fresh expedition begins.");
     setScreen("game");
@@ -246,8 +262,9 @@ function App() {
           </div>
         </section>
       )}
-      <HavenView preview={screen==="title"} ref={havenRef} visible={screen === "camp"} muted={muted} player={state} onBoard={() => setScreen("campaign")} onGrove={() => setScreen("grove")} onToggleMuted={() => setMuted(!muted)} />
-      {screen === "grove" && <GroveView muted={muted} onMute={() => setMuted(!muted)} onReturn={() => { havenRef.current?.returnToBoard(); setScreen("camp"); }} onBoard={() => { havenRef.current?.returnToBoard(); setScreen("campaign"); }} />}
+      <HavenView onComplete={title=>setBadge({title,detail:"Himalayan Haven"})} missionDone={missionDone} preview={screen==="title"} ref={havenRef} visible={screen === "camp"} muted={muted} player={state} onBoard={() => setScreen("campaign")} onGrove={() => setScreen("grove")} onToggleMuted={() => setMuted(!muted)} />
+      {badge && (screen==="camp" || screen==="grove") && <aside className="mission-ribbon" role="status"><img src="/assets/branding/ripple_emblem_1024.png" alt=""/><div><small>Mission complete</small><strong>{badge.title}</strong><span>{badge.detail}</span></div><button onClick={()=>setBadge(null)} aria-label="Dismiss mission badge">×</button></aside>}
+      {screen === "grove" && <GroveView onComplete={title=>setBadge({title,detail:"Komodo Grove"})} muted={muted} onMute={() => setMuted(!muted)} onReturn={() => { havenRef.current?.returnToBoard(); setScreen("camp"); }} onBoard={() => { havenRef.current?.returnToBoard(); setScreen("campaign"); }} />}
       {(screen==="campaign" || screen==="game") && <div className="exp-map" id="game-canvas" aria-label="Operation Komodo map"/>}
       {screen==="campaign" && <section className="campaign-card embark" aria-label="Expedition briefing">
         <div className="embark-note"><img src="/assets/sprites/aurora_portrait.png" alt="Aurora"/><div>
@@ -275,34 +292,6 @@ function App() {
           <button onClick={()=>setMenu(null)}>Resume</button></section></div>}
 
         </div>
-      )}
-      {screen === "result" && (
-        <section className="result">
-          <img src={A + "branding/ripple_emblem_1024.png"} alt="" />
-          <div>
-            <p className="eyebrow">Expedition complete · local demo</p>
-            <h1>Water reaches both homes.</h1>
-            <p>
-              Lofi and Aurora restored the fictional village network. This does
-              not represent a physical well or a funding transfer.
-            </p>
-            <div className="result-stats">
-              <span>{state.xp} XP</span>
-              <span>{state.rp} virtual RP</span>
-              <span>{state.actions} actions</span>
-              <span>{state.energy} energy left</span>
-            </div>
-            <p>
-              Replay recorded locally: {log.length} accepted actions. Onchain
-              verification is not connected yet.
-            </p>
-            <details><summary>View local replay actions</summary><pre>{JSON.stringify(log, null, 2)}</pre></details>
-            <button className="primary" onClick={restart}>
-              Play again
-            </button>
-            <button className="secondary" onClick={() => setScreen("camp")}>Return to camp</button>
-          </div>
-        </section>
       )}
       {puzzle && screen === "game" && (
         <div className="modal-backdrop">
